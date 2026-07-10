@@ -1,0 +1,109 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Hero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="site-shell">
+      <header class="topbar" aria-label="Primary navigation">
+        <a class="brand" href="#" aria-label="Home">[ MY NAME ]</a>
+
+        <nav class="nav-links" aria-label="Main menu">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span aria-hidden="true">*</span>
+          <span aria-hidden="true">/</span>
+          <span aria-hidden="true">&lt;</span>
+        </button>
+      </header>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span aria-hidden="true">&lt;/&gt;</span>
+            Freelance Web Developer
+          </p>
+
+          <h1 id="hero-title">
+            <span>Developing web</span>
+            <span>experiences that</span>
+            <strong>work for businesses.</strong>
+          </h1>
+
+          <p class="intro">
+            <span>Crafting scalable, high-performance web applications and</span>
+            <span>interfaces for clear, measurable impact </span> <span>from first sketch to final
+            launch.</span>
+          </p>
+
+          <a class="impact-link" href="#work">
+            See my impact
+            <span aria-hidden="true">-&gt;</span>
+          </a>
+
+          <div class="scroll-mark" aria-hidden="true">( )</div>
+        </div>
+
+        <svg
+          class="wave-art"
+          viewBox="0 0 242 394"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            fill="#174429"
+            d="M40 0C29 45 38 82 50 124C63 171 36 193 16 240C-8 296 36 315 25 394H242V0Z"
+          ></path>
+          <path
+            fill="#3d8652"
+            d="M73 0C60 47 64 85 79 128C94 172 62 198 48 240C29 296 76 316 64 394H242V0Z"
+          ></path>
+          <path
+            fill="#1f5a38"
+            d="M92 0C78 51 85 89 101 132C117 175 86 201 69 242C48 294 93 317 83 394H242V0Z"
+          ></path>
+          <path
+            fill="#133f2a"
+            d="M126 0C113 50 120 88 138 133C154 176 123 202 109 243C90 294 135 317 127 394H242V0Z"
+          ></path>
+          <path
+            fill="#2d7045"
+            d="M150 0C136 51 143 90 160 134C177 178 146 205 131 245C113 295 160 318 151 394H242V0Z"
+          ></path>
+          <path
+            fill="#16462f"
+            d="M185 0C172 54 178 93 195 136C212 180 181 207 166 247C148 298 195 318 188 394H242V0Z"
+          ></path>
+          <path
+            fill="#0d3424"
+            d="M219 0C205 54 212 94 227 137C244 180 214 208 200 248C182 299 227 319 221 394H242V0Z"
+          ></path>
+        </svg>
+      </section>
+    </main>
+
+    <script is:inline>
+      const toggle = document.querySelector(".theme-toggle");
+
+      toggle?.addEventListener("click", () => {
+        document.body.classList.toggle("light-theme");
+      });
+    </script>
+  </body>
+</html>
