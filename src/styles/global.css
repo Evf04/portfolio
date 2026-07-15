@@ -82,8 +82,14 @@ a {
   color: var(--green);
 }
 
-.theme-toggle {
+.topbar-actions {
   justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle {
   width: 38px;
   height: 16px;
   display: inline-flex;
@@ -96,6 +102,34 @@ a {
   color: #9ca6a0;
   font: 800 6px/1 Inter, Arial, sans-serif;
   cursor: pointer;
+}
+
+.lang-toggle {
+  width: 44px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 1px solid #1a251e;
+  border-radius: 999px;
+  background: #121a16;
+  font: 800 6px/1 Inter, Arial, sans-serif;
+  cursor: pointer;
+  padding: 0;
+}
+
+.lang-toggle span {
+  color: #5e6b63;
+  transition: color 0.2s ease;
+}
+
+.lang-toggle span.active {
+  color: var(--green);
+}
+
+.lang-toggle .lang-separator {
+  color: #37423c;
 }
 
 .hero {
@@ -224,6 +258,23 @@ body.light-theme .theme-toggle {
   color: #27342b;
 }
 
+body.light-theme .lang-toggle {
+  background: #e6ede5;
+  border-color: #cbd7cd;
+}
+
+body.light-theme .lang-toggle span {
+  color: #8c9990;
+}
+
+body.light-theme .lang-toggle span.active {
+  color: #15432b;
+}
+
+body.light-theme .lang-toggle .lang-separator {
+  color: #b0bcb3;
+}
+
 @media (max-width: 980px) {
   .topbar {
     height: 50px;
@@ -318,6 +369,10 @@ body.light-theme .theme-toggle {
   }
 
   .theme-toggle {
+    width: 62px;
+  }
+
+  .lang-toggle {
     width: 62px;
   }
 

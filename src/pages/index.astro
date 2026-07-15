@@ -21,39 +21,47 @@ import "../styles/global.css";
         <a class="brand" href="#" aria-label="Home">EVF04</a>
 
         <nav class="nav-links" aria-label="Main menu">
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
-          <a href="#contact">Contact</a>
+          <a href="#about" data-en="About" data-es="Sobre mí">About</a>
+          <a href="#work" data-en="Work" data-es="Trabajo">Work</a>
+          <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
         </nav>
 
-        <button class="theme-toggle" type="button" aria-label="Toggle theme">
-          <span aria-hidden="true">*</span>
-          <span aria-hidden="true">/</span>
-          <span aria-hidden="true">&lt;</span>
-        </button>
+        <div class="topbar-actions">
+          <button class="lang-toggle" type="button" aria-label="Switch language">
+            <span class="lang-en active" aria-hidden="true">EN</span>
+            <span class="lang-separator" aria-hidden="true">/</span>
+            <span class="lang-es" aria-hidden="true">ES</span>
+          </button>
+
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <span aria-hidden="true">*</span>
+            <span aria-hidden="true">/</span>
+            <span aria-hidden="true">&lt;</span>
+          </button>
+        </div>
       </header>
 
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">
             <span aria-hidden="true">&lt;/&gt;</span>
-            Freelance Web Developer
+            <span data-en="Freelance Web Developer" data-es="Desarrollador Web Freelance">Freelance Web Developer</span>
           </p>
 
           <h1 id="hero-title">
-            <span>Developing web</span>
-            <span>experiences that</span>
-            <strong>work for businesses.</strong>
+            <span data-en="Developing web" data-es="Desarrollando">Developing web</span>
+            <span data-en="experiences that" data-es="experiencias web que">experiences that</span>
+            <strong data-en="work for businesses." data-es="funcionan para empresas.">work for businesses.</strong>
           </h1>
 
           <p class="intro">
-            <span>Crafting scalable, high-performance web applications and</span>
-            <span>interfaces for clear, measurable impact </span> <span>from first sketch to final
-            launch.</span>
+            <span data-en="Crafting scalable, high-performance web applications and" data-es="Diseñando aplicaciones e interfaces web escalables y de">Crafting scalable, high-performance web applications and</span>
+            <span data-en="interfaces for clear, measurable impact " data-es="alto rendimiento para un impacto claro y medible,">interfaces for clear, measurable impact </span> 
+            <span data-en="from first sketch to final launch." data-es="desde el primer boceto hasta el lanzamiento final.">from first sketch to final launch.</span>
           </p>
 
           <a class="impact-link" href="#work">
-            See my impact
+            <span data-en="See my impact" data-es="Mira mi impacto">See my impact</span>
             <span aria-hidden="true">-&gt;</span>
           </a>
 
@@ -99,10 +107,48 @@ import "../styles/global.css";
     </main>
 
     <script is:inline>
-      const toggle = document.querySelector(".theme-toggle");
-
-      toggle?.addEventListener("click", () => {
+      // Theme Toggle Logic
+      const themeToggle = document.querySelector(".theme-toggle");
+      themeToggle?.addEventListener("click", () => {
         document.body.classList.toggle("light-theme");
+      });
+
+      // Language Toggle Logic
+      const langToggle = document.querySelector(".lang-toggle");
+      const translatable = document.querySelectorAll("[data-en]");
+      const langEnSpan = langToggle?.querySelector(".lang-en");
+      const langEsSpan = langToggle?.querySelector(".lang-es");
+
+      function setLanguage(lang) {
+        document.documentElement.setAttribute("lang", lang);
+        
+        translatable.forEach((el) => {
+          const text = el.getAttribute(`data-${lang}`);
+          if (text) {
+            el.textContent = text;
+          }
+        });
+
+        if (lang === "es") {
+          langEnSpan?.classList.remove("active");
+          langEsSpan?.classList.add("active");
+        } else {
+          langEnSpan?.classList.add("active");
+          langEsSpan?.classList.remove("active");
+        }
+      }
+
+      // Initialize language preference (detect browser language and default to es if browser is Spanish, otherwise en)
+      const browserLang = navigator.language || navigator.userLanguage || "en";
+      const defaultLang = browserLang.startsWith("es") ? "es" : "en";
+      const savedLang = localStorage.getItem("preferred-lang") || defaultLang;
+      setLanguage(savedLang);
+
+      langToggle?.addEventListener("click", () => {
+        const currentLang = document.documentElement.getAttribute("lang") || "en";
+        const nextLang = currentLang === "en" ? "es" : "en";
+        setLanguage(nextLang);
+        localStorage.setItem("preferred-lang", nextLang);
       });
     </script>
   </body>
