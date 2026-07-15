@@ -105,8 +105,8 @@ a {
 }
 
 .lang-toggle {
-  width: 44px;
-  height: 16px;
+  width: 70px;
+  height: 27px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -114,7 +114,7 @@ a {
   border: 1px solid #1a251e;
   border-radius: 999px;
   background: #121a16;
-  font: 800 6px/1 Inter, Arial, sans-serif;
+  font: 800 13px/1 Inter, Arial, sans-serif;
   cursor: pointer;
   padding: 0;
 }
