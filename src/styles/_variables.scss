@@ -1,0 +1,47 @@
+// Color Variables
+$page-dark: #252729;
+$panel-dark: #050a0d;
+$ink-dark: #f4f6f7;
+$muted-dark: #96a0a4;
+$line-dark: #182023;
+
+$accent: #63c8df;
+$accent-deep: #153443;
+$accent-mid: #286169;
+$accent-soft: #3b7885;
+$accent-glow: rgba(99, 200, 223, 0.15);
+
+$page-light: #d6dade;
+$panel-light: #f1f4f7;
+$ink-light: #070c11;
+$muted-light: #465054;
+$line-light: #cbd4d7;
+
+// Responsive Breakpoints Mixins
+@mixin desktop-xl {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin tablet-large {
+  @media (max-width: 980px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 760px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 430px) {
+    @content;
+  }
+}
+
+// Micro-animations & Transitions
+$transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+$transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);

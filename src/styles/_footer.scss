@@ -1,0 +1,124 @@
+@use "variables" as *;
+
+.site-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+  background: var(--panel);
+  padding: 48px 32px 32px;
+
+  @include tablet {
+    padding: 36px 22px 24px;
+  }
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.footer-brand {
+  .footer-logo {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--ink);
+    margin-bottom: 12px;
+    display: inline-block;
+
+    span {
+      color: var(--accent);
+    }
+  }
+
+  p {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 380px;
+    margin: 0 0 20px;
+    line-height: 1.6;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: pulse 2s infinite;
+    }
+  }
+}
+
+.footer-nav {
+  h4 {
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--ink);
+    letter-spacing: 1px;
+    margin: 0 0 16px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    a {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+
+  @include mobile {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.6; transform: scale(0.95); }
+}

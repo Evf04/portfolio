@@ -1,0 +1,89 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/main.scss";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Elias Velasquez | Front-End & Full-Stack Developer",
+  description = "Portfolio of Elias Velasquez Fuentes - Systems Engineering student and Front-End/Full-Stack Developer specializing in Astro, TypeScript, Sass, Supabase, and PostgreSQL.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="site-shell">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
+
+    <script is:inline>
+      // Global Theme Management
+      const savedTheme = localStorage.getItem("preferred-theme");
+      if (savedTheme === "light") {
+        document.body.classList.add("light-theme");
+      }
+
+      const themeToggle = document.querySelector(".theme-toggle");
+      themeToggle?.addEventListener("click", () => {
+        const isLight = document.body.classList.toggle("light-theme");
+        localStorage.setItem("preferred-theme", isLight ? "light" : "dark");
+      });
+
+      // Global Language Management (EN / ES)
+      function updateLanguage(lang) {
+        document.documentElement.setAttribute("lang", lang);
+        const translatable = document.querySelectorAll("[data-en]");
+        const langEnSpans = document.querySelectorAll(".lang-en");
+        const langEsSpans = document.querySelectorAll(".lang-es");
+
+        translatable.forEach((el) => {
+          const text = el.getAttribute(`data-${lang}`);
+          if (text) {
+            el.textContent = text;
+          }
+        });
+
+        if (lang === "es") {
+          langEnSpans.forEach((s) => s.classList.remove("active"));
+          langEsSpans.forEach((s) => s.classList.add("active"));
+        } else {
+          langEnSpans.forEach((s) => s.classList.add("active"));
+          langEsSpans.forEach((s) => s.classList.remove("active"));
+        }
+      }
+
+      // Initialize language (stored or browser preference)
+      const browserLang = navigator.language || navigator.userLanguage || "en";
+      const defaultLang = browserLang.startsWith("es") ? "es" : "en";
+      const savedLang = localStorage.getItem("preferred-lang") || defaultLang;
+      updateLanguage(savedLang);
+
+      const langToggle = document.querySelector(".lang-toggle");
+      langToggle?.addEventListener("click", () => {
+        const currentLang = document.documentElement.getAttribute("lang") || "en";
+        const nextLang = currentLang === "en" ? "es" : "en";
+        updateLanguage(nextLang);
+        localStorage.setItem("preferred-lang", nextLang);
+      });
+    </script>
+  </body>
+</html>

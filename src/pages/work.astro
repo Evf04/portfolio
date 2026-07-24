@@ -1,0 +1,233 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Featured Work & Case Studies | Elias Velasquez"
+  description="Explore real web development case studies and live projects by Elias Velasquez, including Adidas brand launch platforms and full-stack applications."
+>
+  <main class="page-container">
+    <div class="section-tag">
+      <span class="tag-code" aria-hidden="true">&lt;/&gt;</span>
+      <span data-en="Featured Work & Case Studies" data-es="Trabajos Destacados y Casos de Estudio">Featured Work & Case Studies</span>
+    </div>
+
+    <h1 class="page-title">
+      <span data-en="Real projects," data-es="Proyectos reales,">Real projects,</span>
+      <strong data-en="proven business impact." data-es="impacto comprobado.">proven business impact.</strong>
+    </h1>
+
+    <p class="page-description" data-en="Explore detailed case studies of web platforms engineered for brand launch events, user registration flows, and cloud architectures with working live demos." data-es="Explora casos de estudio detallados de plataformas web desarrolladas para eventos de marca, flujos de registro de usuarios y arquitecturas en la nube con demos en vivo.">
+      Explore detailed case studies of web platforms engineered for brand launch events, user registration flows, and cloud architectures with working live demos.
+    </p>
+
+    <!-- Filter Buttons -->
+    <div class="work-filter-bar">
+      <button class="filter-btn active" data-filter="all" data-en="All Case Studies" data-es="Todos los Casos de Estudio">All Case Studies</button>
+      <button class="filter-btn" data-filter="freelance" data-en="Adidas Freelance" data-es="Freelance Adidas">Adidas Freelance</button>
+      <button class="filter-btn" data-filter="fullstack" data-en="Full-Stack & DB" data-es="Full-Stack y BD">Full-Stack & DB</button>
+      <button class="filter-btn" data-filter="aws" data-en="AWS & Cloud" data-es="AWS y Nube">AWS & Cloud</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid">
+      <!-- Project 1: Adidas Original Forever -->
+      <article class="project-card" data-category="freelance">
+        <div class="project-image-wrapper">
+          <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="400" height="225" fill="#080f15"/>
+            <rect x="25" y="25" width="350" height="175" rx="6" fill="#0d1721" stroke="#63c8df" stroke-width="2"/>
+            <text x="45" y="65" fill="#63c8df" font-family="Inter, sans-serif" font-weight="900" font-size="18">ADIDAS ORIGINALS</text>
+            <text x="45" y="90" fill="#f4f6f7" font-family="Inter, sans-serif" font-weight="800" font-size="14">"Original Forever" Booking Platform</text>
+            <rect x="45" y="110" width="140" height="28" rx="4" fill="#153443" stroke="#3b7885"/>
+            <text x="55" y="128" fill="#63c8df" font-family="Inter, sans-serif" font-size="11" font-weight="800">SLOT RESERVATION</text>
+            <rect x="200" y="110" width="155" height="65" rx="4" fill="#070c11" stroke="#1d2a38"/>
+            <circle cx="225" cy="135" r="10" fill="#63c8df"/>
+            <text x="245" y="139" fill="#f4f6f7" font-family="Inter, sans-serif" font-size="11" font-weight="700">Zero Queue Entry</text>
+          </svg>
+          <span class="project-badge" data-en="Adidas Event Platform" data-es="Plataforma de Evento Adidas">Adidas Event Platform</span>
+        </div>
+        <div class="project-body">
+          <div class="project-metric">
+            <span class="metric-icon">&lt;/&gt;</span>
+            <span data-en="Eliminated Event Queues" data-es="Eliminación de Filas en Evento">Eliminated Event Queues</span>
+          </div>
+          <h3 class="project-title">
+            <a href="https://slotsadidasoriginals-p.netlify.app" target="_blank" rel="noopener noreferrer">Adidas "Original Forever" Launch Platform</a>
+          </h3>
+          <p class="project-desc" data-en="Engineered a high-speed time-slot reservation system for Adidas' product launch event in Colombia. Streamlined visitor check-in, managed attendee capacity limits, and integrated Supabase & PostgreSQL database storage." data-es="Desarrollo de un sistema de reserva por turnos para el evento de lanzamiento de Adidas en Colombia. Agilizó el ingreso de asistentes, gestionó aforos e integró almacenamiento de datos con Supabase y PostgreSQL.">
+            Engineered a high-speed time-slot reservation system for Adidas' product launch event in Colombia. Streamlined visitor check-in, managed attendee capacity limits, and integrated Supabase & PostgreSQL database storage.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Astro</span>
+            <span class="tech-tag">Sass</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">PostgreSQL</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://slotsadidasoriginals-p.netlify.app" class="btn-project-primary" target="_blank" rel="noopener noreferrer">
+              <span data-en="Launch Live Demo" data-es="Ver Demo En Vivo">Launch Live Demo</span> &#8599;
+            </a>
+            <a href="https://github.com/Evf04" class="btn-project-secondary" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+              &lt;/&gt;
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: Adidas Hotel Superstar -->
+      <article class="project-card" data-category="freelance">
+        <div class="project-image-wrapper">
+          <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="400" height="225" fill="#060a0e"/>
+            <rect x="25" y="25" width="350" height="175" rx="6" fill="#0e171f" stroke="#3b7885" stroke-width="2"/>
+            <text x="45" y="65" fill="#63c8df" font-family="Inter, sans-serif" font-weight="900" font-size="18">HOTEL SUPERSTAR</text>
+            <text x="45" y="90" fill="#f4f6f7" font-family="Inter, sans-serif" font-weight="800" font-size="14">Adidas Brand Experience Hub</text>
+            <rect x="45" y="115" width="310" height="60" rx="4" fill="#162330"/>
+            <rect x="60" y="130" width="80" height="30" rx="3" fill="#63c8df"/>
+            <text x="73" y="150" fill="#050a0d" font-family="Inter, sans-serif" font-weight="900" font-size="12">RSVP</text>
+            <rect x="155" y="130" width="180" height="10" rx="2" fill="#3b7885"/>
+            <rect x="155" y="146" width="120" height="10" rx="2" fill="#286169"/>
+          </svg>
+          <span class="project-badge" data-en="Adidas Brand Hub" data-es="Plataforma de Experiencia Adidas">Adidas Brand Hub</span>
+        </div>
+        <div class="project-body">
+          <div class="project-metric">
+            <span class="metric-icon">&lt;/&gt;</span>
+            <span data-en="Centralized RSVP & Schedules" data-es="Centralización de Reservas e Itinerarios">Centralized RSVP & Schedules</span>
+          </div>
+          <h3 class="project-title">
+            <a href="https://experienciasuperstar-p.netlify.app" target="_blank" rel="noopener noreferrer">Adidas "Hotel Superstar" Experience Portal</a>
+          </h3>
+          <p class="project-desc" data-en="Centralized web application for the Adidas Hotel Superstar experience, allowing attendees to view activity schedules, reserve spots, and confirm real-time attendance in a unified portal." data-es="Plataforma web centralizada para la experiencia Hotel Superstar de Adidas, permitiendo a los asistentes consultar itinerarios de actividades, reservar cupos y confirmar asistencia en tiempo real.">
+            Centralized web application for the Adidas Hotel Superstar experience, allowing attendees to view activity schedules, reserve spots, and confirm real-time attendance in a unified portal.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Astro</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Sass</span>
+            <span class="tech-tag">Supabase</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://experienciasuperstar-p.netlify.app" class="btn-project-primary" target="_blank" rel="noopener noreferrer">
+              <span data-en="Launch Live Demo" data-es="Ver Demo En Vivo">Launch Live Demo</span> &#8599;
+            </a>
+            <a href="https://github.com/Evf04" class="btn-project-secondary" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+              &lt;/&gt;
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: AWS Cloud & Data Engineering -->
+      <article class="project-card" data-category="aws">
+        <div class="project-image-wrapper">
+          <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="400" height="225" fill="#090e14"/>
+            <rect x="30" y="30" width="340" height="165" rx="6" fill="#101a24" stroke="#254d5f" stroke-width="2"/>
+            <text x="50" y="70" fill="#63c8df" font-family="Inter, sans-serif" font-weight="900" font-size="16">AWS ACADEMY GRADUATE</text>
+            <text x="50" y="95" fill="#f4f6f7" font-family="Inter, sans-serif" font-weight="800" font-size="13">Cloud Architecting & Data Pipelines</text>
+            <rect x="50" y="115" width="90" height="50" rx="4" fill="#1b2a39"/>
+            <rect x="155" y="115" width="90" height="50" rx="4" fill="#1b2a39"/>
+            <rect x="260" y="115" width="90" height="50" rx="4" fill="#63c8df" fill-opacity="0.2" stroke="#63c8df"/>
+          </svg>
+          <span class="project-badge" data-en="AWS Certified Labs" data-es="Proyectos AWS Certified">AWS Certified Labs</span>
+        </div>
+        <div class="project-body">
+          <div class="project-metric">
+            <span class="metric-icon">&lt;/&gt;</span>
+            <span data-en="Architecting, Data & Developing" data-es="Arquitectura, Datos y Desarrollo">Architecting, Data & Developing</span>
+          </div>
+          <h3 class="project-title">
+            <a href="https://github.com/Evf04" target="_blank" rel="noopener noreferrer">AWS Cloud & Data Engineering Architecture</a>
+          </h3>
+          <p class="project-desc" data-en="Cloud architecture designs, serverless API deployments, and data engineering pipelines developed across three AWS Academy Graduate certifications." data-es="Diseños de arquitectura en la nube, despliegues de API serverless y pipelines de ingeniería de datos desarrollados en las tres certificaciones de AWS Academy.">
+            Cloud architecture designs, serverless API deployments, and data engineering pipelines developed across three AWS Academy Graduate certifications.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">AWS Cloud</span>
+            <span class="tech-tag">Data Engineering</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Node.js</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Evf04" class="btn-project-primary" target="_blank" rel="noopener noreferrer">
+              <span data-en="View AWS Profile" data-es="Ver Perfil AWS">View AWS Profile</span> &#8599;
+            </a>
+            <a href="https://github.com/Evf04" class="btn-project-secondary" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+              &lt;/&gt;
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Systems Engineering Platform -->
+      <article class="project-card" data-category="fullstack">
+        <div class="project-image-wrapper">
+          <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="400" height="225" fill="#050a0d"/>
+            <rect x="30" y="30" width="340" height="165" rx="6" fill="#0b131a" stroke="#1c2938" stroke-width="2"/>
+            <text x="50" y="70" fill="#63c8df" font-family="Inter, sans-serif" font-weight="900" font-size="16">UNIVERSIDAD DE CARTAGENA</text>
+            <text x="50" y="95" fill="#f4f6f7" font-family="Inter, sans-serif" font-weight="800" font-size="13">Systems Engineering Core Labs</text>
+            <rect x="50" y="115" width="300" height="50" rx="4" fill="#121c2c"/>
+          </svg>
+          <span class="project-badge" data-en="Systems Engineering" data-es="Ingeniería de Sistemas">Systems Engineering</span>
+        </div>
+        <div class="project-body">
+          <div class="project-metric">
+            <span class="metric-icon">&lt;/&gt;</span>
+            <span data-en="Relational Systems & APIs" data-es="Sistemas Relacionales y APIs">Relational Systems & APIs</span>
+          </div>
+          <h3 class="project-title">
+            <a href="https://github.com/Evf04" target="_blank" rel="noopener noreferrer">Relational Database & Systems Architecture</a>
+          </h3>
+          <p class="project-desc" data-en="Full-stack database systems, RESTful services, and structured SQL/PostgreSQL schemas created as part of the Systems Engineering degree at Universidad de Cartagena." data-es="Sistemas de bases de datos full-stack, servicios RESTful y esquemas SQL/PostgreSQL creados como parte de la carrera de Ingeniería de Sistemas.">
+            Full-stack database systems, RESTful services, and structured SQL/PostgreSQL schemas created as part of the Systems Engineering degree at Universidad de Cartagena.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">REST APIs</span>
+            <span class="tech-tag">Git</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Evf04" class="btn-project-primary" target="_blank" rel="noopener noreferrer">
+              <span data-en="View Repositories" data-es="Ver Repositorios">View Repositories</span> &#8599;
+            </a>
+            <a href="https://github.com/Evf04" class="btn-project-secondary" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+              &lt;/&gt;
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script is:inline>
+    // Project Category Filter Script
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.getAttribute("data-filter");
+
+        filterButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        projectCards.forEach((card) => {
+          const category = card.getAttribute("data-category");
+          if (filter === "all" || category === filter) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+</Layout>

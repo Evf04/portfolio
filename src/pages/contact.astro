@@ -1,0 +1,140 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Contact Elias Velasquez | Front-End & Full-Stack Developer"
+  description="Get in touch with Elias Velasquez Fuentes for freelance web development projects, full-stack web applications, or software engineering roles."
+>
+  <main class="page-container">
+    <div class="section-tag">
+      <span class="tag-code" aria-hidden="true">&lt;/&gt;</span>
+      <span data-en="Get In Touch" data-es="Contacto Directo">Get In Touch</span>
+    </div>
+
+    <h1 class="page-title">
+      <span data-en="Let's connect & build" data-es="Conectemos y construyamos">Let's connect & build</span>
+      <strong data-en="something impactful." data-es="algo de gran impacto.">something impactful.</strong>
+    </h1>
+
+    <p class="page-description" data-en="Looking for a front-end / full-stack developer for brand events, web applications, or engineering projects? Send a message below or email directly." data-es="¿Buscas un desarrollador front-end / full-stack para eventos de marca, aplicaciones web o proyectos de ingeniería? Envía un mensaje a continuación o escribe directamente.">
+      Looking for a front-end / full-stack developer for brand events, web applications, or engineering projects? Send a message below or email directly.
+    </p>
+
+    <div class="contact-layout">
+      <!-- Contact Form Card -->
+      <div class="contact-form-card">
+        <div id="formSuccess" class="form-success-message">
+          <span data-en="Thank you! Your message has been sent successfully. I will respond to your email shortly." data-es="¡Gracias! Tu mensaje ha sido enviado con éxito. Te responderé a tu correo a la brevedad.">Thank you! Your message has been sent successfully. I will respond to your email shortly.</span>
+        </div>
+
+        <form id="contactForm" onsubmit="event.preventDefault(); document.getElementById('formSuccess').classList.add('active'); this.reset();">
+          <div class="form-group">
+            <label for="name" data-en="Your Name" data-es="Tu Nombre">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="e.g. Alex Morgan" />
+          </div>
+
+          <div class="form-group">
+            <label for="email" data-en="Email Address" data-es="Correo Electrónico">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="e.g. alex@company.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="projectType" data-en="Project / Inquiry Scope" data-es="Tipo de Proyecto o Consulta">Project / Inquiry Scope</label>
+            <select id="projectType" name="projectType">
+              <option value="freelance-event" data-en="Brand Event & Booking Platform" data-es="Plataforma de Evento de Marca">Brand Event & Booking Platform</option>
+              <option value="fullstack-app" data-en="Full-Stack Web Application" data-es="Aplicación Web Full-Stack">Full-Stack Web Application</option>
+              <option value="frontend-astro" data-en="Astro & Sass Development" data-es="Desarrollo en Astro y Sass">Astro & Sass Development</option>
+              <option value="hiring" data-en="Engineering Role / Job Inquiry" data-es="Oportunidad Laboral / Contratación">Engineering Role / Job Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label data-en="Estimated Budget (USD)" data-es="Presupuesto Estimado (USD)">Estimated Budget (USD)</label>
+            <div class="budget-selector">
+              <div class="budget-option">
+                <input type="radio" id="b1" name="budget" value="<2k" />
+                <label for="b1">&lt; $2k</label>
+              </div>
+              <div class="budget-option">
+                <input type="radio" id="b2" name="budget" value="2k-5k" checked />
+                <label for="b2">$2k - $5k</label>
+              </div>
+              <div class="budget-option">
+                <input type="radio" id="b3" name="budget" value="5k-10k" />
+                <label for="b3">$5k - $10k</label>
+              </div>
+              <div class="budget-option">
+                <input type="radio" id="b4" name="budget" value="10k+" />
+                <label for="b4">$10k+</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message" data-en="Project Details" data-es="Detalles del Proyecto">Project Details</label>
+            <textarea id="message" name="message" required placeholder="Tell me about your project, timeline, or position details..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span data-en="Send Message to Elias" data-es="Enviar Mensaje a Elias">Send Message to Elias</span>
+            <span aria-hidden="true">&#8594;</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Sidebar with Direct Info -->
+      <aside class="contact-info-sidebar">
+        <div class="info-card">
+          <h4 data-en="Direct Contact Info" data-es="Información Directa">Direct Contact Info</h4>
+
+          <div class="info-item">
+            <div class="info-icon">@</div>
+            <div class="info-detail">
+              <span data-en="Direct Email" data-es="Correo Directo">Direct Email</span>
+              <a href="mailto:eliasvelasquezf0404@gmail.com">eliasvelasquezf0404@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">#</div>
+            <div class="info-detail">
+              <span data-en="Phone / WhatsApp" data-es="Teléfono / WhatsApp">Phone / WhatsApp</span>
+              <a href="https://wa.me/573024625580" target="_blank" rel="noopener noreferrer">+57 302 462 5580</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">*</div>
+            <div class="info-detail">
+              <span data-en="Location" data-es="Ubicación">Location</span>
+              <strong>Cartagena, Colombia</strong>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">+</div>
+            <div class="info-detail">
+              <span data-en="University" data-es="Universidad">University</span>
+              <strong data-en="Universidad de Cartagena" data-es="Universidad de Cartagena">Universidad de Cartagena</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h4 data-en="Developer Profiles" data-es="Perfiles de Desarrollador">Developer Profiles</h4>
+          <div class="socials-grid">
+            <a href="https://github.com/Evf04" target="_blank" rel="noopener noreferrer" class="social-pill">
+              <span>GitHub (Evf04)</span>
+              <span>&#8599;</span>
+            </a>
+            <a href="mailto:eliasvelasquezf0404@gmail.com" class="social-pill">
+              <span>Send Email</span>
+              <span>&#8599;</span>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</Layout>
