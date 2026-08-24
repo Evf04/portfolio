@@ -21,14 +21,12 @@ const currentPath = pathname.replace(/\/$/, "");
       <span class="lang-es" aria-hidden="true">ES</span>
     </button>
 
-    <button class="theme-toggle" type="button" aria-label="Toggle theme">
-      <span aria-hidden="true">*</span>
-      <span aria-hidden="true">/</span>
-      <span aria-hidden="true">&lt;</span>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark/light theme" id="themeToggle">
+      <span class="theme-label" data-en="Theme" data-es="Tema">Theme</span>
     </button>
 
-    <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle mobile menu">
-      ☰
+    <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span aria-hidden="true">☰</span>
     </button>
   </div>
 
@@ -41,11 +39,30 @@ const currentPath = pathname.replace(/\/$/, "");
 </header>
 
 <script is:inline>
-  // Mobile Nav Toggle Logic
+  // Mobile Nav Toggle Logic with Accessibility & Escape Key Handling
   const mobileToggle = document.getElementById("mobileNavToggle");
   const mobileMenu = document.getElementById("mobileMenu");
 
+  function setMobileMenu(open) {
+    if (open) {
+      mobileMenu?.classList.add("open");
+      mobileToggle?.setAttribute("aria-expanded", "true");
+    } else {
+      mobileMenu?.classList.remove("open");
+      mobileToggle?.setAttribute("aria-expanded", "false");
+    }
+  }
+
   mobileToggle?.addEventListener("click", () => {
-    mobileMenu?.classList.toggle("open");
+    const isOpen = mobileMenu?.classList.contains("open");
+    setMobileMenu(!isOpen);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileMenu?.classList.contains("open")) {
+      setMobileMenu(false);
+      mobileToggle?.focus();
+    }
   });
 </script>
+

@@ -5,12 +5,11 @@ import WaveArt from "../components/WaveArt.astro";
 
 <Layout
   title="Elias Velasquez | Front-End & Full-Stack Developer"
-  description="Portfolio of Elias Velasquez Fuentes - Systems Engineering student and Front-End/Full-Stack Developer specializing in Astro, TypeScript, Sass, Supabase, and PostgreSQL."
+  description="Portfolio of Elias Velasquez Fuentes - Systems Engineering student and Front-End/Full-Stack Developer specializing in Astro, JavaScript, Sass, Supabase, and PostgreSQL."
 >
   <main class="hero" aria-labelledby="hero-title">
     <div class="hero-copy">
       <p class="eyebrow">
-        <span aria-hidden="true">&lt;/&gt;</span>
         <span data-en="Front-End / Full-Stack Developer" data-es="Desarrollador Front-End / Full-Stack">Front-End / Full-Stack Developer</span>
       </p>
 
@@ -21,9 +20,9 @@ import WaveArt from "../components/WaveArt.astro";
       </h1>
 
       <p class="intro">
-        <span data-en="Crafting high-performance web applications and brand platforms for Adidas events —" data-es="Construyendo aplicaciones web de alto rendimiento y plataformas para eventos de Adidas —">Crafting high-performance web applications and brand platforms for Adidas events —</span>
-        <span data-en="from rapid booking flows to full database integrations" data-es="desde flujos de reserva rápidos hasta integración de bases de datos">from rapid booking flows to full database integrations </span> 
-        <span data-en="with Astro, TypeScript, Supabase, and PostgreSQL." data-es="con Astro, TypeScript, Supabase y PostgreSQL.">with Astro, TypeScript, Supabase, and PostgreSQL.</span>
+        <span data-en="Crafting high-performance web applications, booking platforms, and digital experiences —" data-es="Desarrollando aplicaciones web de alto rendimiento, plataformas de reservas y experiencias digitales —">Crafting high-performance web applications, booking platforms, and digital experiences —</span>
+        <span data-en="from fast-paced interactive flows to full database integrations" data-es="desde flujos interactivos rápidos hasta integración de bases de datos">from fast-paced interactive flows to full database integrations </span> 
+        <span data-en="with Astro, modern JavaScript, Supabase, and PostgreSQL." data-es="con Astro, JavaScript moderno, Supabase y PostgreSQL.">with Astro, modern JavaScript, Supabase, and PostgreSQL.</span>
       </p>
 
       <div class="hero-actions">
@@ -35,10 +34,45 @@ import WaveArt from "../components/WaveArt.astro";
           <span data-en="About Elias" data-es="Sobre Elias">About Elias</span>
         </a>
       </div>
-
-      <div class="scroll-mark" aria-hidden="true">( ) SCROLL FOR CASE STUDIES</div>
     </div>
 
-    <WaveArt />
+    <!-- Right-Side Visual: Wave Art + Asymmetric Staggered Screenshot Fan -->
+    <div class="hero-visual" aria-label="Interactive Showcase">
+      <div class="hero-snaps-fan" aria-label="Featured Project Snapshots">
+        <a href="/work" class="snap-widget snap-widget-1" aria-label="Project Snap 01">
+          <div class="snap-preview">
+            <!-- Drop project 1 screenshot here: <img src="/path/to/snap1.png" alt="Project 1 preview" /> -->
+            <div class="snap-placeholder">
+              <span class="snap-placeholder-badge">01</span>
+              <span class="snap-placeholder-label" data-en="Project Snap" data-es="Captura 01">Project Snap</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/work" class="snap-widget snap-widget-2" aria-label="Project Snap 02">
+          <div class="snap-preview">
+            <!-- Drop project 2 screenshot here: <img src="/path/to/snap2.png" alt="Project 2 preview" /> -->
+            <div class="snap-placeholder">
+              <span class="snap-placeholder-badge">02</span>
+              <span class="snap-placeholder-label" data-en="Project Snap" data-es="Captura 02">Project Snap</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/work" class="snap-widget snap-widget-3 snap-wip" aria-label="Work in Progress Project">
+          <div class="snap-preview">
+            <!-- Drop project 3 screenshot here when ready -->
+            <div class="snap-placeholder snap-placeholder-wip">
+              <span class="snap-placeholder-badge" data-en="Work in Progress" data-es="En Progreso...">Work in Progress</span>
+              <span class="wip-subtext" data-en="Upcoming project" data-es="Próximo proyecto">Upcoming project</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+
+      <WaveArt />
+    </div>
   </main>
 </Layout>

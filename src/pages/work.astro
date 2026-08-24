@@ -3,231 +3,228 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-  title="Featured Work & Case Studies | Elias Velasquez"
-  description="Explore real web development case studies and live projects by Elias Velasquez, including Adidas brand launch platforms and full-stack applications."
+  title="Selected Work & Case Studies | Elias Velasquez"
+  description="Explore real web development case studies and live platforms by Elias Velasquez, including high-concurrency event booking systems and database integrations."
 >
-  <main class="page-container">
-    <div class="section-tag">
-      <span class="tag-code" aria-hidden="true">&lt;/&gt;</span>
-      <span data-en="Featured Work & Case Studies" data-es="Trabajos Destacados y Casos de Estudio">Featured Work & Case Studies</span>
-    </div>
+  <main class="page-container work-page">
+    <header class="work-header">
+      <h1 class="page-title">
+        <span data-en="Real projects," data-es="Proyectos reales,">Real projects,</span>
+        <strong data-en="proven business impact." data-es="impacto comprobado.">proven business impact.</strong>
+      </h1>
 
-    <h1 class="page-title">
-      <span data-en="Real projects," data-es="Proyectos reales,">Real projects,</span>
-      <strong data-en="proven business impact." data-es="impacto comprobado.">proven business impact.</strong>
-    </h1>
+      <p class="page-description" data-en="In-depth case studies of high-performance web applications and booking systems engineered for brand launch events, featuring live production demos, UI snapshots, and technical architecture." data-es="Casos de estudio detallados de aplicaciones web y sistemas de reserva desarrollados para eventos de marca, con demos en vivo, capturas de interfaz y arquitectura técnica.">
+        In-depth case studies of high-performance web applications and booking systems engineered for brand launch events, featuring live production demos, UI snapshots, and technical architecture.
+      </p>
+    </header>
 
-    <p class="page-description" data-en="Explore detailed case studies of web platforms engineered for brand launch events, user registration flows, and cloud architectures with working live demos." data-es="Explora casos de estudio detallados de plataformas web desarrolladas para eventos de marca, flujos de registro de usuarios y arquitecturas en la nube con demos en vivo.">
-      Explore detailed case studies of web platforms engineered for brand launch events, user registration flows, and cloud architectures with working live demos.
-    </p>
-
-    <!-- Filter Buttons -->
-    <div class="work-filter-bar">
-      <button class="filter-btn active" data-filter="all" data-en="All Case Studies" data-es="Todos los Casos de Estudio">All Case Studies</button>
-      <button class="filter-btn" data-filter="freelance" data-en="Adidas Freelance" data-es="Freelance Adidas">Adidas Freelance</button>
-      <button class="filter-btn" data-filter="fullstack" data-en="Full-Stack & DB" data-es="Full-Stack y BD">Full-Stack & DB</button>
-      <button class="filter-btn" data-filter="aws" data-en="AWS & Cloud" data-es="AWS y Nube">AWS & Cloud</button>
-    </div>
-
-    <!-- Projects Grid -->
-    <div class="projects-grid">
-      <!-- Project 1: Adidas Original Forever -->
-      <article class="project-card" data-category="freelance">
-        <div class="project-image-wrapper">
-          <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="400" height="225" fill="#080f15"/>
-            <rect x="25" y="25" width="350" height="175" rx="6" fill="#0d1721" stroke="#63c8df" stroke-width="2"/>
-            <text x="45" y="65" fill="#63c8df" font-family="Inter, sans-serif" font-weight="900" font-size="18">ADIDAS ORIGINALS</text>
-            <text x="45" y="90" fill="#f4f6f7" font-family="Inter, sans-serif" font-weight="800" font-size="14">"Original Forever" Booking Platform</text>
-            <rect x="45" y="110" width="140" height="28" rx="4" fill="#153443" stroke="#3b7885"/>
-            <text x="55" y="128" fill="#63c8df" font-family="Inter, sans-serif" font-size="11" font-weight="800">SLOT RESERVATION</text>
-            <rect x="200" y="110" width="155" height="65" rx="4" fill="#070c11" stroke="#1d2a38"/>
-            <circle cx="225" cy="135" r="10" fill="#63c8df"/>
-            <text x="245" y="139" fill="#f4f6f7" font-family="Inter, sans-serif" font-size="11" font-weight="700">Zero Queue Entry</text>
-          </svg>
-          <span class="project-badge" data-en="Adidas Event Platform" data-es="Plataforma de Evento Adidas">Adidas Event Platform</span>
-        </div>
-        <div class="project-body">
-          <div class="project-metric">
-            <span class="metric-icon">&lt;/&gt;</span>
-            <span data-en="Eliminated Event Queues" data-es="Eliminación de Filas en Evento">Eliminated Event Queues</span>
+    <!-- Deep-Dive Case Studies Stack -->
+    <div class="case-studies-stack">
+      <!-- Case Study 01: Original Forever -->
+      <article class="case-study-dossier" aria-labelledby="project-1-title">
+        <div class="dossier-header">
+          <div class="dossier-title-group">
+            <span class="dossier-badge" data-en="Brand Launch Platform" data-es="Plataforma de Lanzamiento">Brand Launch Platform</span>
+            <h2 id="project-1-title" class="dossier-title">
+              <a href="https://slotsadidasoriginals-p.netlify.app" target="_blank" rel="noopener noreferrer">
+                "Original Forever" Time-Slot Reservation System
+              </a>
+            </h2>
           </div>
-          <h3 class="project-title">
-            <a href="https://slotsadidasoriginals-p.netlify.app" target="_blank" rel="noopener noreferrer">Adidas "Original Forever" Launch Platform</a>
-          </h3>
-          <p class="project-desc" data-en="Engineered a high-speed time-slot reservation system for Adidas' product launch event in Colombia. Streamlined visitor check-in, managed attendee capacity limits, and integrated Supabase & PostgreSQL database storage." data-es="Desarrollo de un sistema de reserva por turnos para el evento de lanzamiento de Adidas en Colombia. Agilizó el ingreso de asistentes, gestionó aforos e integró almacenamiento de datos con Supabase y PostgreSQL.">
-            Engineered a high-speed time-slot reservation system for Adidas' product launch event in Colombia. Streamlined visitor check-in, managed attendee capacity limits, and integrated Supabase & PostgreSQL database storage.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Astro</span>
-            <span class="tech-tag">Sass</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">Supabase</span>
-            <span class="tech-tag">PostgreSQL</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://slotsadidasoriginals-p.netlify.app" class="btn-project-primary" target="_blank" rel="noopener noreferrer">
-              <span data-en="Launch Live Demo" data-es="Ver Demo En Vivo">Launch Live Demo</span> &#8599;
+
+          <div class="dossier-actions">
+            <a href="https://slotsadidasoriginals-p.netlify.app" class="btn-live-demo" target="_blank" rel="noopener noreferrer">
+              <span data-en="Launch Live Demo" data-es="Ver Demo en Vivo">Launch Live Demo</span>
+              <span aria-hidden="true" class="arrow">&#8599;</span>
             </a>
-            <a href="https://github.com/Evf04" class="btn-project-secondary" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-              &lt;/&gt;
+            <a href="https://github.com/Evf04" class="btn-source" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              GitHub
             </a>
           </div>
         </div>
-      </article>
 
-      <!-- Project 2: Adidas Hotel Superstar -->
-      <article class="project-card" data-category="freelance">
-        <div class="project-image-wrapper">
-          <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="400" height="225" fill="#060a0e"/>
-            <rect x="25" y="25" width="350" height="175" rx="6" fill="#0e171f" stroke="#3b7885" stroke-width="2"/>
-            <text x="45" y="65" fill="#63c8df" font-family="Inter, sans-serif" font-weight="900" font-size="18">HOTEL SUPERSTAR</text>
-            <text x="45" y="90" fill="#f4f6f7" font-family="Inter, sans-serif" font-weight="800" font-size="14">Adidas Brand Experience Hub</text>
-            <rect x="45" y="115" width="310" height="60" rx="4" fill="#162330"/>
-            <rect x="60" y="130" width="80" height="30" rx="3" fill="#63c8df"/>
-            <text x="73" y="150" fill="#050a0d" font-family="Inter, sans-serif" font-weight="900" font-size="12">RSVP</text>
-            <rect x="155" y="130" width="180" height="10" rx="2" fill="#3b7885"/>
-            <rect x="155" y="146" width="120" height="10" rx="2" fill="#286169"/>
-          </svg>
-          <span class="project-badge" data-en="Adidas Brand Hub" data-es="Plataforma de Experiencia Adidas">Adidas Brand Hub</span>
-        </div>
-        <div class="project-body">
-          <div class="project-metric">
-            <span class="metric-icon">&lt;/&gt;</span>
-            <span data-en="Centralized RSVP & Schedules" data-es="Centralización de Reservas e Itinerarios">Centralized RSVP & Schedules</span>
+        <!-- Snapshots Gallery Grid -->
+        <div class="dossier-snapshots" aria-label="Project UI Snapshots">
+          <div class="snapshot-slot main-snap">
+            <div class="snapshot-frame">
+              <!-- Vector preview / Drop image here: <img src="/path/to/snap1.png" alt="Original Forever Main View" /> -->
+              <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="400" height="225" fill="#080f15"/>
+                <rect x="20" y="20" width="360" height="185" rx="6" fill="#0d1721" stroke="#63c8df" stroke-width="1.5"/>
+                <text x="40" y="60" fill="#63c8df" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" letter-spacing="1">LAUNCH EVENT PLATFORM</text>
+                <text x="40" y="88" fill="#f4f6f7" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="18">"Original Forever" Booking</text>
+                <rect x="40" y="112" width="150" height="30" rx="4" fill="#153443" stroke="#3b7885"/>
+                <text x="52" y="132" fill="#63c8df" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="800">SLOT RESERVATION</text>
+                <rect x="210" y="112" width="150" height="65" rx="4" fill="#070c11" stroke="#1d2a38"/>
+                <circle cx="235" cy="138" r="8" fill="#63c8df"/>
+                <text x="252" y="142" fill="#f4f6f7" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="700">Zero Queue Flow</text>
+              </svg>
+            </div>
+            <span class="snap-caption" data-en="Overview: Time-slot reservation interface and digital entry flow" data-es="Vista general: Interfaz de reserva por turnos y flujo de ingreso digital">Overview: Time-slot reservation interface and digital entry flow</span>
           </div>
-          <h3 class="project-title">
-            <a href="https://experienciasuperstar-p.netlify.app" target="_blank" rel="noopener noreferrer">Adidas "Hotel Superstar" Experience Portal</a>
-          </h3>
-          <p class="project-desc" data-en="Centralized web application for the Adidas Hotel Superstar experience, allowing attendees to view activity schedules, reserve spots, and confirm real-time attendance in a unified portal." data-es="Plataforma web centralizada para la experiencia Hotel Superstar de Adidas, permitiendo a los asistentes consultar itinerarios de actividades, reservar cupos y confirmar asistencia en tiempo real.">
-            Centralized web application for the Adidas Hotel Superstar experience, allowing attendees to view activity schedules, reserve spots, and confirm real-time attendance in a unified portal.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Astro</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Sass</span>
-            <span class="tech-tag">Supabase</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://experienciasuperstar-p.netlify.app" class="btn-project-primary" target="_blank" rel="noopener noreferrer">
-              <span data-en="Launch Live Demo" data-es="Ver Demo En Vivo">Launch Live Demo</span> &#8599;
-            </a>
-            <a href="https://github.com/Evf04" class="btn-project-secondary" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-              &lt;/&gt;
-            </a>
-          </div>
-        </div>
-      </article>
 
-      <!-- Project 3: AWS Cloud & Data Engineering -->
-      <article class="project-card" data-category="aws">
-        <div class="project-image-wrapper">
-          <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="400" height="225" fill="#090e14"/>
-            <rect x="30" y="30" width="340" height="165" rx="6" fill="#101a24" stroke="#254d5f" stroke-width="2"/>
-            <text x="50" y="70" fill="#63c8df" font-family="Inter, sans-serif" font-weight="900" font-size="16">AWS ACADEMY GRADUATE</text>
-            <text x="50" y="95" fill="#f4f6f7" font-family="Inter, sans-serif" font-weight="800" font-size="13">Cloud Architecting & Data Pipelines</text>
-            <rect x="50" y="115" width="90" height="50" rx="4" fill="#1b2a39"/>
-            <rect x="155" y="115" width="90" height="50" rx="4" fill="#1b2a39"/>
-            <rect x="260" y="115" width="90" height="50" rx="4" fill="#63c8df" fill-opacity="0.2" stroke="#63c8df"/>
-          </svg>
-          <span class="project-badge" data-en="AWS Certified Labs" data-es="Proyectos AWS Certified">AWS Certified Labs</span>
+          <div class="snapshot-sub-grid">
+            <div class="snapshot-slot">
+              <div class="snapshot-frame">
+                <!-- Drop screenshot 2 here: <img src="/path/to/snap2.png" alt="Capacity and Shift Selector" /> -->
+                <div class="snap-placeholder">
+                  <span class="snap-badge">02</span>
+                  <span class="snap-label" data-en="Capacity & Shift Selector" data-es="Selector de Horarios y Aforo">Capacity & Shift Selector</span>
+                </div>
+              </div>
+              <span class="snap-caption" data-en="Shift & attendee capacity rules" data-es="Gestión de aforo y cupos por turno">Shift & attendee capacity rules</span>
+            </div>
+
+            <div class="snapshot-slot">
+              <div class="snapshot-frame">
+                <!-- Drop screenshot 3 here: <img src="/path/to/snap3.png" alt="Real-time confirmation flow" /> -->
+                <div class="snap-placeholder">
+                  <span class="snap-badge">03</span>
+                  <span class="snap-label" data-en="Real-Time Database Sync" data-es="Sincronización en Tiempo Real">Real-Time Database Sync</span>
+                </div>
+              </div>
+              <span class="snap-caption" data-en="Instant PostgreSQL/Supabase confirmation" data-es="Confirmación instantánea en PostgreSQL/Supabase">Instant PostgreSQL/Supabase confirmation</span>
+            </div>
+          </div>
         </div>
-        <div class="project-body">
-          <div class="project-metric">
-            <span class="metric-icon">&lt;/&gt;</span>
-            <span data-en="Architecting, Data & Developing" data-es="Arquitectura, Datos y Desarrollo">Architecting, Data & Developing</span>
+
+        <!-- Case Study Detailed Narrative -->
+        <div class="dossier-body">
+          <div class="dossier-column">
+            <h3 class="breakdown-heading" data-en="The Challenge" data-es="El Desafío">The Challenge</h3>
+            <p data-en="Brand product launch events often encounter severe registration bottlenecks, leading to long physical queues and attendee frustration. The objective was to build a zero-latency reservation interface capable of enforcing strict capacity limits per hourly shift." data-es="Los eventos de lanzamiento de marca suelen enfrentar cuellos de botella en el registro, generando filas físicas y retrasos. El objetivo fue crear una interfaz de reserva de latencia cero capaz de gestionar cupos estrictos por horario.">
+              Brand product launch events often encounter severe registration bottlenecks, leading to long physical queues and attendee frustration. The objective was to build a zero-latency reservation interface capable of enforcing strict capacity limits per hourly shift.
+            </p>
           </div>
-          <h3 class="project-title">
-            <a href="https://github.com/Evf04" target="_blank" rel="noopener noreferrer">AWS Cloud & Data Engineering Architecture</a>
-          </h3>
-          <p class="project-desc" data-en="Cloud architecture designs, serverless API deployments, and data engineering pipelines developed across three AWS Academy Graduate certifications." data-es="Diseños de arquitectura en la nube, despliegues de API serverless y pipelines de ingeniería de datos desarrollados en las tres certificaciones de AWS Academy.">
-            Cloud architecture designs, serverless API deployments, and data engineering pipelines developed across three AWS Academy Graduate certifications.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">AWS Cloud</span>
-            <span class="tech-tag">Data Engineering</span>
-            <span class="tech-tag">SQL</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">Node.js</span>
+
+          <div class="dossier-column">
+            <h3 class="breakdown-heading" data-en="Engineering Solution" data-es="Solución de Ingeniería">Engineering Solution</h3>
+            <p data-en="Architected a lightweight Astro application utilizing modern JavaScript and modular SCSS for fast mobile rendering. Connected the front-end to a Supabase & PostgreSQL backend to lock time-slots in real time and deliver instant digital entry confirmations." data-es="Desarrollo de una aplicación ligera en Astro utilizando JavaScript moderno y SCSS modular para cargas instantáneas en móviles. Conexión del front-end a Supabase y PostgreSQL para bloquear cupos en tiempo real y entregar confirmaciones digitales inmediatas.">
+              Architected a lightweight Astro application utilizing modern JavaScript and modular SCSS for fast mobile rendering. Connected the front-end to a Supabase & PostgreSQL backend to lock time-slots in real time and deliver instant digital entry confirmations.
+            </p>
           </div>
-          <div class="project-actions">
-            <a href="https://github.com/Evf04" class="btn-project-primary" target="_blank" rel="noopener noreferrer">
-              <span data-en="View AWS Profile" data-es="Ver Perfil AWS">View AWS Profile</span> &#8599;
-            </a>
-            <a href="https://github.com/Evf04" class="btn-project-secondary" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-              &lt;/&gt;
-            </a>
+
+          <div class="dossier-column">
+            <h3 class="breakdown-heading" data-en="Business Impact & Deliverables" data-es="Impacto y Entregables">Business Impact & Deliverables</h3>
+            <ul class="deliverables-list">
+              <li data-en="Eliminated physical queuing bottlenecks with frictionless digital entry." data-es="Eliminación de filas físicas mediante ingreso digital fluido.">Eliminated physical queuing bottlenecks with frictionless digital entry.</li>
+              <li data-en="Enforced real-time attendee capacity limits across all event shifts." data-es="Control estricto de aforo en tiempo real en todos los turnos.">Enforced real-time attendee capacity limits across all event shifts.</li>
+              <li data-en="Automated database storage with PostgreSQL and Supabase." data-es="Almacenamiento y confirmación automatizada con PostgreSQL y Supabase.">Automated database storage with PostgreSQL and Supabase.</li>
+            </ul>
+
+            <div class="dossier-tech-stack">
+              <span class="tech-tag">Astro</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">SCSS</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">PostgreSQL</span>
+            </div>
           </div>
         </div>
       </article>
 
-      <!-- Project 4: Systems Engineering Platform -->
-      <article class="project-card" data-category="fullstack">
-        <div class="project-image-wrapper">
-          <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="400" height="225" fill="#050a0d"/>
-            <rect x="30" y="30" width="340" height="165" rx="6" fill="#0b131a" stroke="#1c2938" stroke-width="2"/>
-            <text x="50" y="70" fill="#63c8df" font-family="Inter, sans-serif" font-weight="900" font-size="16">UNIVERSIDAD DE CARTAGENA</text>
-            <text x="50" y="95" fill="#f4f6f7" font-family="Inter, sans-serif" font-weight="800" font-size="13">Systems Engineering Core Labs</text>
-            <rect x="50" y="115" width="300" height="50" rx="4" fill="#121c2c"/>
-          </svg>
-          <span class="project-badge" data-en="Systems Engineering" data-es="Ingeniería de Sistemas">Systems Engineering</span>
+      <!-- Case Study 02: Hotel Superstar -->
+      <article class="case-study-dossier" aria-labelledby="project-2-title">
+        <div class="dossier-header">
+          <div class="dossier-title-group">
+            <span class="dossier-badge" data-en="Brand Experience Portal" data-es="Portal de Experiencia de Marca">Brand Experience Portal</span>
+            <h2 id="project-2-title" class="dossier-title">
+              <a href="https://experienciasuperstar-p.netlify.app" target="_blank" rel="noopener noreferrer">
+                "Hotel Superstar" Experience Portal & RSVP Hub
+              </a>
+            </h2>
+          </div>
+
+          <div class="dossier-actions">
+            <a href="https://experienciasuperstar-p.netlify.app" class="btn-live-demo" target="_blank" rel="noopener noreferrer">
+              <span data-en="Launch Live Demo" data-es="Ver Demo en Vivo">Launch Live Demo</span>
+              <span aria-hidden="true" class="arrow">&#8599;</span>
+            </a>
+            <a href="https://github.com/Evf04" class="btn-source" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              GitHub
+            </a>
+          </div>
         </div>
-        <div class="project-body">
-          <div class="project-metric">
-            <span class="metric-icon">&lt;/&gt;</span>
-            <span data-en="Relational Systems & APIs" data-es="Sistemas Relacionales y APIs">Relational Systems & APIs</span>
+
+        <!-- Snapshots Gallery Grid -->
+        <div class="dossier-snapshots" aria-label="Project UI Snapshots">
+          <div class="snapshot-slot main-snap">
+            <div class="snapshot-frame">
+              <!-- Vector preview / Drop image here: <img src="/path/to/snap1.png" alt="Hotel Superstar Portal View" /> -->
+              <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="400" height="225" fill="#060a0e"/>
+                <rect x="20" y="20" width="360" height="185" rx="6" fill="#0e171f" stroke="#3b7885" stroke-width="1.5"/>
+                <text x="40" y="60" fill="#63c8df" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" letter-spacing="1">EXPERIENCE PORTAL</text>
+                <text x="40" y="88" fill="#f4f6f7" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="18">"Hotel Superstar" Hub</text>
+                <rect x="40" y="115" width="320" height="60" rx="4" fill="#162330"/>
+                <rect x="55" y="130" width="80" height="30" rx="3" fill="#63c8df"/>
+                <text x="70" y="150" fill="#050a0d" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="12">RSVP</text>
+                <rect x="150" y="130" width="190" height="10" rx="2" fill="#3b7885"/>
+                <rect x="150" y="146" width="130" height="10" rx="2" fill="#286169"/>
+              </svg>
+            </div>
+            <span class="snap-caption" data-en="Overview: Activity scheduling, RSVP flow, and brand portal" data-es="Vista general: Itinerario de actividades, RSVP y portal de marca">Overview: Activity scheduling, RSVP flow, and brand portal</span>
           </div>
-          <h3 class="project-title">
-            <a href="https://github.com/Evf04" target="_blank" rel="noopener noreferrer">Relational Database & Systems Architecture</a>
-          </h3>
-          <p class="project-desc" data-en="Full-stack database systems, RESTful services, and structured SQL/PostgreSQL schemas created as part of the Systems Engineering degree at Universidad de Cartagena." data-es="Sistemas de bases de datos full-stack, servicios RESTful y esquemas SQL/PostgreSQL creados como parte de la carrera de Ingeniería de Sistemas.">
-            Full-stack database systems, RESTful services, and structured SQL/PostgreSQL schemas created as part of the Systems Engineering degree at Universidad de Cartagena.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">REST APIs</span>
-            <span class="tech-tag">Git</span>
+
+          <div class="snapshot-sub-grid">
+            <div class="snapshot-slot">
+              <div class="snapshot-frame">
+                <!-- Drop screenshot 2 here: <img src="/path/to/snap2.png" alt="Activity Schedule Matrix" /> -->
+                <div class="snap-placeholder">
+                  <span class="snap-badge">02</span>
+                  <span class="snap-label" data-en="Activity Schedule Matrix" data-es="Matriz de Itinerarios">Activity Schedule Matrix</span>
+                </div>
+              </div>
+              <span class="snap-caption" data-en="Dynamic schedule and session slots" data-es="Horarios dinámicos y sesiones">Dynamic schedule and session slots</span>
+            </div>
+
+            <div class="snapshot-slot">
+              <div class="snapshot-frame">
+                <!-- Drop screenshot 3 here: <img src="/path/to/snap3.png" alt="Attendance Confirmation" /> -->
+                <div class="snap-placeholder">
+                  <span class="snap-badge">03</span>
+                  <span class="snap-label" data-en="Attendance Confirmation" data-es="Confirmación de Asistencia">Attendance Confirmation</span>
+                </div>
+              </div>
+              <span class="snap-caption" data-en="Unified attendee check-in confirmation" data-es="Confirmación unificada de asistencia">Unified attendee check-in confirmation</span>
+            </div>
           </div>
-          <div class="project-actions">
-            <a href="https://github.com/Evf04" class="btn-project-primary" target="_blank" rel="noopener noreferrer">
-              <span data-en="View Repositories" data-es="Ver Repositorios">View Repositories</span> &#8599;
-            </a>
-            <a href="https://github.com/Evf04" class="btn-project-secondary" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-              &lt;/&gt;
-            </a>
+        </div>
+
+        <!-- Case Study Detailed Narrative -->
+        <div class="dossier-body">
+          <div class="dossier-column">
+            <h3 class="breakdown-heading" data-en="The Challenge" data-es="El Desafío">The Challenge</h3>
+            <p data-en="The 'Hotel Superstar' brand activation required a unified digital hub for attendees to navigate multi-room event schedules, confirm RSVP reservations, and verify session access in real time without fragmented communication channels." data-es="La activación de marca 'Hotel Superstar' requería un portal centralizado para que los asistentes consultaran cronogramas por salas, confirmaran reservas RSVP y verificaran accesos sin canales fragmentados.">
+              The 'Hotel Superstar' brand activation required a unified digital hub for attendees to navigate multi-room event schedules, confirm RSVP reservations, and verify session access in real time without fragmented communication channels.
+            </p>
+          </div>
+
+          <div class="dossier-column">
+            <h3 class="breakdown-heading" data-en="Engineering Solution" data-es="Solución de Ingeniería">Engineering Solution</h3>
+            <p data-en="Developed a responsive web portal connecting client-side state with Node.js and Supabase backend services. Implemented structured schedule views, interactive activity reservations, and real-time attendance validation for on-site hosts." data-es="Desarrollo de un portal web responsivo conectando estado del cliente con servicios backend en Node.js y Supabase. Implementación de cronogramas estructurados, reservas interactivas y validación de asistencia en tiempo real.">
+              Developed a responsive web portal connecting client-side state with Node.js and Supabase backend services. Implemented structured schedule views, interactive activity reservations, and real-time attendance validation for on-site hosts.
+            </p>
+          </div>
+
+          <div class="dossier-column">
+            <h3 class="breakdown-heading" data-en="Business Impact & Deliverables" data-es="Impacto y Entregables">Business Impact & Deliverables</h3>
+            <ul class="deliverables-list">
+              <li data-en="Centralized multi-room event schedules and session itineraries." data-es="Centralización de cronogramas e itinerarios del evento.">Centralized multi-room event schedules and session itineraries.</li>
+              <li data-en="Real-time RSVP confirmation and capacity tracking." data-es="Confirmación RSVP y seguimiento de aforo en tiempo real.">Real-time RSVP confirmation and capacity tracking.</li>
+              <li data-en="Zero-friction responsive interface optimized for mobile attendees." data-es="Interfaz responsiva optimizada para dispositivos móviles.">Zero-friction responsive interface optimized for mobile attendees.</li>
+            </ul>
+
+            <div class="dossier-tech-stack">
+              <span class="tech-tag">Astro</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">SCSS</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Supabase</span>
+            </div>
           </div>
         </div>
       </article>
     </div>
   </main>
-
-  <script is:inline>
-    // Project Category Filter Script
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const projectCards = document.querySelectorAll(".project-card");
-
-    filterButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const filter = btn.getAttribute("data-filter");
-
-        filterButtons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        projectCards.forEach((card) => {
-          const category = card.getAttribute("data-category");
-          if (filter === "all" || category === filter) {
-            card.style.display = "flex";
-          } else {
-            card.style.display = "none";
-          }
-        });
-      });
-    });
-  </script>
 </Layout>

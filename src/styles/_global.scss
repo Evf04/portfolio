@@ -1,6 +1,9 @@
 @use "variables" as *;
 
 :root {
+  --font-display: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
   --page: #{$page-dark};
   --ink: #{$ink-dark};
   --muted: #{$muted-dark};
@@ -32,11 +35,29 @@ body {
   width: 100%;
   background: var(--page);
   color: var(--ink);
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-body);
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero-heading,
+.page-title,
+.brand-logo,
+.impact-link,
+.section-title,
+.specs-title,
+.timeline-heading,
+.project-title {
+  font-family: var(--font-display);
+}
+
 
 a {
   color: inherit;
@@ -110,6 +131,17 @@ button {
   line-height: 1.6;
 }
 
+// Interactive Focus Management & Craft Details
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent-deep);
+  color: var(--accent);
+}
+
 // Light Theme Modifiers
 body.light-theme {
   --page: #{$page-light};
@@ -120,8 +152,26 @@ body.light-theme {
   --card-bg: #ffffff;
   --card-border: #d4dde0;
   --input-bg: #e9eff1;
+  --accent: #{$accent-light};
+  --accent-deep: #{$accent-deep-light};
+  --accent-mid: #{$accent-mid-light};
+  --accent-soft: #{$accent-soft-light};
+  --accent-glow: #{$accent-glow-light};
 
   .page-title {
     color: #070c11;
   }
 }
+
+// Accessibility: Motion Sensitivity Accommodation
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

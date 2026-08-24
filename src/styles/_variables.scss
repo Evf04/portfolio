@@ -16,6 +16,12 @@ $panel-light: #f1f4f7;
 $ink-light: #070c11;
 $muted-light: #465054;
 $line-light: #cbd4d7;
+$accent-light: #156d80;
+$accent-deep-light: #d8edf1;
+$accent-mid-light: #1b7a8f;
+$accent-soft-light: #2b8b9f;
+$accent-glow-light: rgba(21, 109, 128, 0.18);
+
 
 // Responsive Breakpoints Mixins
 @mixin desktop-xl {

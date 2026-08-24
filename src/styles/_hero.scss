@@ -7,60 +7,57 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   @include tablet {
     min-height: auto;
-    padding: 20px 0 60px;
+    padding: 30px 0 60px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
 .hero-copy {
-  width: clamp(520px, 46vw, 750px);
+  width: clamp(480px, 44vw, 680px);
   max-width: calc(100% - 48px);
-  padding: clamp(67px, 7.4vw, 126px) 0 38px clamp(33px, 4.1vw, 65px);
+  padding: clamp(50px, 6vw, 100px) 0 38px clamp(32px, 4.1vw, 64px);
   position: relative;
-  z-index: 2;
+  z-index: 5;
 
   @include tablet-large {
-    padding: 67px 0 38px 33px;
+    padding: 50px 0 32px 32px;
+    width: clamp(440px, 46vw, 580px);
   }
 
   @include tablet {
-    width: min(100%, 450px);
+    width: min(100%, 480px);
     max-width: calc(100vw - 44px);
-    padding: 40px 22px 20px;
+    padding: 20px 22px 20px;
   }
 }
 
 .eyebrow {
-  margin: 0 0 12px;
-  display: grid;
-  gap: 4px;
+  margin: 0 0 14px;
+  display: inline-block;
   color: var(--accent);
-  font-size: clamp(20px, 2.2vw, 27px);
+  font-size: clamp(12px, 1.2vw, 14px);
   line-height: 1;
   font-weight: 900;
-  letter-spacing: 2.7px;
+  letter-spacing: 2px;
   text-transform: uppercase;
 
-  span {
-    font-size: 14px;
-    letter-spacing: 0;
-    color: var(--accent-soft);
-  }
-
   @include tablet {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 }
 
 h1.hero-heading {
-  max-width: 720px;
+  max-width: 640px;
   margin: 0;
   color: var(--ink);
   text-transform: uppercase;
-  font-size: clamp(34px, 4.05vw, 70px);
-  line-height: 1.03;
+  font-size: clamp(28px, 3.2vw, 50px);
+  line-height: 1.08;
   font-weight: 900;
 
   span,
@@ -79,17 +76,16 @@ h1.hero-heading {
   }
 
   @include tablet {
-    font-size: clamp(28px, 7.5vw, 36px);
+    font-size: clamp(26px, 6.8vw, 34px);
   }
 }
 
 .intro {
-  width: clamp(420px, 38vw, 885px);
-  max-width: 100%;
-  margin: 21px 0 31px;
+  width: min(100%, 540px);
+  margin: 18px 0 28px;
   color: var(--muted);
-  font-size: clamp(15px, 1.4vw, 22px);
-  line-height: 1.58;
+  font-size: clamp(14px, 1.15vw, 17px);
+  line-height: 1.6;
   font-weight: 500;
 
   span {
@@ -101,7 +97,7 @@ h1.hero-heading {
   }
 
   @include tablet {
-    margin: 20px 0 28px;
+    margin: 16px 0 24px;
     font-size: 14px;
   }
 }
@@ -125,6 +121,7 @@ h1.hero-heading {
   font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.5px;
+  border-radius: 6px;
   transition: all $transition-fast;
 
   &:hover {
@@ -134,7 +131,7 @@ h1.hero-heading {
   }
 
   @include tablet {
-    height: 42px;
+    height: 44px;
     padding: 0 18px;
     font-size: 12px;
   }
@@ -152,6 +149,7 @@ h1.hero-heading {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 800;
+  border-radius: 6px;
   transition: all $transition-fast;
 
   &:hover {
@@ -160,26 +158,39 @@ h1.hero-heading {
   }
 
   @include tablet {
-    height: 42px;
+    height: 44px;
     padding: 0 16px;
     font-size: 12px;
   }
 }
 
-.scroll-mark {
-  margin-top: 32px;
-  margin-left: 6px;
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  opacity: 0.7;
+/* Right-Side Visual: Wave Art + Asymmetric Staggered Screenshot Fan */
+.hero-visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: clamp(480px, 56vw, 920px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+
+  @include tablet {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 36px;
+    padding: 0 22px;
+    pointer-events: auto;
+  }
 }
 
 .wave-art {
-  width: clamp(249px, 32vw, 492px);
+  width: clamp(260px, 34vw, 520px);
   height: 100%;
-  min-width: 249px;
+  min-width: 260px;
   display: block;
   position: absolute;
   top: 0;
@@ -189,13 +200,214 @@ h1.hero-heading {
   transform: translateX(1px);
 
   @include tablet-large {
-    width: clamp(240px, 32vw, 430px);
+    width: clamp(240px, 30vw, 420px);
   }
 
   @include tablet {
     width: 100%;
     min-width: 0;
-    opacity: 0.25;
+    opacity: 0.22;
     transform: translateX(45%);
   }
 }
+
+.hero-snaps-fan {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 600px;
+  height: 540px;
+  margin-right: clamp(60px, 8vw, 150px);
+  pointer-events: auto;
+
+  @include tablet-large {
+    max-width: 500px;
+    height: 460px;
+    margin-right: 40px;
+  }
+
+  @include tablet {
+    height: auto;
+    margin-right: 0;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  @include mobile {
+    gap: 8px;
+  }
+}
+
+.snap-widget {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  width: clamp(245px, 20vw, 310px);
+  display: flex;
+  position: absolute;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+  transition: transform $transition-smooth, border-color $transition-smooth, box-shadow $transition-smooth, z-index 0.1s;
+  text-decoration: none;
+  cursor: pointer;
+
+  // Staggered Asymmetric Fan with generous separation across the waves
+  &.snap-widget-1 {
+    top: 10px;
+    left: -25px;
+    transform: rotate(-3.5deg);
+    z-index: 3;
+  }
+
+  &.snap-widget-2 {
+    top: 175px;
+    left: 220px;
+    transform: rotate(1.5deg);
+    z-index: 4;
+  }
+
+  &.snap-widget-3 {
+    top: 340px;
+    left: 25px;
+    transform: rotate(3.8deg);
+    z-index: 2;
+  }
+
+  @include tablet-large {
+    width: clamp(210px, 18vw, 255px);
+
+    &.snap-widget-1 {
+      top: 10px;
+      left: 0;
+    }
+
+    &.snap-widget-2 {
+      top: 150px;
+      left: 170px;
+    }
+
+    &.snap-widget-3 {
+      top: 290px;
+      left: 20px;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-8px) rotate(0deg) scale(1.05);
+    z-index: 10;
+    border-color: var(--accent);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.65), 0 0 20px var(--accent-glow);
+
+    .snap-placeholder {
+      border-color: var(--accent);
+    }
+
+    .snap-placeholder-badge {
+      color: var(--ink);
+    }
+  }
+
+  @include tablet {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100%;
+    z-index: 1 !important;
+
+    &:hover {
+      transform: translateY(-4px) !important;
+    }
+  }
+}
+
+.snap-preview {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+  }
+}
+
+.snap-placeholder {
+  width: 100%;
+  height: 100%;
+  border: 1px dashed var(--card-border);
+  border-radius: 4px;
+  background: var(--input-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 8px;
+  text-align: center;
+  transition: border-color $transition-fast;
+}
+
+.snap-placeholder-badge {
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  transition: color $transition-fast;
+}
+
+.snap-placeholder-label {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  line-height: 1;
+
+  @include mobile {
+    font-size: 9px;
+  }
+}
+
+/* WIP Card Specific Styles */
+.snap-wip {
+  .snap-placeholder-wip {
+    background: repeating-linear-gradient(
+      -45deg,
+      rgba(99, 200, 223, 0.025),
+      rgba(99, 200, 223, 0.025) 10px,
+      transparent 10px,
+      transparent 20px
+    ), var(--input-bg);
+    border: 1px dashed var(--card-border);
+    gap: 6px;
+  }
+
+  .snap-placeholder-badge {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--ink);
+  }
+
+  .wip-subtext {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--muted);
+    line-height: 1;
+  }
+}
+
+
+
