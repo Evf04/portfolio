@@ -48,12 +48,11 @@
 .case-study-dossier {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 6px;
-  padding: clamp(24px, 3.5vw, 44px);
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  transition: border-color $transition-smooth;
+  border-radius: 8px;
+  padding: clamp(24px, 3.5vw, 40px);
+  position: relative;
+  scroll-margin-top: 90px;
+  transition: border-color $transition-fast;
 
   &:hover {
     border-color: var(--card-border);

@@ -14,7 +14,7 @@
     margin: 0 0 20px;
     font-size: clamp(32px, 4.2vw, 56px);
     line-height: 1.08;
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: -0.02em;
     color: var(--ink);
@@ -43,7 +43,7 @@
 .editorial-grid {
   display: grid;
   grid-template-columns: 340px 1fr;
-  gap: clamp(40px, 5vw, 72px);
+  gap: clamp(40px, 5vw, 64px);
   align-items: start;
 
   @include tablet-large {
@@ -53,7 +53,7 @@
 
   @include tablet {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 44px;
   }
 }
 
@@ -65,6 +65,11 @@
   padding: 28px 24px;
   position: sticky;
   top: 90px;
+  transition: border-color $transition-fast;
+
+  &:hover {
+    border-color: var(--card-border);
+  }
 
   @include tablet {
     position: static;
@@ -72,13 +77,11 @@
 
   .specs-title {
     font-size: 13px;
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--ink);
+    color: var(--accent);
     margin: 0 0 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--line);
   }
 
   .specs-list {
@@ -112,7 +115,7 @@
       strong {
         display: block;
         color: var(--ink);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 14px;
         margin-bottom: 2px;
         letter-spacing: -0.01em;
@@ -144,15 +147,15 @@
 .narrative-section {
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 44px;
 
   .section-title {
-    font-size: 18px;
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 700;
     color: var(--ink);
     text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin: 0 0 18px;
+    letter-spacing: 0.06em;
+    margin: 0 0 16px;
   }
 
   .narrative-block {
@@ -176,20 +179,21 @@
     gap: 16px;
 
     .capability-item {
-      padding: 20px 24px;
+      padding: 22px 24px;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 6px;
-      transition: border-color $transition-fast, transform $transition-fast;
+      transition: border-color $transition-fast, transform $transition-fast, box-shadow $transition-fast;
 
       &:hover {
         border-color: var(--accent);
         transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       }
 
       h3 {
         font-size: 15px;
-        font-weight: 900;
+        font-weight: 700;
         color: var(--ink);
         margin: 0 0 8px;
         text-transform: uppercase;
@@ -250,7 +254,7 @@
 
         .timeline-period {
           font-size: 11px;
-          font-weight: 900;
+          font-weight: 800;
           color: var(--accent);
           text-transform: uppercase;
           letter-spacing: 0.08em;
@@ -266,7 +270,7 @@
 
       .timeline-heading {
         font-size: 16px;
-        font-weight: 900;
+        font-weight: 700;
         color: var(--ink);
         margin: 0 0 6px;
         letter-spacing: -0.01em;
@@ -296,4 +300,3 @@
     }
   }
 }
-

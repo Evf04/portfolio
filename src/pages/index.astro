@@ -28,7 +28,6 @@ import WaveArt from "../components/WaveArt.astro";
       <div class="hero-actions">
         <a class="impact-link" href="/work">
           <span data-en="See my work & case studies" data-es="Ver trabajos y casos de estudio">See my work & case studies</span>
-          <span aria-hidden="true">-&gt;</span>
         </a>
         <a class="secondary-action" href="/about">
           <span data-en="About Elias" data-es="Sobre Elias">About Elias</span>
@@ -39,38 +38,60 @@ import WaveArt from "../components/WaveArt.astro";
     <!-- Right-Side Visual: Wave Art + Asymmetric Staggered Screenshot Fan -->
     <div class="hero-visual" aria-label="Interactive Showcase">
       <div class="hero-snaps-fan" aria-label="Featured Project Snapshots">
-        <a href="/work" class="snap-widget snap-widget-1" aria-label="Project Snap 01">
+        <!-- Card 1: Oasis / Original Forever -->
+        <div class="snap-widget snap-widget-1" aria-label="Original Forever Booking Platform">
           <div class="snap-preview">
-            <!-- Drop project 1 screenshot here: <img src="/path/to/snap1.png" alt="Project 1 preview" /> -->
-            <div class="snap-placeholder">
-              <span class="snap-placeholder-badge">01</span>
-              <span class="snap-placeholder-label" data-en="Project Snap" data-es="Captura 01">Project Snap</span>
+            <img
+              src="/images/oasis.webp"
+              alt="Original Forever Platform Preview"
+              width="1902"
+              height="942"
+              loading="eager"
+              decoding="async"
+            />
+            <div class="snap-footer-actions">
+              <a href="https://slotsadidasoriginals-p.netlify.app" target="_blank" rel="noopener noreferrer" class="snap-action-btn">
+                <span data-en="Live Demo" data-es="Demo en Vivo">Live Demo</span>
+              </a>
+              <a href="/work#original-forever" class="snap-action-btn">
+                <span data-en="Case Study" data-es="Caso de Estudio">Case Study</span>
+              </a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="/work" class="snap-widget snap-widget-2" aria-label="Project Snap 02">
+        <!-- Card 2: Superstar -->
+        <div class="snap-widget snap-widget-2" aria-label="Hotel Superstar Experience Hub">
           <div class="snap-preview">
-            <!-- Drop project 2 screenshot here: <img src="/path/to/snap2.png" alt="Project 2 preview" /> -->
-            <div class="snap-placeholder">
-              <span class="snap-placeholder-badge">02</span>
-              <span class="snap-placeholder-label" data-en="Project Snap" data-es="Captura 02">Project Snap</span>
+            <img
+              src="/images/superstar.webp"
+              alt="Hotel Superstar Portal Preview"
+              width="1904"
+              height="948"
+              loading="eager"
+              decoding="async"
+            />
+            <div class="snap-footer-actions">
+              <a href="https://experienciasuperstar-p.netlify.app" target="_blank" rel="noopener noreferrer" class="snap-action-btn">
+                <span data-en="Live Demo" data-es="Demo en Vivo">Live Demo</span>
+              </a>
+              <a href="/work#hotel-superstar" class="snap-action-btn">
+                <span data-en="Case Study" data-es="Caso de Estudio">Case Study</span>
+              </a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="/work" class="snap-widget snap-widget-3 snap-wip" aria-label="Work in Progress Project">
+        <!-- Card 3: Work in Progress -->
+        <div class="snap-widget snap-widget-3 snap-wip" aria-label="Work in Progress Project">
           <div class="snap-preview">
-            <!-- Drop project 3 screenshot here when ready -->
             <div class="snap-placeholder snap-placeholder-wip">
               <span class="snap-placeholder-badge" data-en="Work in Progress" data-es="En Progreso...">Work in Progress</span>
               <span class="wip-subtext" data-en="Upcoming project" data-es="Próximo proyecto">Upcoming project</span>
             </div>
           </div>
-        </a>
+        </div>
       </div>
-
-
 
       <WaveArt />
     </div>
