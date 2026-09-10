@@ -7,93 +7,57 @@ import Layout from "../layouts/Layout.astro";
   description="Get in direct touch with Elias Velasquez Fuentes for software engineering roles, web platforms, and technical collaboration."
 >
   <main class="page-container contact-page">
-    <header class="contact-header">
-      <h1 class="page-title">
-        <span data-en="Let's connect & build" data-es="Conectemos y construyamos">Let's connect & build</span>
-        <strong data-en="something impactful." data-es="algo de gran impacto.">something impactful.</strong>
-      </h1>
+    <div class="contact-wrapper">
+      <header class="contact-header">
+        <h1 class="page-title">
+          <strong data-en="Say hello." data-es="Escríbeme.">Say hello.</strong>
+        </h1>
 
-      <p class="page-description" data-en="Whether you have an engineering role, a brand platform project, or want to discuss technical systems, reach out directly through the channels below." data-es="Ya sea que tengas una oportunidad laboral, un proyecto de plataforma web o desees conversar sobre sistemas, contáctame directamente por los siguientes canales.">
-        Whether you have an engineering role, a brand platform project, or want to discuss technical systems, reach out directly through the channels below.
-      </p>
-    </header>
+        <p class="page-description" data-en="Whether you have an open role, a web project, or just want to talk tech, feel free to reach out." data-es="Ya sea que tengas una oferta laboral, un proyecto web o quieras conversar sobre tecnología, escríbeme con total confianza.">
+          Whether you have an open role, a web project, or just want to talk tech, feel free to reach out.
+        </p>
+      </header>
 
-    <!-- Minimal Direct Contact Grid -->
-    <div class="contact-direct-grid">
-      <!-- Primary Email Card -->
-      <div class="direct-card primary-channel">
-        <div class="channel-meta">
-          <span class="channel-badge" data-en="Primary Contact" data-es="Contacto Principal">Primary Contact</span>
-          <span class="channel-note" data-en="Replies within 24 hours" data-es="Respuesta en menos de 24 horas">Replies within 24 hours</span>
+      <!-- Single Unified Contact Card -->
+      <div class="contact-single-card">
+        <div class="card-meta">
+          <span class="channel-badge" data-en="Direct Email" data-es="Correo Directo">Direct Email</span>
         </div>
 
-        <h2 class="channel-title" data-en="Direct Email" data-es="Correo Directo">Direct Email</h2>
-        <a href="mailto:eliasvelasquezf0404@gmail.com" class="channel-link">
-          eliasvelasquezf0404@gmail.com
-        </a>
+        <div class="card-main-row">
+          <span class="main-email-text">
+            eliasvelasquezf0404@gmail.com
+          </span>
 
-        <div class="channel-actions">
-          <a href="mailto:eliasvelasquezf0404@gmail.com" class="btn-email-action">
+          <a 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=eliasvelasquezf0404@gmail.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-email-action"
+          >
             <span data-en="Send an Email" data-es="Enviar Correo">Send an Email</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
           </a>
-          <button id="copyEmailBtn" class="btn-copy-action" type="button">
-            <span id="copyText" data-en="Copy Email" data-es="Copiar Correo">Copy Email</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Developer Profiles & Location Card -->
-      <div class="direct-card info-channel">
-        <div class="channel-meta">
-          <span class="channel-badge" data-en="Profiles & Location" data-es="Perfiles y Ubicación">Profiles & Location</span>
         </div>
 
-        <h2 class="channel-title" data-en="Online Presence" data-es="Presencia Online">Online Presence</h2>
-
-        <div class="profile-links-list">
-          <a href="https://github.com/Evf04" target="_blank" rel="noopener noreferrer" class="profile-link-item">
-            <div class="profile-item-text">
-              <strong>GitHub</strong>
-              <span>github.com/Evf04</span>
-            </div>
+        <div class="card-footer-meta">
+          <a href="https://github.com/Evf04" target="_blank" rel="noopener noreferrer" class="footer-meta-item footer-meta-link">
+            <span class="meta-label">GitHub</span>
+            <span class="meta-val">github.com/Evf04 ↗</span>
           </a>
-
-
-          <div class="profile-info-row">
-            <div class="profile-item-text">
-              <span class="info-label" data-en="Location" data-es="Ubicación">Location</span>
-              <strong class="info-val">Cartagena, Colombia</strong>
-            </div>
-          </div>
-
-          <div class="profile-info-row">
-            <div class="profile-item-text">
-              <span class="info-label" data-en="University" data-es="Universidad">University</span>
-              <strong class="info-val">Universidad de Cartagena</strong>
-            </div>
+          <a href="https://www.linkedin.com/in/evf04" target="_blank" rel="noopener noreferrer" class="footer-meta-item footer-meta-link">
+            <span class="meta-label">LinkedIn</span>
+            <span class="meta-val">linkedin.com/in/evf04 ↗</span>
+          </a>
+          <div class="footer-meta-item">
+            <span class="meta-label" data-en="Location" data-es="Ubicación">Location</span>
+            <span class="meta-val">Cartagena, Colombia</span>
           </div>
         </div>
       </div>
     </div>
   </main>
-
-  <script is:inline>
-    const copyBtn = document.getElementById("copyEmailBtn");
-    const copyText = document.getElementById("copyText");
-    const email = "eliasvelasquezf0404@gmail.com";
-
-    copyBtn?.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(email);
-        const isEs = document.documentElement.getAttribute("lang") === "es";
-        copyText.textContent = isEs ? "¡Copiado!" : "Copied!";
-        setTimeout(() => {
-          const currentLang = document.documentElement.getAttribute("lang") || "en";
-          copyText.textContent = currentLang === "es" ? "Copiar Correo" : "Copy Email";
-        }, 2500);
-      } catch (err) {
-        window.location.href = `mailto:${email}`;
-      }
-    });
-  </script>
 </Layout>

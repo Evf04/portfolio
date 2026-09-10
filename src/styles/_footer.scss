@@ -4,7 +4,7 @@
   margin-top: auto;
   border-top: 1px solid var(--line);
   background: var(--panel);
-  padding: 24px 32px 16px;
+  padding: 36px 32px 20px;
 
   @include tablet {
     padding: 20px 22px 16px;
@@ -81,9 +81,8 @@
 
 .footer-bottom {
   max-width: 1200px;
-  margin: 18px auto 0;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
+  margin: 28px auto 0;
+  padding-top: 0;
   display: flex;
   justify-content: center;
   align-items: center;

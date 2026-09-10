@@ -6,8 +6,9 @@ const currentPath = pathname.replace(/\/$/, "");
 <header class="topbar" aria-label="Primary navigation">
   <div class="topbar-inner">
     <a class="brand" href="/" aria-label="Home">
-      EVF04<span class="brand-dot">.</span>
+      Elias Velasquez<span class="brand-dot">.</span>
     </a>
+
 
     <nav class="nav-links" aria-label="Main menu">
       <a href="/about" class={currentPath === "/about" ? "active" : ""} data-en="About" data-es="Sobre mí">About</a>
@@ -16,6 +17,21 @@ const currentPath = pathname.replace(/\/$/, "");
     </nav>
 
     <div class="topbar-actions">
+      <a
+        href="https://www.linkedin.com/in/evf04"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-btn linkedin-btn"
+        aria-label="LinkedIn profile"
+        title="LinkedIn profile"
+      >
+        <svg class="social-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      </a>
+
       <button class="lang-toggle" type="button" aria-label="Switch language">
         <span class="lang-en active" aria-hidden="true">EN</span>
         <span class="lang-separator" aria-hidden="true">/</span>
@@ -28,7 +44,7 @@ const currentPath = pathname.replace(/\/$/, "");
         </svg>
         <svg class="theme-icon sun-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="12" x2="12" y2="3"></line>
           <line x1="12" y1="21" x2="12" y2="23"></line>
           <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
           <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
@@ -52,6 +68,7 @@ const currentPath = pathname.replace(/\/$/, "");
     <a href="/about" class={currentPath === "/about" ? "active" : ""} data-en="About" data-es="Sobre mí">About</a>
     <a href="/work" class={currentPath === "/work" ? "active" : ""} data-en="Work" data-es="Trabajo">Work</a>
     <a href="/contact" class={currentPath === "/contact" ? "active" : ""} data-en="Contact" data-es="Contacto">Contact</a>
+    <a href="https://www.linkedin.com/in/evf04" target="_blank" rel="noopener noreferrer" class="mobile-external-link">LinkedIn ↗</a>
   </div>
 </header>
 

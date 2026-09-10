@@ -7,7 +7,7 @@
   --page: #{$page-dark};
   --ink: #{$ink-dark};
   --muted: #{$muted-dark};
-  --line: #{$line-dark};
+  --line: rgba(255, 255, 255, 0.06);
   --panel: #{$panel-dark};
   --accent: #{$accent};
   --accent-deep: #{$accent-deep};
@@ -15,7 +15,7 @@
   --accent-soft: #{$accent-soft};
   --accent-glow: #{$accent-glow};
   --card-bg: #0b1114;
-  --card-border: #182226;
+  --card-border: rgba(255, 255, 255, 0.08);
   --input-bg: #0c1216;
 }
 
@@ -149,9 +149,9 @@ body.light-theme {
   --panel: #{$panel-light};
   --ink: #{$ink-light};
   --muted: #{$muted-light};
-  --line: #{$line-light};
+  --line: rgba(0, 0, 0, 0.07);
   --card-bg: #ffffff;
-  --card-border: #d4dde0;
+  --card-border: rgba(0, 0, 0, 0.09);
   --input-bg: #e9eff1;
   --accent: #{$accent-light};
   --accent-deep: #{$accent-deep-light};

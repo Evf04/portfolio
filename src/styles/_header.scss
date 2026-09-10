@@ -2,7 +2,6 @@
 
 .topbar {
   height: 70px;
-  border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -114,6 +113,42 @@ body.light-theme {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.social-btn {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  background: var(--input-bg);
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  transition: border-color $transition-fast, transform $transition-fast, box-shadow $transition-fast, color $transition-fast;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px var(--accent-glow);
+  }
+
+  &:active {
+    transform: scale(0.92);
+  }
+
+  .social-icon {
+    display: block;
+    transition: transform $transition-fast;
+  }
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .theme-toggle {
