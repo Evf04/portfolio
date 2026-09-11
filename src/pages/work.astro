@@ -4,17 +4,17 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout
   title="Selected Work & Case Studies | Elias Velasquez"
-  description="Explore real web development case studies and live platforms by Elias Velasquez, including high-concurrency event booking systems and database integrations."
+  description="Explore web applications, booking systems, and freelance projects built by Elias Velasquez."
 >
   <main class="page-container work-page">
     <header class="work-header">
       <h1 class="page-title">
-        <span data-en="Real projects," data-es="Proyectos reales,">Real projects,</span>
-        <strong data-en="proven business impact." data-es="impacto comprobado.">proven business impact.</strong>
+        <span data-en="Selected work" data-es="Trabajos seleccionados">Selected work</span>
+        <strong data-en="& case studies." data-es="y casos de estudio.">& case studies.</strong>
       </h1>
 
-      <p class="page-description" data-en="In-depth case studies of high-performance web applications and booking systems engineered for brand launch events, featuring live production demos, UI snapshots, and technical architecture." data-es="Casos de estudio detallados de aplicaciones web y sistemas de reserva desarrollados para eventos de marca, con demos en vivo, capturas de interfaz y arquitectura técnica.">
-        In-depth case studies of high-performance web applications and booking systems engineered for brand launch events, featuring live production demos, UI snapshots, and technical architecture.
+      <p class="page-description" data-en="A look into some of the web platforms, booking systems, and freelance projects I've built recently, with live demos and technical overviews." data-es="Un vistazo a algunas de las plataformas web, sistemas de reservas y proyectos freelance que he desarrollado recientemente, con demos en vivo y detalles técnicos.">
+        A look into some of the web platforms, booking systems, and freelance projects I've built recently, with live demos and technical overviews.
       </p>
     </header>
 
@@ -25,10 +25,16 @@ import Layout from "../layouts/Layout.astro";
 
         <div class="dossier-header">
           <div class="dossier-title-group">
-            <span class="dossier-badge" data-en="Brand Launch Platform" data-es="Plataforma de Lanzamiento">Brand Launch Platform</span>
+            <span class="dossier-badge" data-en="Brand Launch Platform · Freelance" data-es="Plataforma de Lanzamiento · Freelance">Brand Launch Platform · Freelance</span>
             <h2 id="project-1-title" class="dossier-title">
-              <a href="https://slotsadidasoriginals-p.netlify.app" target="_blank" rel="noopener noreferrer">
-                "Original Forever" Time-Slot Reservation System
+              <a 
+                href="https://slotsadidasoriginals-p.netlify.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                data-en='"Original Forever"'
+                data-es='"Original Forever"'
+              >
+                "Original Forever"
               </a>
             </h2>
           </div>
@@ -37,6 +43,9 @@ import Layout from "../layouts/Layout.astro";
             <a href="https://slotsadidasoriginals-p.netlify.app" class="btn-live-demo" target="_blank" rel="noopener noreferrer">
               <span data-en="Launch Live Demo" data-es="Ver Demo en Vivo">Launch Live Demo</span>
             </a>
+            <span class="dossier-prod-note" data-en="Original campaign domain: slotsadidasoriginals.com (campaign concluded)" data-es="Dominio original: slotsadidasoriginals.com (campaña finalizada)">
+              Original campaign domain: slotsadidasoriginals.com (campaign concluded)
+            </span>
           </div>
 
 
@@ -46,43 +55,45 @@ import Layout from "../layouts/Layout.astro";
         <div class="dossier-snapshots" aria-label="Project UI Snapshots">
           <div class="snapshot-slot main-snap">
             <div class="snapshot-frame">
-              <!-- Vector preview / Drop image here: <img src="/path/to/snap1.png" alt="Original Forever Main View" /> -->
-              <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="400" height="225" fill="#080f15"/>
-                <rect x="20" y="20" width="360" height="185" rx="6" fill="#0d1721" stroke="#63c8df" stroke-width="1.5"/>
-                <text x="40" y="60" fill="#63c8df" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" letter-spacing="1">LAUNCH EVENT PLATFORM</text>
-                <text x="40" y="88" fill="#f4f6f7" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="18">"Original Forever" Booking</text>
-                <rect x="40" y="112" width="150" height="30" rx="4" fill="#153443" stroke="#3b7885"/>
-                <text x="52" y="132" fill="#63c8df" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="800">SLOT RESERVATION</text>
-                <rect x="210" y="112" width="150" height="65" rx="4" fill="#070c11" stroke="#1d2a38"/>
-                <circle cx="235" cy="138" r="8" fill="#63c8df"/>
-                <text x="252" y="142" fill="#f4f6f7" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="700">Zero Queue Flow</text>
-              </svg>
+              <img
+                src="/images/original-forever-hero.webp"
+                alt="Adidas Originals x Oasis Campaign Hero View"
+                width="1024"
+                height="508"
+                loading="eager"
+                decoding="async"
+              />
             </div>
-            <span class="snap-caption" data-en="Overview: Time-slot reservation interface and digital entry flow" data-es="Vista general: Interfaz de reserva por turnos y flujo de ingreso digital">Overview: Time-slot reservation interface and digital entry flow</span>
+            <span class="snap-caption" data-en="Overview: Campaign hero interface and Adidas x Oasis brand activation" data-es="Vista general: Interfaz de campaña y activación de marca Adidas x Oasis">Overview: Campaign hero interface and Adidas x Oasis brand activation</span>
           </div>
 
           <div class="snapshot-sub-grid">
             <div class="snapshot-slot">
               <div class="snapshot-frame">
-                <!-- Drop screenshot 2 here: <img src="/path/to/snap2.png" alt="Capacity and Shift Selector" /> -->
-                <div class="snap-placeholder">
-                  <span class="snap-badge">02</span>
-                  <span class="snap-label" data-en="Capacity & Shift Selector" data-es="Selector de Horarios y Aforo">Capacity & Shift Selector</span>
-                </div>
+                <img
+                  src="/images/original-forever-slots.webp"
+                  alt="Store and Shift Selector with Real-time Capacity Control"
+                  width="1024"
+                  height="506"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <span class="snap-caption" data-en="Shift & attendee capacity rules" data-es="Gestión de aforo y cupos por turno">Shift & attendee capacity rules</span>
+              <span class="snap-caption" data-en="Store & shift selection with real-time capacity rules" data-es="Selección de tienda y turno con reglas de aforo en tiempo real">Store & shift selection with real-time capacity rules</span>
             </div>
 
             <div class="snapshot-slot">
               <div class="snapshot-frame">
-                <!-- Drop screenshot 3 here: <img src="/path/to/snap3.png" alt="Real-time confirmation flow" /> -->
-                <div class="snap-placeholder">
-                  <span class="snap-badge">03</span>
-                  <span class="snap-label" data-en="Real-Time Database Sync" data-es="Sincronización en Tiempo Real">Real-Time Database Sync</span>
-                </div>
+                <img
+                  src="/images/original-forever-form.webp"
+                  alt="Participant Registration Form and Database Sync"
+                  width="1024"
+                  height="507"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <span class="snap-caption" data-en="Instant PostgreSQL/Supabase confirmation" data-es="Confirmación instantánea en PostgreSQL/Supabase">Instant PostgreSQL/Supabase confirmation</span>
+              <span class="snap-caption" data-en="Participant registration form and instant database sync" data-es="Formulario de registro y sincronización instantánea con base de datos">Participant registration form and instant database sync</span>
             </div>
           </div>
         </div>
@@ -91,15 +102,15 @@ import Layout from "../layouts/Layout.astro";
         <div class="dossier-body">
           <div class="dossier-column">
             <h3 class="breakdown-heading" data-en="The Challenge" data-es="El Desafío">The Challenge</h3>
-            <p data-en="Brand product launch events often encounter severe registration bottlenecks, leading to long physical queues and attendee frustration. The objective was to build a zero-latency reservation interface capable of enforcing strict capacity limits per hourly shift." data-es="Los eventos de lanzamiento de marca suelen enfrentar cuellos de botella en el registro, generando filas físicas y retrasos. El objetivo fue crear una interfaz de reserva de latencia cero capaz de gestionar cupos estrictos por horario.">
-              Brand product launch events often encounter severe registration bottlenecks, leading to long physical queues and attendee frustration. The objective was to build a zero-latency reservation interface capable of enforcing strict capacity limits per hourly shift.
+            <p data-en="Developed as a freelance production platform for an agency-led brand campaign, the 'Original Forever' launch required a zero-latency reservation interface capable of enforcing strict store capacity limits across multiple retail locations in Argentina." data-es="Desarrollado como proyecto freelance para una campaña de marca, el lanzamiento 'Original Forever' requería una interfaz de reserva de latencia cero capaz de gestionar cupos estrictos por tienda en múltiples ubicaciones de Argentina.">
+              Developed as a freelance production platform for an agency-led brand campaign, the 'Original Forever' launch required a zero-latency reservation interface capable of enforcing strict store capacity limits across multiple retail locations in Argentina.
             </p>
           </div>
 
           <div class="dossier-column">
             <h3 class="breakdown-heading" data-en="Engineering Solution" data-es="Solución de Ingeniería">Engineering Solution</h3>
-            <p data-en="Architected a lightweight Astro application utilizing modern JavaScript and modular SCSS for fast mobile rendering. Connected the front-end to a Supabase & PostgreSQL backend to lock time-slots in real time and deliver instant digital entry confirmations." data-es="Desarrollo de una aplicación ligera en Astro utilizando JavaScript moderno y SCSS modular para cargas instantáneas en móviles. Conexión del front-end a Supabase y PostgreSQL para bloquear cupos en tiempo real y entregar confirmaciones digitales inmediatas.">
-              Architected a lightweight Astro application utilizing modern JavaScript and modular SCSS for fast mobile rendering. Connected the front-end to a Supabase & PostgreSQL backend to lock time-slots in real time and deliver instant digital entry confirmations.
+            <p data-en="Working from UI/UX design specifications delivered by the client, I engineered a lightweight Astro application utilizing modern JavaScript and modular SCSS for fast mobile rendering. Connected the front-end to a Supabase & PostgreSQL backend to lock time-slots in real time and deliver instant digital confirmations. Originally deployed in production at slotsadidasoriginals.com during the active campaign run." data-es="A partir del diseño UI/UX entregado por el cliente, desarrollé una aplicación ligera en Astro utilizando JavaScript moderno y SCSS modular para cargas instantáneas en móviles. Conexión del front-end a Supabase y PostgreSQL para bloquear cupos en tiempo real y entregar confirmaciones digitales inmediatas. Desplegado originalmente en producción en slotsadidasoriginals.com durante la vigencia de la campaña.">
+              Working from UI/UX design specifications delivered by the client, I engineered a lightweight Astro application utilizing modern JavaScript and modular SCSS for fast mobile rendering. Connected the front-end to a Supabase & PostgreSQL backend to lock time-slots in real time and deliver instant digital confirmations. Originally deployed in production at slotsadidasoriginals.com during the active campaign run.
             </p>
           </div>
 
@@ -108,7 +119,7 @@ import Layout from "../layouts/Layout.astro";
             <ul class="deliverables-list">
               <li data-en="Eliminated physical queuing bottlenecks with frictionless digital entry." data-es="Eliminación de filas físicas mediante ingreso digital fluido.">Eliminated physical queuing bottlenecks with frictionless digital entry.</li>
               <li data-en="Enforced real-time attendee capacity limits across all event shifts." data-es="Control estricto de aforo en tiempo real en todos los turnos.">Enforced real-time attendee capacity limits across all event shifts.</li>
-              <li data-en="Automated database storage with PostgreSQL and Supabase." data-es="Almacenamiento y confirmación automatizada con PostgreSQL y Supabase.">Automated database storage with PostgreSQL and Supabase.</li>
+              <li data-en="Faithful pixel-perfect implementation from provided UI design specs." data-es="Implementación pixel-perfect fiel al diseño de interfaz entregado.">Faithful pixel-perfect implementation from provided UI design specs.</li>
             </ul>
 
             <div class="dossier-tech-stack">
@@ -125,12 +136,17 @@ import Layout from "../layouts/Layout.astro";
       <!-- Case Study 02: Hotel Superstar -->
       <article id="hotel-superstar" class="case-study-dossier" aria-labelledby="project-2-title">
         <div class="dossier-header">
-
           <div class="dossier-title-group">
-            <span class="dossier-badge" data-en="Brand Experience Portal" data-es="Portal de Experiencia de Marca">Brand Experience Portal</span>
+            <span class="dossier-badge" data-en="Brand Experience · Freelance" data-es="Experiencia de Marca · Freelance">Brand Experience · Freelance</span>
             <h2 id="project-2-title" class="dossier-title">
-              <a href="https://experienciasuperstar-p.netlify.app" target="_blank" rel="noopener noreferrer">
-                "Hotel Superstar" Experience Portal & RSVP Hub
+              <a 
+                href="https://experienciasuperstar-p.netlify.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                data-en='"Hotel Superstar"'
+                data-es='"Hotel Superstar"'
+              >
+                "Hotel Superstar"
               </a>
             </h2>
           </div>
@@ -139,52 +155,55 @@ import Layout from "../layouts/Layout.astro";
             <a href="https://experienciasuperstar-p.netlify.app" class="btn-live-demo" target="_blank" rel="noopener noreferrer">
               <span data-en="Launch Live Demo" data-es="Ver Demo en Vivo">Launch Live Demo</span>
             </a>
+            <span class="dossier-prod-note" data-en="Original campaign domain: experienciasuperstar.com (campaign concluded)" data-es="Dominio original: experienciasuperstar.com (campaña finalizada)">
+              Original campaign domain: experienciasuperstar.com (campaign concluded)
+            </span>
           </div>
-
-
         </div>
 
         <!-- Snapshots Gallery Grid -->
         <div class="dossier-snapshots" aria-label="Project UI Snapshots">
           <div class="snapshot-slot main-snap">
             <div class="snapshot-frame">
-              <!-- Vector preview / Drop image here: <img src="/path/to/snap1.png" alt="Hotel Superstar Portal View" /> -->
-              <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="400" height="225" fill="#060a0e"/>
-                <rect x="20" y="20" width="360" height="185" rx="6" fill="#0e171f" stroke="#3b7885" stroke-width="1.5"/>
-                <text x="40" y="60" fill="#63c8df" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" letter-spacing="1">EXPERIENCE PORTAL</text>
-                <text x="40" y="88" fill="#f4f6f7" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="18">"Hotel Superstar" Hub</text>
-                <rect x="40" y="115" width="320" height="60" rx="4" fill="#162330"/>
-                <rect x="55" y="130" width="80" height="30" rx="3" fill="#63c8df"/>
-                <text x="70" y="150" fill="#050a0d" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="12">RSVP</text>
-                <rect x="150" y="130" width="190" height="10" rx="2" fill="#3b7885"/>
-                <rect x="150" y="146" width="130" height="10" rx="2" fill="#286169"/>
-              </svg>
+              <img
+                src="/images/hotel-superstar-hero.webp"
+                alt="Adidas Originals Hotel Superstar Campaign Hero View"
+                width="1024"
+                height="503"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <span class="snap-caption" data-en="Overview: Activity scheduling, RSVP flow, and brand portal" data-es="Vista general: Itinerario de actividades, RSVP y portal de marca">Overview: Activity scheduling, RSVP flow, and brand portal</span>
+            <span class="snap-caption" data-en="Overview: Campaign hero interface and event dates (March 6, 7 & 8)" data-es="Vista general: Interfaz principal de campaña y fechas del evento (6, 7 y 8 de marzo)">Overview: Campaign hero interface and event dates (March 6, 7 & 8)</span>
           </div>
 
           <div class="snapshot-sub-grid">
             <div class="snapshot-slot">
               <div class="snapshot-frame">
-                <!-- Drop screenshot 2 here: <img src="/path/to/snap2.png" alt="Activity Schedule Matrix" /> -->
-                <div class="snap-placeholder">
-                  <span class="snap-badge">02</span>
-                  <span class="snap-label" data-en="Activity Schedule Matrix" data-es="Matriz de Itinerarios">Activity Schedule Matrix</span>
-                </div>
+                <img
+                  src="/images/hotel-superstar-about.webp"
+                  alt="Recoleta Mansion Hotel Superstar Experience"
+                  width="1024"
+                  height="501"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <span class="snap-caption" data-en="Dynamic schedule and session slots" data-es="Horarios dinámicos y sesiones">Dynamic schedule and session slots</span>
+              <span class="snap-caption" data-en="Venue showcase: 1912 French-style mansion in Recoleta" data-es="Presentación del hotel: Mansión de estilo francés de 1912 en Recoleta">Venue showcase: 1912 French-style mansion in Recoleta</span>
             </div>
 
             <div class="snapshot-slot">
               <div class="snapshot-frame">
-                <!-- Drop screenshot 3 here: <img src="/path/to/snap3.png" alt="Attendance Confirmation" /> -->
-                <div class="snap-placeholder">
-                  <span class="snap-badge">03</span>
-                  <span class="snap-label" data-en="Attendance Confirmation" data-es="Confirmación de Asistencia">Attendance Confirmation</span>
-                </div>
+                <img
+                  src="/images/hotel-superstar-adiclub.webp"
+                  alt="adiclub Hotel Superstar Night Stay Giveaway"
+                  width="1024"
+                  height="501"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <span class="snap-caption" data-en="Unified attendee check-in confirmation" data-es="Confirmación unificada de asistencia">Unified attendee check-in confirmation</span>
+              <span class="snap-caption" data-en="adiclub points redemption" data-es="Canje de puntos adiclub">adiclub points redemption</span>
             </div>
           </div>
         </div>
@@ -193,36 +212,128 @@ import Layout from "../layouts/Layout.astro";
         <div class="dossier-body">
           <div class="dossier-column">
             <h3 class="breakdown-heading" data-en="The Challenge" data-es="El Desafío">The Challenge</h3>
-            <p data-en="The 'Hotel Superstar' brand activation required a unified digital hub for attendees to navigate multi-room event schedules, confirm RSVP reservations, and verify session access in real time without fragmented communication channels." data-es="La activación de marca 'Hotel Superstar' requería un portal centralizado para que los asistentes consultaran cronogramas por salas, confirmaran reservas RSVP y verificaran accesos sin canales fragmentados.">
-              The 'Hotel Superstar' brand activation required a unified digital hub for attendees to navigate multi-room event schedules, confirm RSVP reservations, and verify session access in real time without fragmented communication channels.
+            <p data-en="Developed as a freelance project for a brand experience campaign in Argentina, the 'Hotel Superstar' activation by Adidas & adiclub brought together music, art, and hospitality in a 1912 French-style mansion in Recoleta. The platform served as the central point for users to redeem club points and enter the exclusive hotel stay giveaway." data-es="Desarrollado como proyecto freelance para una campaña de experiencia de marca en Argentina, la activación 'Hotel Superstar' de Adidas y adiclub combinó música, arte y hotelería en una mansión de estilo francés de 1912 en Recoleta. La plataforma funcionó como punto central para que los usuarios canjearan puntos y participaran por la estadía exclusiva.">
+              Developed as a freelance project for a brand experience campaign in Argentina, the 'Hotel Superstar' activation by Adidas & adiclub brought together music, art, and hospitality in a 1912 French-style mansion in Recoleta. The platform served as the central point for users to redeem club points and enter the exclusive hotel stay giveaway.
             </p>
           </div>
 
           <div class="dossier-column">
             <h3 class="breakdown-heading" data-en="Engineering Solution" data-es="Solución de Ingeniería">Engineering Solution</h3>
-            <p data-en="Developed a responsive web portal connecting client-side state with Node.js and Supabase backend services. Implemented structured schedule views, interactive activity reservations, and real-time attendance validation for on-site hosts." data-es="Desarrollo de un portal web responsivo conectando estado del cliente con servicios backend en Node.js y Supabase. Implementación de cronogramas estructurados, reservas interactivas y validación de asistencia en tiempo real.">
-              Developed a responsive web portal connecting client-side state with Node.js and Supabase backend services. Implemented structured schedule views, interactive activity reservations, and real-time attendance validation for on-site hosts.
+            <p data-en="Working from UI/UX design specifications delivered by the client, I engineered a fast, responsive web platform in Astro using modern JavaScript and modular SCSS. Connected the front-end to Supabase and PostgreSQL backend services to validate adiclub user registrations and manage entry data in real time. Originally deployed in production at experienciasuperstar.com during the active campaign run." data-es="A partir del diseño UI/UX entregado por el cliente, desarrollé una plataforma web en Astro con JavaScript moderno y SCSS modular para cargas móviles inmediatas. Conexión con servicios backend en Supabase y PostgreSQL para validar registros de adiclub y gestionar participaciones en tiempo real. Desplegado originalmente en producción en experienciasuperstar.com durante la vigencia de la campaña.">
+              Working from UI/UX design specifications delivered by the client, I engineered a fast, responsive web platform in Astro using modern JavaScript and modular SCSS. Connected the front-end to Supabase and PostgreSQL backend services to validate adiclub user registrations and manage entry data in real time. Originally deployed in production at experienciasuperstar.com during the active campaign run.
             </p>
           </div>
 
           <div class="dossier-column">
             <h3 class="breakdown-heading" data-en="Business Impact & Deliverables" data-es="Impacto y Entregables">Business Impact & Deliverables</h3>
             <ul class="deliverables-list">
-              <li data-en="Centralized multi-room event schedules and session itineraries." data-es="Centralización de cronogramas e itinerarios del evento.">Centralized multi-room event schedules and session itineraries.</li>
-              <li data-en="Real-time RSVP confirmation and capacity tracking." data-es="Confirmación RSVP y seguimiento de aforo en tiempo real.">Real-time RSVP confirmation and capacity tracking.</li>
-              <li data-en="Zero-friction responsive interface optimized for mobile attendees." data-es="Interfaz responsiva optimizada para dispositivos móviles.">Zero-friction responsive interface optimized for mobile attendees.</li>
+              <li data-en="Multi-section brand experience portal for the adiclub campaign giveaway." data-es="Portal de experiencia de marca y sorteo para la campaña de adiclub.">Multi-section brand experience portal for the adiclub campaign giveaway.</li>
+              <li data-en="Dynamic campaign storytelling highlighting the Recoleta mansion venue." data-es="Presentación interactiva de la mansión en Recoleta y la activación.">Dynamic campaign storytelling highlighting the Recoleta mansion venue.</li>
+              <li data-en="Faithful pixel-perfect implementation from provided UI design specs." data-es="Implementación pixel-perfect fiel al diseño de interfaz entregado.">Faithful pixel-perfect implementation from provided UI design specs.</li>
             </ul>
 
             <div class="dossier-tech-stack">
               <span class="tech-tag">Astro</span>
               <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">SCSS</span>
-              <span class="tech-tag">Node.js</span>
               <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">PostgreSQL</span>
             </div>
           </div>
         </div>
       </article>
     </div>
+
+    <!-- Image Preview Lightbox Modal -->
+    <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image Preview">
+      <div class="lightbox-overlay" id="lightboxOverlay"></div>
+      <div class="lightbox-container">
+        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close preview">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="lightbox-media">
+          <img id="lightboxImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Enlarged snapshot preview" />
+        </div>
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+      </div>
+    </div>
   </main>
+
+  <script is:inline>
+    function initWorkLightbox() {
+      const lightbox = document.getElementById("imageLightbox");
+      const lightboxImg = document.getElementById("lightboxImg");
+      const lightboxCaption = document.getElementById("lightboxCaption");
+      const lightboxClose = document.getElementById("lightboxClose");
+      const lightboxOverlay = document.getElementById("lightboxOverlay");
+
+      function openLightbox(src, alt, captionText) {
+        if (!lightbox || !lightboxImg) return;
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || "Enlarged preview";
+        if (lightboxCaption) {
+          lightboxCaption.textContent = captionText || "";
+        }
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        if (lightboxImg) {
+          lightboxImg.src = "";
+        }
+      }
+
+      // Attach click listener to all snapshot frames with an image
+      const snapshotFrames = document.querySelectorAll(".snapshot-frame");
+      snapshotFrames.forEach((frame) => {
+        const img = frame.querySelector("img");
+        if (img) {
+          frame.classList.add("clickable-snap");
+          frame.setAttribute("tabindex", "0");
+          frame.setAttribute("role", "button");
+          frame.setAttribute("aria-label", "Ver imagen ampliada / Enlarge snapshot preview");
+
+          const handleOpen = () => {
+            const captionEl = frame.closest(".snapshot-slot")?.querySelector(".snap-caption");
+            const captionText = captionEl ? captionEl.textContent : "";
+            openLightbox(img.src, img.alt, captionText);
+          };
+
+          frame.onclick = handleOpen;
+          frame.onkeydown = (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              handleOpen();
+            }
+          };
+        }
+      });
+
+      if (lightboxClose) lightboxClose.onclick = closeLightbox;
+      if (lightboxOverlay) lightboxOverlay.onclick = closeLightbox;
+      if (lightboxImg) lightboxImg.onclick = closeLightbox;
+
+      document.onkeydown = (e) => {
+        if (e.key === "Escape" && lightbox?.classList.contains("active")) {
+          closeLightbox();
+        }
+      };
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initWorkLightbox);
+    } else {
+      initWorkLightbox();
+    }
+    document.addEventListener("astro:page-load", initWorkLightbox);
+  </script>
 </Layout>
