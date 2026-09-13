@@ -90,6 +90,18 @@
     gap: 20px;
     margin: 0;
     padding: 0;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 24px;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
   }
 
   .spec-row {
@@ -177,6 +189,17 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
 
     .capability-item {
       padding: 22px 24px;

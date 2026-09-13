@@ -30,20 +30,23 @@ $accent-glow-light: rgba(21, 109, 128, 0.18);
   }
 }
 
+// Tablet Landscape & Small Desktop (covers up to iPad Pro 1024px)
 @mixin tablet-large {
-  @media (max-width: 980px) {
+  @media (max-width: 1024px) {
     @content;
   }
 }
 
+// Tablet Portrait (covers standard iPad 768px, iPad Air 820px, iPad Pro 834px)
 @mixin tablet {
-  @media (max-width: 760px) {
+  @media (max-width: 834px) {
     @content;
   }
 }
 
+// Mobile Devices (covers up to 480px)
 @mixin mobile {
-  @media (max-width: 430px) {
+  @media (max-width: 480px) {
     @content;
   }
 }

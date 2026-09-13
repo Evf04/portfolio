@@ -88,8 +88,16 @@ button {
   margin: 0 auto;
   padding: 60px 32px 80px;
 
+  @include tablet-large {
+    padding: 50px 32px 70px;
+  }
+
   @include tablet {
-    padding: 40px 22px 60px;
+    padding: 40px 28px 60px;
+  }
+
+  @include mobile {
+    padding: 32px 20px 50px;
   }
 }
 

@@ -19,9 +19,27 @@
   gap: 28px;
   align-items: start;
 
+  @include tablet-large {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 24px;
+  }
+
   @include tablet {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 20px;
+
+    .footer-brand {
+      grid-column: auto;
+    }
   }
 }
 

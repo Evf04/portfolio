@@ -150,6 +150,10 @@
     border-top: 1px solid var(--line);
 
     @include tablet {
+      gap: 16px;
+    }
+
+    @include mobile {
       grid-template-columns: 1fr;
       gap: 16px;
     }
