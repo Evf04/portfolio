@@ -9,21 +9,16 @@ import WaveArt from "../components/WaveArt.astro";
 >
   <main class="hero" aria-labelledby="hero-title">
     <div class="hero-copy">
-      <p class="eyebrow">
-        <span data-en="Full-Stack Developer" data-es="Desarrollador Full-Stack">Full-Stack Developer</span>
-      </p>
-
-
       <h1 id="hero-title" class="hero-heading">
-        <span data-en="Full-stack web" data-es="Plataformas web">Full-stack web</span>
-        <span data-en="platforms engineered for" data-es="full-stack preparadas para">platforms engineered for</span>
-        <strong data-en="production." data-es="producción.">production.</strong>
+        <span class="hero-greeting" data-en="Hi, I'm Elias Velasquez" data-es="Hola, soy Elías Velásquez">Hola, soy Elías Velásquez</span>
+        <span data-en="Full-stack developer in" data-es="Desarrollador full-stack en">Desarrollador full-stack en</span>
+        <strong data-en="Cartagena, Colombia." data-es="Cartagena, Colombia.">Cartagena, Colombia.</strong>
       </h1>
 
 
       <p class="intro">
-        <span data-en="Designing and developing fast web systems with robust relational architectures." data-es="Desarrollo de sistemas web rápidos con arquitecturas relacionales robustas.">Designing and developing fast web systems with robust relational architectures.</span>
-        <span data-en="Systems Engineering senior at Universidad de Cartagena." data-es="Estudiante de último año de Ingeniería de Sistemas en la Universidad de Cartagena.">Systems Engineering senior at Universidad de Cartagena.</span>
+        <span data-en="Engineering fast web systems and relational PostgreSQL architectures for brand events and production (including platforms for Adidas in Argentina)." data-es="Construyo sistemas web rápidos y arquitecturas relacionales en PostgreSQL para eventos de marca y producción (incluyendo plataformas para Adidas en Argentina).">Construyo sistemas web rápidos y arquitecturas relacionales en PostgreSQL para eventos de marca y producción (incluyendo plataformas para Adidas en Argentina).</span>
+        <span data-en="Systems Engineering senior at Universidad de Cartagena." data-es="Estudiante de último año de Ingeniería de Sistemas en la Universidad de Cartagena.">Estudiante de último año de Ingeniería de Sistemas en la Universidad de Cartagena.</span>
       </p>
 
 
@@ -39,59 +34,91 @@ import WaveArt from "../components/WaveArt.astro";
       </div>
     </div>
 
-    <!-- Right-Side Visual: Wave Art + Asymmetric Staggered Screenshot Fan -->
+    <!-- Right-Side Visual: Wave Art + Interactive Showcase Stage -->
     <div class="hero-visual" aria-label="Interactive Showcase">
-      <div class="hero-snaps-fan" aria-label="Featured Project Snapshots">
-        <!-- Card 1: Oasis / Original Forever -->
-        <div class="snap-widget snap-widget-1" aria-label="Original Forever Booking Platform">
-          <div class="snap-preview">
-            <img
-              src="/images/oasis.webp"
-              alt="Original Forever Platform Preview"
-              width="1902"
-              height="942"
-              loading="eager"
-              decoding="async"
-            />
-            <div class="snap-footer-actions">
-              <a href="https://slotsadidasoriginals-p.netlify.app" target="_blank" rel="noopener noreferrer" class="snap-action-btn">
-                <span data-en="Live Demo" data-es="Demo en Vivo">Live Demo</span>
-              </a>
-              <a href="/work#original-forever" class="snap-action-btn">
-                <span data-en="Case Study" data-es="Caso de Estudio">Case Study</span>
-              </a>
-            </div>
-          </div>
+      <div class="hero-showcase-stage" aria-label="Featured Projects Showcase">
+        <!-- Stage Tabs -->
+        <div class="stage-tabs" role="tablist" aria-label="Featured projects selector">
+          <button
+            class="stage-tab active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-oasis"
+            id="tab-oasis"
+            data-target="panel-oasis"
+            type="button"
+          >
+            <span class="tab-name" data-en="Adidas Originals" data-es="Adidas Originals">Adidas Originals</span>
+            <span class="tab-badge" data-en="Oasis · Argentina" data-es="Oasis · Argentina">Oasis · Argentina</span>
+          </button>
+
+          <button
+            class="stage-tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-superstar"
+            id="tab-superstar"
+            data-target="panel-superstar"
+            type="button"
+          >
+            <span class="tab-name" data-en="Hotel Superstar" data-es="Hotel Superstar">Hotel Superstar</span>
+            <span class="tab-badge" data-en="Experience Hub" data-es="Portal de Evento">Experience Hub</span>
+          </button>
         </div>
 
-        <!-- Card 2: Superstar -->
-        <div class="snap-widget snap-widget-2" aria-label="Hotel Superstar Experience Hub">
-          <div class="snap-preview">
-            <img
-              src="/images/superstar.webp"
-              alt="Hotel Superstar Portal Preview"
-              width="1904"
-              height="948"
-              loading="eager"
-              decoding="async"
-            />
-            <div class="snap-footer-actions">
-              <a href="https://experienciasuperstar-p.netlify.app" target="_blank" rel="noopener noreferrer" class="snap-action-btn">
-                <span data-en="Live Demo" data-es="Demo en Vivo">Live Demo</span>
-              </a>
-              <a href="/work#hotel-superstar" class="snap-action-btn">
-                <span data-en="Case Study" data-es="Caso de Estudio">Case Study</span>
-              </a>
+        <!-- Stage Viewport Screen -->
+        <div class="stage-screen">
+          <!-- Slide 1: Oasis / Original Forever -->
+          <div
+            class="stage-slide active"
+            id="panel-oasis"
+            role="tabpanel"
+            aria-labelledby="tab-oasis"
+          >
+            <div class="stage-media">
+              <img
+                src="/images/oasis.webp"
+                alt="Original Forever Booking Platform Preview"
+                width="1902"
+                height="942"
+                loading="eager"
+                decoding="async"
+              />
+              <div class="stage-actions">
+                <a href="https://slotsadidasoriginals-p.netlify.app" target="_blank" rel="noopener noreferrer" class="stage-action-btn primary">
+                  <span data-en="Live Demo" data-es="Demo en Vivo">Live Demo</span>
+                </a>
+                <a href="/work#original-forever" class="stage-action-btn secondary">
+                  <span data-en="Case Study" data-es="Caso de Estudio">Case Study</span>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Card 3: Work in Progress -->
-        <div class="snap-widget snap-widget-3 snap-wip" aria-label="Work in Progress Project">
-          <div class="snap-preview">
-            <div class="snap-placeholder snap-placeholder-wip">
-              <span class="snap-placeholder-badge" data-en="Work in Progress" data-es="En Progreso...">Work in Progress</span>
-              <span class="wip-subtext" data-en="Upcoming project" data-es="Próximo proyecto">Upcoming project</span>
+          <!-- Slide 2: Superstar -->
+          <div
+            class="stage-slide"
+            id="panel-superstar"
+            role="tabpanel"
+            aria-labelledby="tab-superstar"
+          >
+            <div class="stage-media">
+              <img
+                src="/images/superstar.webp"
+                alt="Hotel Superstar Portal Preview"
+                width="1904"
+                height="948"
+                loading="eager"
+                decoding="async"
+              />
+              <div class="stage-actions">
+                <a href="https://experienciasuperstar-p.netlify.app" target="_blank" rel="noopener noreferrer" class="stage-action-btn primary">
+                  <span data-en="Live Demo" data-es="Demo en Vivo">Live Demo</span>
+                </a>
+                <a href="/work#hotel-superstar" class="stage-action-btn secondary">
+                  <span data-en="Case Study" data-es="Caso de Estudio">Case Study</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -101,3 +128,49 @@ import WaveArt from "../components/WaveArt.astro";
     </div>
   </main>
 </Layout>
+
+<script>
+  function setupShowcaseStage() {
+    const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('.stage-tab'));
+    const slides = Array.from(document.querySelectorAll<HTMLElement>('.stage-slide'));
+
+    function activateTab(index: number) {
+      tabs.forEach((t, i) => {
+        const isActive = i === index;
+        t.classList.toggle('active', isActive);
+        t.setAttribute('aria-selected', String(isActive));
+        t.tabIndex = isActive ? 0 : -1;
+      });
+
+      const targetId = tabs[index]?.getAttribute('data-target');
+      slides.forEach((slide) => {
+        const isTarget = slide.id === targetId;
+        slide.classList.toggle('active', isTarget);
+      });
+    }
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => {
+        activateTab(index);
+      });
+
+      tab.addEventListener('keydown', (e) => {
+        let nextIndex = -1;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          nextIndex = (index + 1) % tabs.length;
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          nextIndex = (index - 1 + tabs.length) % tabs.length;
+        }
+
+        if (nextIndex !== -1) {
+          e.preventDefault();
+          activateTab(nextIndex);
+          tabs[nextIndex]?.focus();
+        }
+      });
+    });
+  }
+
+  setupShowcaseStage();
+  document.addEventListener('astro:page-load', setupShowcaseStage);
+</script>
