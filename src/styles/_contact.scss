@@ -126,18 +126,10 @@
       flex-shrink: 0;
       transition: all $transition-fast;
 
-      .btn-arrow {
-        transition: transform $transition-fast;
-      }
-
       &:hover {
         background: var(--accent);
         color: #050a0d;
         transform: translateY(-2px);
-
-        .btn-arrow {
-          transform: translate(2px, -2px);
-        }
       }
     }
   }

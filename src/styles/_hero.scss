@@ -11,7 +11,7 @@
 
   @include tablet {
     min-height: auto;
-    padding: 24px 0 40px;
+    padding: clamp(32px, 5vw, 44px) 0 clamp(44px, 7vw, 60px);
     flex-direction: column;
     align-items: stretch;
   }
@@ -33,11 +33,11 @@
     width: 100%;
     max-width: 580px;
     margin: 0 auto;
-    padding: 24px 32px 10px;
+    padding: 8px 32px 0;
   }
 
   @include mobile {
-    padding: 20px 20px 8px;
+    padding: 4px 20px 0;
     max-width: 100%;
   }
 }
@@ -48,7 +48,7 @@ h1.hero-heading {
   color: var(--ink);
   text-transform: none;
   font-size: clamp(30px, 3.4vw, 50px);
-  line-height: 1.1;
+  line-height: 1.12;
   font-weight: 800;
   letter-spacing: -0.02em;
   text-wrap: balance;
@@ -79,37 +79,39 @@ h1.hero-heading {
 
   @include tablet {
     font-size: clamp(26px, 6.8vw, 36px);
+    line-height: 1.18;
 
     .hero-greeting {
       font-size: 13px;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      letter-spacing: 0.08em;
     }
   }
 }
 
 .intro {
   width: min(100%, 540px);
-  margin: 18px 0 28px;
+  margin: 20px 0 30px;
   color: var(--muted);
   font-size: clamp(14px, 1.15vw, 17px);
-  line-height: 1.6;
+  line-height: 1.65;
   font-weight: 500;
 
   span {
     display: block;
 
     &:not(:last-child) {
-      margin-bottom: 6px;
-    }
-
-    @include tablet {
-      display: inline;
+      margin-bottom: 8px;
     }
   }
 
   @include tablet {
-    margin: 16px 0 24px;
-    font-size: 14px;
+    margin: 18px 0 26px;
+    font-size: 15px;
+
+    span:not(:last-child) {
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -122,7 +124,7 @@ h1.hero-heading {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    gap: 12px;
+    gap: 10px;
   }
 }
 
@@ -156,8 +158,9 @@ h1.hero-heading {
 
   @include mobile {
     width: 100%;
-    height: 48px;
-    font-size: 13px;
+    height: 44px;
+    font-size: 12px;
+    letter-spacing: 0.03em;
     text-align: center;
   }
 }
@@ -190,8 +193,9 @@ h1.hero-heading {
 
   @include mobile {
     width: 100%;
-    height: 48px;
-    font-size: 13px;
+    height: 44px;
+    font-size: 12px;
+    letter-spacing: 0.03em;
     text-align: center;
   }
 }
@@ -208,19 +212,21 @@ h1.hero-heading {
   align-items: center;
   justify-content: center;
   pointer-events: none;
+  z-index: 3;
 
   @include tablet {
     position: relative;
     width: 100%;
     height: auto;
-    margin-top: 16px;
-    padding: 0 32px 32px;
+    margin-top: clamp(28px, 5vw, 40px);
+    padding: 0 32px 36px;
     pointer-events: auto;
+    z-index: 3;
   }
 
   @include mobile {
-    padding: 0 20px 28px;
-    margin-top: 12px;
+    padding: 0 20px 36px;
+    margin-top: 28px;
   }
 }
 
@@ -235,16 +241,28 @@ h1.hero-heading {
   bottom: 0;
   z-index: 1;
   transform: translateX(1px);
+  pointer-events: none;
 
   @include tablet-large {
     width: clamp(240px, 30vw, 380px);
   }
 
   @include tablet {
-    width: 100%;
+    width: clamp(220px, 42vw, 360px);
     min-width: 0;
-    opacity: 0.18;
-    transform: translateX(35%);
+    opacity: 0.40;
+    transform: none;
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  @include mobile {
+    width: clamp(180px, 48vw, 240px);
+    min-width: 0;
+    opacity: 0.45;
+    transform: none;
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 45%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 45%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0) 100%);
   }
 }
 
@@ -256,7 +274,7 @@ h1.hero-heading {
   margin-right: clamp(32px, 5vw, 90px);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   pointer-events: auto;
 
   @include tablet-large {
@@ -267,11 +285,12 @@ h1.hero-heading {
   @include tablet {
     max-width: 520px;
     margin: 0 auto;
+    gap: 12px;
   }
 
   @include mobile {
     max-width: 100%;
-    gap: 8px;
+    gap: 12px;
   }
 }
 
@@ -349,7 +368,8 @@ h1.hero-heading {
   }
 
   @include mobile {
-    padding: 8px 10px;
+    padding: 10px 12px;
+    min-height: 42px;
     gap: 6px;
 
     .tab-name {
@@ -376,6 +396,14 @@ h1.hero-heading {
   &:hover {
     border-color: var(--accent);
     box-shadow: 0 24px 56px rgba(0, 0, 0, 0.75), 0 0 24px var(--accent-glow);
+  }
+
+  @include tablet {
+    aspect-ratio: 16 / 10;
+  }
+
+  @include mobile {
+    aspect-ratio: 16 / 11;
   }
 }
 
@@ -416,12 +444,17 @@ h1.hero-heading {
     background: linear-gradient(to top, rgba(5, 10, 13, 0.96) 0%, rgba(5, 10, 13, 0.75) 50%, rgba(5, 10, 13, 0) 100%);
     pointer-events: none;
     z-index: 2;
+
+    @include mobile {
+      height: 68px;
+    }
   }
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 30%;
     display: block;
     image-rendering: -webkit-optimize-contrast;
     backface-visibility: hidden;
@@ -480,9 +513,10 @@ h1.hero-heading {
     }
 
     @include mobile {
-      min-height: 38px;
+      min-height: 36px;
       padding: 6px 10px;
       font-size: 11px;
+      letter-spacing: 0.03em;
     }
   }
 
@@ -545,6 +579,16 @@ body.light-theme {
         color: #ffffff;
         border-color: var(--accent);
       }
+    }
+  }
+
+  .wave-art {
+    @include tablet {
+      opacity: 0.32;
+    }
+
+    @include mobile {
+      opacity: 0.35;
     }
   }
 }
