@@ -7,50 +7,83 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0 clamp(24px, 3vw, 56px);
 
   @include tablet {
     min-height: auto;
     padding: clamp(32px, 5vw, 44px) 0 clamp(44px, 7vw, 60px);
-    flex-direction: column;
-    align-items: stretch;
+    display: block;
   }
 }
 
-.hero-copy {
-  width: clamp(480px, 44vw, 680px);
-  max-width: calc(100% - 48px);
-  padding: clamp(50px, 6vw, 100px) 0 38px clamp(32px, 4.1vw, 64px);
+.hero-inner {
+  width: 100%;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(460px, 540px) 1fr;
+  gap: clamp(56px, 7vw, 130px);
+  align-items: center;
   position: relative;
   z-index: 5;
 
   @include tablet-large {
-    padding: 40px 0 32px 32px;
-    width: clamp(400px, 46vw, 520px);
+    grid-template-columns: minmax(380px, 460px) 1fr;
+    gap: 40px;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 32px;
+    gap: clamp(24px, 4vw, 36px);
+    max-width: 680px;
+  }
+
+  @include mobile {
+    padding: 0 20px;
+    gap: 20px;
+    max-width: 100%;
+  }
+}
+
+.hero-copy {
+  width: 100%;
+  max-width: 540px;
+  padding: clamp(32px, 3vw, 48px) 0;
+  position: relative;
+  z-index: 5;
+
+  @include tablet-large {
+    padding: 20px 0;
+    max-width: 100%;
   }
 
   @include tablet {
     width: 100%;
-    max-width: 580px;
-    margin: 0 auto;
-    padding: 8px 32px 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   @include mobile {
-    padding: 4px 20px 0;
+    padding: 0;
     max-width: 100%;
   }
 }
 
 h1.hero-heading {
-  max-width: 660px;
+  max-width: 620px;
   margin: 0;
   color: var(--ink);
   text-transform: none;
-  font-size: clamp(30px, 3.4vw, 50px);
-  line-height: 1.12;
+  font-size: clamp(30px, 2.9vw, 46px);
+  line-height: 1.15;
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   text-wrap: balance;
 
   .hero-greeting {
@@ -60,7 +93,7 @@ h1.hero-heading {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
   span,
@@ -90,11 +123,11 @@ h1.hero-heading {
 }
 
 .intro {
-  width: min(100%, 540px);
-  margin: 20px 0 30px;
+  width: min(100%, 560px);
+  margin: 22px 0 32px;
   color: var(--muted);
   font-size: clamp(14px, 1.15vw, 17px);
-  line-height: 1.65;
+  line-height: 1.68;
   font-weight: 500;
 
   span {
@@ -200,33 +233,25 @@ h1.hero-heading {
   }
 }
 
-/* Right-Side Visual: Wave Art + Asymmetric Staggered Screenshot Fan */
+/* Right-Side Visual: Wave Art + Interactive Showcase Stage */
 .hero-visual {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: clamp(480px, 56vw, 920px);
-  height: 100%;
+  position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  pointer-events: none;
+  justify-content: flex-start;
+  pointer-events: auto;
   z-index: 3;
 
   @include tablet {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-top: clamp(28px, 5vw, 40px);
-    padding: 0 32px 36px;
-    pointer-events: auto;
-    z-index: 3;
+    justify-content: center;
+    margin-top: 0;
+    padding: 0;
   }
 
   @include mobile {
-    padding: 0 20px 36px;
-    margin-top: 28px;
+    margin-top: 0;
+    padding: 0;
   }
 }
 
@@ -270,46 +295,168 @@ h1.hero-heading {
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 580px;
-  margin-right: clamp(32px, 5vw, 90px);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  max-width: 860px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 16px;
+  align-items: stretch;
   pointer-events: auto;
 
   @include tablet-large {
-    max-width: 480px;
-    margin-right: 20px;
+    max-width: 100%;
+    grid-template-columns: 160px 1fr;
+    gap: 12px;
   }
 
   @include tablet {
-    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
     margin: 0 auto;
-    gap: 12px;
+    gap: 10px;
   }
 
   @include mobile {
-    max-width: 100%;
-    gap: 12px;
+    gap: 10px;
   }
 }
 
-.stage-tabs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* Mobile Stepper Header (Approach C - active on tablet/mobile) */
+.stage-stepper-header {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    min-height: 44px;
+    user-select: none;
+  }
+
+  .stepper-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .stepper-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .stepper-badge {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: rgba(99, 200, 223, 0.12);
+    border: 1px solid rgba(99, 200, 223, 0.2);
+    white-space: nowrap;
+  }
+
+  .stepper-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .stepper-counter {
+    font-family: monospace, inherit;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+    min-width: 48px;
+    text-align: center;
+  }
+
+  .stepper-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    border: 1px solid var(--card-border);
+    background: var(--panel);
+    color: var(--ink);
+    cursor: pointer;
+    transition: all $transition-fast;
+    padding: 0;
+
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    &:active {
+      transform: scale(0.92);
+    }
+  }
+
+  @include mobile {
+    padding: 6px 10px;
+    min-height: 40px;
+
+    .stepper-title {
+      font-size: 12px;
+    }
+
+    .stepper-badge {
+      font-size: 9px;
+      padding: 1px 5px;
+    }
+
+    .stepper-counter {
+      font-size: 10px;
+      min-width: 40px;
+    }
+
+    .stepper-btn {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}
+
+/* Desktop Dossier Sidebar (Approach B - active on desktop) */
+.stage-dossier-list {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+  justify-content: center;
   width: 100%;
 
-  @include mobile {
-    gap: 8px;
+  @include tablet {
+    display: none;
   }
 }
 
-.stage-tab {
+.stage-dossier-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
+  gap: 12px;
+  padding: 13px 15px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 6px;
@@ -318,35 +465,60 @@ h1.hero-heading {
   transition: all $transition-fast;
   user-select: none;
   font-family: inherit;
+  width: 100%;
 
   &:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
 
-  .tab-name {
+  .dossier-indicator {
+    width: 3px;
+    height: 26px;
+    border-radius: 2px;
+    background: var(--card-border);
+    transition: background $transition-fast, transform $transition-fast;
+    flex-shrink: 0;
+  }
+
+  .dossier-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .dossier-name {
     font-size: 13px;
     font-weight: 800;
     color: var(--muted);
     transition: color $transition-fast;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  .tab-badge {
+  .dossier-tag {
     font-size: 10px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--muted);
-    margin-left: auto;
     opacity: 0.65;
-    white-space: nowrap;
     transition: color $transition-fast, opacity $transition-fast;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &:hover {
     border-color: var(--accent-mid);
 
-    .tab-name {
+    .dossier-indicator {
+      background: var(--accent-mid);
+    }
+
+    .dossier-name {
       color: var(--ink);
     }
   }
@@ -356,28 +528,32 @@ h1.hero-heading {
     background: var(--card-bg);
     box-shadow: 0 0 16px var(--accent-glow);
 
-    .tab-name {
+    .dossier-indicator {
+      background: var(--accent);
+      transform: scaleY(1.1);
+    }
+
+    .dossier-name {
       color: var(--ink);
       font-weight: 900;
     }
 
-    .tab-badge {
+    .dossier-tag {
       color: var(--accent);
       opacity: 1;
     }
   }
 
-  @include mobile {
+  @include tablet-large {
     padding: 10px 12px;
-    min-height: 42px;
-    gap: 6px;
+    gap: 8px;
 
-    .tab-name {
+    .dossier-name {
       font-size: 12px;
     }
 
-    .tab-badge {
-      display: none;
+    .dossier-tag {
+      font-size: 9px;
     }
   }
 }
@@ -385,17 +561,17 @@ h1.hero-heading {
 .stage-screen {
   position: relative;
   width: 100%;
-  aspect-ratio: 1904 / 948;
+  aspect-ratio: 16 / 9.4;
   background: #060b0f;
   border: 1px solid var(--card-border);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65);
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.72);
   transition: border-color $transition-smooth, box-shadow $transition-smooth;
 
   &:hover {
     border-color: var(--accent);
-    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.75), 0 0 24px var(--accent-glow);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 24px var(--accent-glow);
   }
 
   @include tablet {
@@ -529,17 +705,30 @@ h1.hero-heading {
 }
 
 body.light-theme {
-  .stage-tab {
+  .stage-dossier-item {
     background: var(--card-bg);
     border-color: var(--card-border);
 
-    .tab-name {
+    .dossier-indicator {
+      background: var(--card-border);
+    }
+
+    .dossier-name {
+      color: var(--muted);
+    }
+
+    .dossier-tag {
       color: var(--muted);
     }
 
     &:hover {
       border-color: var(--accent);
-      .tab-name {
+
+      .dossier-indicator {
+        background: var(--accent);
+      }
+
+      .dossier-name {
         color: var(--ink);
       }
     }
@@ -549,11 +738,45 @@ body.light-theme {
       border-color: var(--accent);
       box-shadow: 0 0 16px var(--accent-glow-light);
 
-      .tab-name {
+      .dossier-indicator {
+        background: var(--accent);
+      }
+
+      .dossier-name {
         color: var(--ink);
       }
 
-      .tab-badge {
+      .dossier-tag {
+        color: var(--accent);
+      }
+    }
+  }
+
+  .stage-stepper-header {
+    background: var(--card-bg);
+    border-color: var(--card-border);
+
+    .stepper-title {
+      color: var(--ink);
+    }
+
+    .stepper-badge {
+      background: rgba(21, 109, 128, 0.12);
+      border-color: rgba(21, 109, 128, 0.25);
+      color: var(--accent);
+    }
+
+    .stepper-counter {
+      color: var(--muted);
+    }
+
+    .stepper-btn {
+      background: #ffffff;
+      border-color: var(--card-border);
+      color: var(--ink);
+
+      &:hover {
+        border-color: var(--accent);
         color: var(--accent);
       }
     }

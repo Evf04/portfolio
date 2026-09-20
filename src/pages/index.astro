@@ -8,116 +8,145 @@ import WaveArt from "../components/WaveArt.astro";
   description="Portfolio of Elias Velasquez Fuentes - Systems Engineering student and Full-Stack Developer specializing in Astro, JavaScript, Sass, Supabase, and PostgreSQL."
 >
   <main class="hero" aria-labelledby="hero-title">
-    <div class="hero-copy">
-      <h1 id="hero-title" class="hero-heading">
-        <span class="hero-greeting" data-en="Hi, I'm Elias Velasquez" data-es="Hola, soy Elías Velásquez">Hola, soy Elías Velásquez</span>
-        <span data-en="Full-stack developer in" data-es="Desarrollador full-stack en">Desarrollador full-stack en</span>
-        <strong data-en="Cartagena, Colombia." data-es="Cartagena, Colombia.">Cartagena, Colombia.</strong>
-      </h1>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1 id="hero-title" class="hero-heading">
+          <span class="hero-greeting" data-en="Hi, I'm Elias Velasquez" data-es="Hola, soy Elías Velásquez">Hola, soy Elías Velásquez</span>
+          <span data-en="Full-stack developer in" data-es="Desarrollador full-stack en">Desarrollador full-stack en</span>
+          <strong data-en="Cartagena, Colombia." data-es="Cartagena, Colombia.">Cartagena, Colombia.</strong>
+        </h1>
 
+        <p class="intro">
+          <span data-en="Engineering fast web systems and relational PostgreSQL architectures for brand events and production." data-es="Construyo sistemas web rápidos y arquitecturas relacionales en PostgreSQL para eventos de marca y producción.">Construyo sistemas web rápidos y arquitecturas relacionales en PostgreSQL para eventos de marca y producción.</span>
+          <span data-en="Systems Engineering senior at Universidad de Cartagena." data-es="Estudiante de último año de Ingeniería de Sistemas en la Universidad de Cartagena.">Estudiante de último año de Ingeniería de Sistemas en la Universidad de Cartagena.</span>
+        </p>
 
-      <p class="intro">
-        <span data-en="Engineering fast web systems and relational PostgreSQL architectures for brand events and production." data-es="Construyo sistemas web rápidos y arquitecturas relacionales en PostgreSQL para eventos de marca y producción.">Construyo sistemas web rápidos y arquitecturas relacionales en PostgreSQL para eventos de marca y producción.</span>
-        <span data-en="Systems Engineering senior at Universidad de Cartagena." data-es="Estudiante de último año de Ingeniería de Sistemas en la Universidad de Cartagena.">Estudiante de último año de Ingeniería de Sistemas en la Universidad de Cartagena.</span>
-      </p>
-
-
-
-      <div class="hero-actions">
-        <a class="impact-link" href="/work">
-          <span data-en="See my work & case studies" data-es="Ver trabajos y casos de estudio">See my work & case studies</span>
-        </a>
-        <a class="secondary-action" href="/about">
-          <span data-en="About Me" data-es="Sobre mí">About Me</span>
-        </a>
-
-      </div>
-    </div>
-
-    <!-- Right-Side Visual: Wave Art + Interactive Showcase Stage -->
-    <div class="hero-visual" aria-label="Interactive Showcase">
-      <div class="hero-showcase-stage" aria-label="Featured Projects Showcase">
-        <!-- Stage Tabs -->
-        <div class="stage-tabs" role="tablist" aria-label="Featured projects selector">
-          <button
-            class="stage-tab active"
-            role="tab"
-            aria-selected="true"
-            aria-controls="panel-oasis"
-            id="tab-oasis"
-            data-target="panel-oasis"
-            type="button"
-          >
-            <span class="tab-name" data-en="Adidas Originals" data-es="Adidas Originals">Adidas Originals</span>
-            <span class="tab-badge" data-en="Oasis · Argentina" data-es="Oasis · Argentina">Oasis · Argentina</span>
-          </button>
-
-          <button
-            class="stage-tab"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-superstar"
-            id="tab-superstar"
-            data-target="panel-superstar"
-            type="button"
-          >
-            <span class="tab-name" data-en="Hotel Superstar" data-es="Hotel Superstar">Hotel Superstar</span>
-            <span class="tab-badge" data-en="Experience Hub" data-es="Portal de Evento">Experience Hub</span>
-          </button>
+        <div class="hero-actions">
+          <a class="impact-link" href="/work">
+            <span data-en="See my work & case studies" data-es="Ver trabajos y casos de estudio">See my work & case studies</span>
+          </a>
+          <a class="secondary-action" href="/about">
+            <span data-en="About Me" data-es="Sobre mí">About Me</span>
+          </a>
         </div>
+      </div>
 
-        <!-- Stage Viewport Screen -->
-        <div class="stage-screen">
-          <!-- Slide 1: Oasis / Original Forever -->
-          <div
-            class="stage-slide active"
-            id="panel-oasis"
-            role="tabpanel"
-            aria-labelledby="tab-oasis"
-          >
-            <div class="stage-media">
-              <img
-                src="/images/oasis.webp"
-                alt="Original Forever Booking Platform Preview"
-                width="1902"
-                height="942"
-                loading="eager"
-                decoding="async"
-              />
-              <div class="stage-actions">
-                <a href="https://slotsadidasoriginals-p.netlify.app" target="_blank" rel="noopener noreferrer" class="stage-action-btn primary">
-                  <span data-en="Live Demo" data-es="Demo en Vivo">Live Demo</span>
-                </a>
-                <a href="/work#original-forever" class="stage-action-btn secondary">
-                  <span data-en="Case Study" data-es="Caso de Estudio">Case Study</span>
-                </a>
-              </div>
+      <!-- Right-Side Visual: Hybrid Showcase Stage -->
+      <div class="hero-visual" aria-label="Interactive Showcase">
+        <div class="hero-showcase-stage" aria-label="Featured Projects Showcase">
+          <!-- Mobile Stepper Header (Approach C) -->
+          <div class="stage-stepper-header" aria-label="Project switcher">
+            <div class="stepper-info">
+              <span class="stepper-title" id="stepper-title" data-en="Adidas Originals" data-es="Adidas Originals">Adidas Originals</span>
+              <span class="stepper-badge" id="stepper-badge" data-en="Oasis · Argentina" data-es="Oasis · Argentina">Oasis · Argentina</span>
+            </div>
+            <div class="stepper-controls">
+              <button type="button" class="stepper-btn prev" id="stepper-prev" aria-label="Previous project">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+              </button>
+              <span class="stepper-counter" id="stepper-counter">01 / 02</span>
+              <button type="button" class="stepper-btn next" id="stepper-next" aria-label="Next project">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
             </div>
           </div>
 
-          <!-- Slide 2: Superstar -->
-          <div
-            class="stage-slide"
-            id="panel-superstar"
-            role="tabpanel"
-            aria-labelledby="tab-superstar"
-          >
-            <div class="stage-media">
-              <img
-                src="/images/superstar.webp"
-                alt="Hotel Superstar Portal Preview"
-                width="1904"
-                height="948"
-                loading="eager"
-                decoding="async"
-              />
-              <div class="stage-actions">
-                <a href="https://experienciasuperstar-p.netlify.app" target="_blank" rel="noopener noreferrer" class="stage-action-btn primary">
-                  <span data-en="Live Demo" data-es="Demo en Vivo">Live Demo</span>
-                </a>
-                <a href="/work#hotel-superstar" class="stage-action-btn secondary">
-                  <span data-en="Case Study" data-es="Caso de Estudio">Case Study</span>
-                </a>
+          <!-- Desktop Dossier List (Approach B) -->
+          <div class="stage-dossier-list" role="tablist" aria-label="Featured projects dossier">
+            <button
+              class="stage-dossier-item active"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-oasis"
+              id="tab-oasis"
+              data-target="panel-oasis"
+              data-title-en="Adidas Originals"
+              data-title-es="Adidas Originals"
+              data-badge-en="Oasis · Argentina"
+              data-badge-es="Oasis · Argentina"
+              type="button"
+            >
+              <span class="dossier-indicator" aria-hidden="true"></span>
+              <div class="dossier-text">
+                <span class="dossier-name" data-en="Adidas Originals" data-es="Adidas Originals">Adidas Originals</span>
+                <span class="dossier-tag" data-en="Oasis · Argentina" data-es="Oasis · Argentina">Oasis · Argentina</span>
+              </div>
+            </button>
+
+            <button
+              class="stage-dossier-item"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-superstar"
+              id="tab-superstar"
+              data-target="panel-superstar"
+              data-title-en="Hotel Superstar"
+              data-title-es="Hotel Superstar"
+              data-badge-en="Experience Hub"
+              data-badge-es="Portal de Evento"
+              type="button"
+            >
+              <span class="dossier-indicator" aria-hidden="true"></span>
+              <div class="dossier-text">
+                <span class="dossier-name" data-en="Hotel Superstar" data-es="Hotel Superstar">Hotel Superstar</span>
+                <span class="dossier-tag" data-en="Experience Hub" data-es="Portal de Evento">Experience Hub</span>
+              </div>
+            </button>
+          </div>
+
+          <!-- Stage Viewport Screen -->
+          <div class="stage-screen">
+            <!-- Slide 1: Oasis / Original Forever -->
+            <div
+              class="stage-slide active"
+              id="panel-oasis"
+              role="tabpanel"
+              aria-labelledby="tab-oasis"
+            >
+              <div class="stage-media">
+                <img
+                  src="/images/oasis.webp"
+                  alt="Original Forever Booking Platform Preview"
+                  width="1902"
+                  height="942"
+                  loading="eager"
+                  decoding="async"
+                />
+                <div class="stage-actions">
+                  <a href="https://slotsadidasoriginals-p.netlify.app" target="_blank" rel="noopener noreferrer" class="stage-action-btn primary">
+                    <span data-en="Live Demo" data-es="Demo en Vivo">Live Demo</span>
+                  </a>
+                  <a href="/work#original-forever" class="stage-action-btn secondary">
+                    <span data-en="Case Study" data-es="Caso de Estudio">Case Study</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Superstar -->
+            <div
+              class="stage-slide"
+              id="panel-superstar"
+              role="tabpanel"
+              aria-labelledby="tab-superstar"
+            >
+              <div class="stage-media">
+                <img
+                  src="/images/superstar.webp"
+                  alt="Hotel Superstar Portal Preview"
+                  width="1904"
+                  height="948"
+                  loading="eager"
+                  decoding="async"
+                />
+                <div class="stage-actions">
+                  <a href="https://experienciasuperstar-p.netlify.app" target="_blank" rel="noopener noreferrer" class="stage-action-btn primary">
+                    <span data-en="Live Demo" data-es="Demo en Vivo">Live Demo</span>
+                  </a>
+                  <a href="/work#hotel-superstar" class="stage-action-btn secondary">
+                    <span data-en="Case Study" data-es="Caso de Estudio">Case Study</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -132,43 +161,89 @@ import WaveArt from "../components/WaveArt.astro";
 
 <script>
   function setupShowcaseStage() {
-    const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('.stage-tab'));
+    const dossierItems = Array.from(document.querySelectorAll<HTMLButtonElement>('.stage-dossier-item'));
     const slides = Array.from(document.querySelectorAll<HTMLElement>('.stage-slide'));
+    const stepperTitle = document.getElementById('stepper-title');
+    const stepperBadge = document.getElementById('stepper-badge');
+    const stepperCounter = document.getElementById('stepper-counter');
+    const prevBtn = document.getElementById('stepper-prev');
+    const nextBtn = document.getElementById('stepper-next');
 
-    function activateTab(index: number) {
-      tabs.forEach((t, i) => {
+    let currentIndex = 0;
+
+    function activateSlide(index: number) {
+      if (index < 0 || index >= slides.length) return;
+      currentIndex = index;
+
+      // 1. Update Desktop Dossier Items
+      dossierItems.forEach((item, i) => {
         const isActive = i === index;
-        t.classList.toggle('active', isActive);
-        t.setAttribute('aria-selected', String(isActive));
-        t.tabIndex = isActive ? 0 : -1;
+        item.classList.toggle('active', isActive);
+        item.setAttribute('aria-selected', String(isActive));
+        item.tabIndex = isActive ? 0 : -1;
       });
 
-      const targetId = tabs[index]?.getAttribute('data-target');
+      // 2. Update Slides
+      const targetItem = dossierItems[index];
+      const targetId = targetItem?.getAttribute('data-target');
       slides.forEach((slide) => {
         const isTarget = slide.id === targetId;
         slide.classList.toggle('active', isTarget);
       });
+
+      // 3. Update Mobile Stepper Header
+      if (stepperCounter) {
+        stepperCounter.textContent = `0${index + 1} / 0${slides.length}`;
+      }
+      if (stepperTitle && targetItem) {
+        const titleEn = targetItem.getAttribute('data-title-en') || '';
+        const titleEs = targetItem.getAttribute('data-title-es') || '';
+        stepperTitle.setAttribute('data-en', titleEn);
+        stepperTitle.setAttribute('data-es', titleEs);
+        const currentLang = document.documentElement.getAttribute('lang') || 'es';
+        stepperTitle.textContent = currentLang === 'en' ? titleEn : titleEs;
+      }
+      if (stepperBadge && targetItem) {
+        const badgeEn = targetItem.getAttribute('data-badge-en') || '';
+        const badgeEs = targetItem.getAttribute('data-badge-es') || '';
+        stepperBadge.setAttribute('data-en', badgeEn);
+        stepperBadge.setAttribute('data-es', badgeEs);
+        const currentLang = document.documentElement.getAttribute('lang') || 'es';
+        stepperBadge.textContent = currentLang === 'en' ? badgeEn : badgeEs;
+      }
     }
 
-    tabs.forEach((tab, index) => {
-      tab.addEventListener('click', () => {
-        activateTab(index);
+    // Desktop Click & Keyboard Navigation
+    dossierItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        activateSlide(index);
       });
 
-      tab.addEventListener('keydown', (e) => {
+      item.addEventListener('keydown', (e) => {
         let nextIndex = -1;
-        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-          nextIndex = (index + 1) % tabs.length;
-        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-          nextIndex = (index - 1 + tabs.length) % tabs.length;
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+          nextIndex = (index + 1) % dossierItems.length;
+        } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+          nextIndex = (index - 1 + dossierItems.length) % dossierItems.length;
         }
 
         if (nextIndex !== -1) {
           e.preventDefault();
-          activateTab(nextIndex);
-          tabs[nextIndex]?.focus();
+          activateSlide(nextIndex);
+          dossierItems[nextIndex]?.focus();
         }
       });
+    });
+
+    // Mobile Stepper Buttons
+    prevBtn?.addEventListener('click', () => {
+      const nextIndex = (currentIndex - 1 + slides.length) % slides.length;
+      activateSlide(nextIndex);
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      const nextIndex = (currentIndex + 1) % slides.length;
+      activateSlide(nextIndex);
     });
   }
 
