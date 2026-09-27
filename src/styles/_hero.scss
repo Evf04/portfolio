@@ -4,15 +4,17 @@
   flex: 1;
   min-height: calc(100vh - 70px);
   position: relative;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 0 clamp(24px, 3vw, 56px);
+  justify-content: flex-start;
+  padding: clamp(28px, 4vh, 48px) clamp(24px, 4vw, 56px) clamp(44px, 5.5vh, 60px);
 
   @include tablet {
     min-height: auto;
-    padding: clamp(32px, 5vw, 44px) 0 clamp(44px, 7vw, 60px);
+    padding: clamp(28px, 4vw, 40px) 0 clamp(40px, 6vw, 56px);
     display: block;
   }
 }
@@ -22,24 +24,17 @@
   max-width: 1640px;
   margin: 0 auto;
   padding: 0;
-  display: grid;
-  grid-template-columns: minmax(460px, 540px) 1fr;
-  gap: clamp(56px, 7vw, 130px);
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: clamp(22px, 2.8vh, 32px);
   position: relative;
   z-index: 5;
 
-  @include tablet-large {
-    grid-template-columns: minmax(380px, 460px) 1fr;
-    gap: 40px;
-  }
-
   @include tablet {
-    display: flex;
-    flex-direction: column;
     align-items: stretch;
-    padding: 0 32px;
-    gap: clamp(24px, 4vw, 36px);
+    padding: 0 24px;
+    gap: 22px;
     max-width: 680px;
   }
 
@@ -52,35 +47,28 @@
 
 .hero-copy {
   width: 100%;
-  max-width: 540px;
-  padding: clamp(32px, 3vw, 48px) 0;
+  max-width: 720px;
+  padding: 0;
+  margin-top: clamp(14px, 2vh, 26px);
   position: relative;
   z-index: 5;
-
-  @include tablet-large {
-    padding: 20px 0;
-    max-width: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 
   @include tablet {
-    width: 100%;
     max-width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  @include mobile {
-    padding: 0;
-    max-width: 100%;
+    margin-top: 0;
   }
 }
 
 h1.hero-heading {
-  max-width: 620px;
+  max-width: 700px;
   margin: 0;
   color: var(--ink);
   text-transform: none;
-  font-size: clamp(30px, 2.9vw, 46px);
+  font-size: clamp(30px, 2.8vw, 44px);
   line-height: 1.15;
   font-weight: 800;
   letter-spacing: -0.015em;
@@ -88,12 +76,12 @@ h1.hero-heading {
 
   .hero-greeting {
     display: block;
-    font-size: clamp(14px, 1.3vw, 17px);
+    font-size: clamp(13px, 1.1vw, 15px);
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
   span,
@@ -116,34 +104,34 @@ h1.hero-heading {
 
     .hero-greeting {
       font-size: 13px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       letter-spacing: 0.08em;
     }
   }
 }
 
 .intro {
-  width: min(100%, 560px);
-  margin: 22px 0 32px;
+  width: min(100%, 680px);
+  margin: 14px 0 20px;
   color: var(--muted);
-  font-size: clamp(14px, 1.15vw, 17px);
-  line-height: 1.68;
+  font-size: clamp(14px, 1.05vw, 16px);
+  line-height: 1.6;
   font-weight: 500;
 
   span {
     display: block;
 
     &:not(:last-child) {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
   }
 
   @include tablet {
-    margin: 18px 0 26px;
+    margin: 14px 0 20px;
     font-size: 15px;
 
     span:not(:last-child) {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
   }
 }
@@ -151,7 +139,7 @@ h1.hero-heading {
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 
   @include mobile {
     flex-direction: column;
@@ -239,7 +227,7 @@ h1.hero-heading {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
   pointer-events: auto;
   z-index: 3;
 
@@ -295,17 +283,20 @@ h1.hero-heading {
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 860px;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-top: clamp(-52px, -5vh, -30px);
   display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 16px;
-  align-items: stretch;
+  grid-template-columns: 210px 1fr;
+  gap: 24px;
+  align-items: center;
   pointer-events: auto;
 
   @include tablet-large {
     max-width: 100%;
-    grid-template-columns: 160px 1fr;
-    gap: 12px;
+    grid-template-columns: 190px 1fr;
+    gap: 14px;
+    margin-top: -20px;
   }
 
   @include tablet {
@@ -313,15 +304,17 @@ h1.hero-heading {
     flex-direction: column;
     max-width: 100%;
     margin: 0 auto;
+    margin-top: 0;
     gap: 10px;
   }
 
   @include mobile {
+    margin-top: 0;
     gap: 10px;
   }
 }
 
-/* Mobile Stepper Header (Approach C - active on tablet/mobile) */
+/* Mobile Stepper Header (active on tablet/mobile) */
 .stage-stepper-header {
   display: none;
 
@@ -439,11 +432,11 @@ h1.hero-heading {
   }
 }
 
-/* Desktop Dossier Sidebar (Approach B - active on desktop) */
+/* Desktop Dossier Sidebar (Discrete option buttons) */
 .stage-dossier-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
   width: 100%;
 
@@ -499,7 +492,7 @@ h1.hero-heading {
   }
 
   .dossier-tag {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -553,25 +546,26 @@ h1.hero-heading {
     }
 
     .dossier-tag {
-      font-size: 9px;
+      font-size: 11px;
     }
   }
 }
 
+/* Stage Viewport Screen (Standalone preview card) */
 .stage-screen {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9.4;
+  aspect-ratio: 16 / 9;
   background: #060b0f;
   border: 1px solid var(--card-border);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.72);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
   transition: border-color $transition-smooth, box-shadow $transition-smooth;
 
   &:hover {
     border-color: var(--accent);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 24px var(--accent-glow);
+    box-shadow: 0 28px 68px rgba(0, 0, 0, 0.82), 0 0 28px var(--accent-glow);
   }
 
   @include tablet {
@@ -734,9 +728,9 @@ body.light-theme {
     }
 
     &.active {
-      background: #ffffff;
+      background: var(--card-bg);
       border-color: var(--accent);
-      box-shadow: 0 0 16px var(--accent-glow-light);
+      box-shadow: 0 0 16px var(--accent-glow);
 
       .dossier-indicator {
         background: var(--accent);
@@ -761,8 +755,8 @@ body.light-theme {
     }
 
     .stepper-badge {
-      background: rgba(21, 109, 128, 0.12);
-      border-color: rgba(21, 109, 128, 0.25);
+      background: var(--accent-glow);
+      border-color: var(--card-border);
       color: var(--accent);
     }
 
@@ -771,7 +765,7 @@ body.light-theme {
     }
 
     .stepper-btn {
-      background: #ffffff;
+      background: var(--card-bg);
       border-color: var(--card-border);
       color: var(--ink);
 
@@ -799,7 +793,7 @@ body.light-theme {
       &:hover,
       &:active {
         background: var(--accent);
-        color: #ffffff;
+        color: var(--panel);
         border-color: var(--accent);
       }
     }
