@@ -11,22 +11,40 @@ import WaveArt from "../components/WaveArt.astro";
     <div class="hero-inner">
       <div class="hero-copy">
         <h1 id="hero-title" class="hero-heading">
-          <span class="hero-greeting" data-en="Hi, I'm Elias Velasquez" data-es="Hola, soy Elías Velásquez">Hola, soy Elías Velásquez</span>
-          <span data-en="Full-stack developer in" data-es="Desarrollador full-stack en">Desarrollador full-stack en</span>
+          <span class="hero-greeting" data-en="Hi, I'm Elias Velasquez" data-es="Hola, soy Elías Velásquez">
+            <span class="lang-text lang-en">Hi, I'm Elias Velasquez</span>
+            <span class="lang-text lang-es">Hola, soy Elías Velásquez</span>
+          </span>
+          <span data-en="Full-stack developer in" data-es="Desarrollador full-stack en">
+            <span class="lang-text lang-en">Full-stack developer in</span>
+            <span class="lang-text lang-es">Desarrollador full-stack en</span>
+          </span>
           <strong data-en="Cartagena, Colombia." data-es="Cartagena, Colombia.">Cartagena, Colombia.</strong>
         </h1>
 
         <p class="intro">
-          <span data-en="Engineering fast web systems and relational PostgreSQL architectures for brand events and production." data-es="Construyo sistemas web rápidos y arquitecturas relacionales en PostgreSQL para eventos de marca y producción.">Construyo sistemas web rápidos y arquitecturas relacionales en PostgreSQL para eventos de marca y producción.</span>
-          <span data-en="Systems Engineering senior at Universidad de Cartagena." data-es="Estudiante de último año de Ingeniería de Sistemas en la Universidad de Cartagena.">Estudiante de último año de Ingeniería de Sistemas en la Universidad de Cartagena.</span>
+          <span data-en="Engineering fast web systems and relational PostgreSQL architectures for brand events and production." data-es="Construyo sistemas web rápidos y arquitecturas relacionales en PostgreSQL para eventos de marca y producción.">
+            <span class="lang-text lang-en">Engineering fast web systems and relational PostgreSQL architectures for brand events and production.</span>
+            <span class="lang-text lang-es">Construyo sistemas web rápidos y arquitecturas relacionales en PostgreSQL para eventos de marca y producción.</span>
+          </span>
+          <span data-en="Systems Engineering senior at Universidad de Cartagena." data-es="Estudiante de último año de Ingeniería de Sistemas en la Universidad de Cartagena.">
+            <span class="lang-text lang-en">Systems Engineering senior at Universidad de Cartagena.</span>
+            <span class="lang-text lang-es">Estudiante de último año de Ingeniería de Sistemas en la Universidad de Cartagena.</span>
+          </span>
         </p>
 
         <div class="hero-actions">
           <a class="impact-link" href="/work">
-            <span data-en="See my work & case studies" data-es="Ver trabajos y casos de estudio">See my work & case studies</span>
+            <span data-en="View case studies" data-es="Ver casos de estudio">
+              <span class="lang-text lang-en">View case studies</span>
+              <span class="lang-text lang-es">Ver casos de estudio</span>
+            </span>
           </a>
-          <a class="secondary-action" href="/about">
-            <span data-en="About Me" data-es="Sobre mí">About Me</span>
+          <a class="hero-sub-link" href="/about">
+            <span data-en="About me" data-es="Sobre mí">
+              <span class="lang-text lang-en">About me</span>
+              <span class="lang-text lang-es">Sobre mí</span>
+            </span>
           </a>
         </div>
       </div>
@@ -34,24 +52,7 @@ import WaveArt from "../components/WaveArt.astro";
       <!-- Right-Side Visual: Hybrid Showcase Stage -->
       <div class="hero-visual" aria-label="Interactive Showcase">
         <div class="hero-showcase-stage" aria-label="Featured Projects Showcase">
-          <!-- Mobile Stepper Header (Approach C) -->
-          <div class="stage-stepper-header" aria-label="Project switcher">
-            <div class="stepper-info">
-              <span class="stepper-title" id="stepper-title" data-en="Adidas Originals" data-es="Adidas Originals">Adidas Originals</span>
-              <span class="stepper-badge" id="stepper-badge" data-en="Oasis · Argentina" data-es="Oasis · Argentina">Oasis · Argentina</span>
-            </div>
-            <div class="stepper-controls">
-              <button type="button" class="stepper-btn prev" id="stepper-prev" aria-label="Previous project">
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-              </button>
-              <span class="stepper-counter" id="stepper-counter">01 / 02</span>
-              <button type="button" class="stepper-btn next" id="stepper-next" aria-label="Next project">
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </button>
-            </div>
-          </div>
-
-          <!-- Desktop Dossier List -->
+          <!-- Project Tabs (Vertical sidebar on desktop, clean horizontal tabs on mobile) -->
           <div class="stage-dossier-list" role="tablist" aria-label="Featured projects dossier">
             <button
               class="stage-dossier-item active"
@@ -89,7 +90,10 @@ import WaveArt from "../components/WaveArt.astro";
               <span class="dossier-indicator" aria-hidden="true"></span>
               <div class="dossier-text">
                 <span class="dossier-name" data-en="Hotel Superstar" data-es="Hotel Superstar">Hotel Superstar</span>
-                <span class="dossier-tag" data-en="Experience Hub" data-es="Portal de Evento">Experience Hub</span>
+                <span class="dossier-tag" data-en="Experience Hub" data-es="Portal de Evento">
+                  <span class="lang-text lang-en">Experience Hub</span>
+                  <span class="lang-text lang-es">Portal de Evento</span>
+                </span>
               </div>
             </button>
           </div>
@@ -114,10 +118,16 @@ import WaveArt from "../components/WaveArt.astro";
                 />
                 <div class="stage-actions">
                   <a href="https://slotsadidasoriginals-p.netlify.app" target="_blank" rel="noopener noreferrer" class="stage-action-btn primary">
-                    <span data-en="Live Demo" data-es="Demo en Vivo">Live Demo</span>
+                    <span data-en="Live Demo" data-es="Demo en Vivo">
+                      <span class="lang-text lang-en">Live Demo</span>
+                      <span class="lang-text lang-es">Demo en Vivo</span>
+                    </span>
                   </a>
                   <a href="/work#original-forever" class="stage-action-btn secondary">
-                    <span data-en="Case Study" data-es="Caso de Estudio">Case Study</span>
+                    <span data-en="Case Study" data-es="Caso de Estudio">
+                      <span class="lang-text lang-en">Case Study</span>
+                      <span class="lang-text lang-es">Caso de Estudio</span>
+                    </span>
                   </a>
                 </div>
               </div>
@@ -141,10 +151,16 @@ import WaveArt from "../components/WaveArt.astro";
                 />
                 <div class="stage-actions">
                   <a href="https://experienciasuperstar-p.netlify.app" target="_blank" rel="noopener noreferrer" class="stage-action-btn primary">
-                    <span data-en="Live Demo" data-es="Demo en Vivo">Live Demo</span>
+                    <span data-en="Live Demo" data-es="Demo en Vivo">
+                      <span class="lang-text lang-en">Live Demo</span>
+                      <span class="lang-text lang-es">Demo en Vivo</span>
+                    </span>
                   </a>
                   <a href="/work#hotel-superstar" class="stage-action-btn secondary">
-                    <span data-en="Case Study" data-es="Caso de Estudio">Case Study</span>
+                    <span data-en="Case Study" data-es="Caso de Estudio">
+                      <span class="lang-text lang-en">Case Study</span>
+                      <span class="lang-text lang-es">Caso de Estudio</span>
+                    </span>
                   </a>
                 </div>
               </div>
@@ -163,11 +179,7 @@ import WaveArt from "../components/WaveArt.astro";
   function setupShowcaseStage() {
     const dossierItems = Array.from(document.querySelectorAll<HTMLButtonElement>('.stage-dossier-item'));
     const slides = Array.from(document.querySelectorAll<HTMLElement>('.stage-slide'));
-    const stepperTitle = document.getElementById('stepper-title');
-    const stepperBadge = document.getElementById('stepper-badge');
-    const stepperCounter = document.getElementById('stepper-counter');
-    const prevBtn = document.getElementById('stepper-prev');
-    const nextBtn = document.getElementById('stepper-next');
+    const stageScreen = document.querySelector<HTMLElement>('.stage-screen');
 
     let currentIndex = 0;
 
@@ -175,7 +187,7 @@ import WaveArt from "../components/WaveArt.astro";
       if (index < 0 || index >= slides.length) return;
       currentIndex = index;
 
-      // 1. Update Desktop Dossier Items
+      // 1. Update Project Tabs
       dossierItems.forEach((item, i) => {
         const isActive = i === index;
         item.classList.toggle('active', isActive);
@@ -190,30 +202,9 @@ import WaveArt from "../components/WaveArt.astro";
         const isTarget = slide.id === targetId;
         slide.classList.toggle('active', isTarget);
       });
-
-      // 3. Update Mobile Stepper Header
-      if (stepperCounter) {
-        stepperCounter.textContent = `0${index + 1} / 0${slides.length}`;
-      }
-      if (stepperTitle && targetItem) {
-        const titleEn = targetItem.getAttribute('data-title-en') || '';
-        const titleEs = targetItem.getAttribute('data-title-es') || '';
-        stepperTitle.setAttribute('data-en', titleEn);
-        stepperTitle.setAttribute('data-es', titleEs);
-        const currentLang = document.documentElement.getAttribute('lang') || 'es';
-        stepperTitle.textContent = currentLang === 'en' ? titleEn : titleEs;
-      }
-      if (stepperBadge && targetItem) {
-        const badgeEn = targetItem.getAttribute('data-badge-en') || '';
-        const badgeEs = targetItem.getAttribute('data-badge-es') || '';
-        stepperBadge.setAttribute('data-en', badgeEn);
-        stepperBadge.setAttribute('data-es', badgeEs);
-        const currentLang = document.documentElement.getAttribute('lang') || 'es';
-        stepperBadge.textContent = currentLang === 'en' ? badgeEn : badgeEs;
-      }
     }
 
-    // Desktop Click & Keyboard Navigation
+    // Click & Keyboard Navigation for all viewports
     dossierItems.forEach((item, index) => {
       item.addEventListener('click', () => {
         activateSlide(index);
@@ -235,16 +226,24 @@ import WaveArt from "../components/WaveArt.astro";
       });
     });
 
-    // Mobile Stepper Buttons
-    prevBtn?.addEventListener('click', () => {
-      const nextIndex = (currentIndex - 1 + slides.length) % slides.length;
-      activateSlide(nextIndex);
-    });
+    // Mobile Swipe Gesture Support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    stageScreen?.addEventListener('touchstart', (e: TouchEvent) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
 
-    nextBtn?.addEventListener('click', () => {
-      const nextIndex = (currentIndex + 1) % slides.length;
-      activateSlide(nextIndex);
-    });
+    stageScreen?.addEventListener('touchend', (e: TouchEvent) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) {
+          activateSlide((currentIndex + 1) % slides.length);
+        } else {
+          activateSlide((currentIndex - 1 + slides.length) % slides.length);
+        }
+      }
+    }, { passive: true });
   }
 
   setupShowcaseStage();

@@ -152,6 +152,7 @@ button {
 }
 
 // Light Theme Modifiers
+html.light-theme,
 body.light-theme {
   --page: #{$page-light};
   --panel: #{$panel-light};
@@ -170,6 +171,20 @@ body.light-theme {
   .page-title {
     color: #070c11;
   }
+}
+
+// Multilingual Instant Render Guard (Zero Layout Shift / Zero Text Swap Flicker)
+.lang-text {
+  display: inline;
+}
+
+html[lang="en"] .lang-text.lang-es,
+html:not([lang="es"]) .lang-text.lang-es {
+  display: none !important;
+}
+
+html[lang="es"] .lang-text.lang-en {
+  display: none !important;
 }
 
 // Accessibility: Motion Sensitivity Accommodation

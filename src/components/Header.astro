@@ -11,9 +11,18 @@ const currentPath = pathname.replace(/\/$/, "");
 
 
     <nav class="nav-links" aria-label="Main menu">
-      <a href="/about" class={currentPath === "/about" ? "active" : ""} data-en="About" data-es="Sobre mí">About</a>
-      <a href="/work" class={currentPath === "/work" ? "active" : ""} data-en="Work" data-es="Trabajo">Work</a>
-      <a href="/contact" class={currentPath === "/contact" ? "active" : ""} data-en="Contact" data-es="Contacto">Contact</a>
+      <a href="/about" class={currentPath === "/about" ? "active" : ""} data-en="About" data-es="Sobre mí">
+        <span class="lang-text lang-en">About</span>
+        <span class="lang-text lang-es">Sobre mí</span>
+      </a>
+      <a href="/work" class={currentPath === "/work" ? "active" : ""} data-en="Work" data-es="Trabajo">
+        <span class="lang-text lang-en">Work</span>
+        <span class="lang-text lang-es">Trabajo</span>
+      </a>
+      <a href="/contact" class={currentPath === "/contact" ? "active" : ""} data-en="Contact" data-es="Contacto">
+        <span class="lang-text lang-en">Contact</span>
+        <span class="lang-text lang-es">Contacto</span>
+      </a>
     </nav>
 
     <div class="topbar-actions">
@@ -33,7 +42,7 @@ const currentPath = pathname.replace(/\/$/, "");
       </a>
 
       <button class="lang-toggle" type="button" aria-label="Switch language">
-        <span class="lang-en active" aria-hidden="true">EN</span>
+        <span class="lang-en" aria-hidden="true">EN</span>
         <span class="lang-separator" aria-hidden="true">/</span>
         <span class="lang-es" aria-hidden="true">ES</span>
       </button>
@@ -64,10 +73,22 @@ const currentPath = pathname.replace(/\/$/, "");
   </div>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="/" class={currentPath === "" ? "active" : ""} data-en="Home" data-es="Inicio">Home</a>
-    <a href="/about" class={currentPath === "/about" ? "active" : ""} data-en="About" data-es="Sobre mí">About</a>
-    <a href="/work" class={currentPath === "/work" ? "active" : ""} data-en="Work" data-es="Trabajo">Work</a>
-    <a href="/contact" class={currentPath === "/contact" ? "active" : ""} data-en="Contact" data-es="Contacto">Contact</a>
+    <a href="/" class={currentPath === "" ? "active" : ""} data-en="Home" data-es="Inicio">
+      <span class="lang-text lang-en">Home</span>
+      <span class="lang-text lang-es">Inicio</span>
+    </a>
+    <a href="/about" class={currentPath === "/about" ? "active" : ""} data-en="About" data-es="Sobre mí">
+      <span class="lang-text lang-en">About</span>
+      <span class="lang-text lang-es">Sobre mí</span>
+    </a>
+    <a href="/work" class={currentPath === "/work" ? "active" : ""} data-en="Work" data-es="Trabajo">
+      <span class="lang-text lang-en">Work</span>
+      <span class="lang-text lang-es">Trabajo</span>
+    </a>
+    <a href="/contact" class={currentPath === "/contact" ? "active" : ""} data-en="Contact" data-es="Contacto">
+      <span class="lang-text lang-en">Contact</span>
+      <span class="lang-text lang-es">Contacto</span>
+    </a>
     <a href="https://www.linkedin.com/in/eliasvf" target="_blank" rel="noopener noreferrer" class="mobile-external-link">LinkedIn ↗</a>
   </div>
 </header>

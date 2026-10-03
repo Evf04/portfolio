@@ -14,7 +14,7 @@
 
   @include tablet {
     min-height: auto;
-    padding: clamp(28px, 4vw, 40px) 0 clamp(40px, 6vw, 56px);
+    padding: clamp(20px, 3vw, 28px) 0 clamp(36px, 5vw, 48px);
     display: block;
   }
 }
@@ -27,20 +27,20 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: clamp(22px, 2.8vh, 32px);
+  gap: clamp(28px, 3.5vh, 40px);
   position: relative;
   z-index: 5;
 
   @include tablet {
     align-items: stretch;
     padding: 0 24px;
-    gap: 22px;
+    gap: 38px;
     max-width: 680px;
   }
 
   @include mobile {
     padding: 0 20px;
-    gap: 20px;
+    gap: 38px;
     max-width: 100%;
   }
 }
@@ -99,12 +99,12 @@ h1.hero-heading {
   }
 
   @include tablet {
-    font-size: clamp(26px, 6.8vw, 36px);
-    line-height: 1.18;
+    font-size: clamp(28px, 7.5vw, 36px);
+    line-height: 1.14;
 
     .hero-greeting {
       font-size: 13px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       letter-spacing: 0.08em;
     }
   }
@@ -112,7 +112,7 @@ h1.hero-heading {
 
 .intro {
   width: min(100%, 680px);
-  margin: 14px 0 20px;
+  margin: 16px 0 24px;
   color: var(--muted);
   font-size: clamp(14px, 1.05vw, 16px);
   line-height: 1.6;
@@ -127,30 +127,35 @@ h1.hero-heading {
   }
 
   @include tablet {
-    margin: 14px 0 20px;
-    font-size: 15px;
+    margin: 18px 0 24px;
+    font-size: 15.5px;
+    line-height: 1.62;
 
     span:not(:last-child) {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
+  }
+
+  @include mobile {
+    margin: 16px 0 24px;
   }
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
 
   @include mobile {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    gap: 10px;
+    gap: 12px;
   }
 }
 
 .impact-link {
-  height: 44px;
+  height: 46px;
   padding: 0 24px;
   display: inline-flex;
   align-items: center;
@@ -163,7 +168,7 @@ h1.hero-heading {
   font-weight: 900;
   letter-spacing: 0.5px;
   border-radius: 6px;
-  transition: all $transition-fast;
+  transition: background-color $transition-fast, color $transition-fast, border-color $transition-fast, transform $transition-fast;
 
   &:hover {
     background: var(--accent);
@@ -172,17 +177,41 @@ h1.hero-heading {
   }
 
   @include tablet {
-    height: 44px;
-    padding: 0 18px;
-    font-size: 12px;
+    height: 46px;
+    padding: 0 20px;
+    font-size: 12.5px;
   }
 
   @include mobile {
     width: 100%;
-    height: 44px;
-    font-size: 12px;
-    letter-spacing: 0.03em;
+    height: 46px;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
     text-align: center;
+  }
+}
+
+.hero-sub-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: var(--ink);
+  }
+
+  @include mobile {
+    justify-content: center;
+    padding: 4px 0;
+    font-size: 12px;
   }
 }
 
@@ -199,7 +228,7 @@ h1.hero-heading {
   font-size: 13px;
   font-weight: 800;
   border-radius: 6px;
-  transition: all $transition-fast;
+  transition: background-color $transition-fast, color $transition-fast, border-color $transition-fast, transform $transition-fast;
 
   &:hover {
     border-color: var(--accent);
@@ -314,125 +343,6 @@ h1.hero-heading {
   }
 }
 
-/* Mobile Stepper Header (active on tablet/mobile) */
-.stage-stepper-header {
-  display: none;
-
-  @include tablet {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 8px 14px;
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 6px;
-    min-height: 44px;
-    user-select: none;
-  }
-
-  .stepper-info {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    min-width: 0;
-    flex: 1;
-  }
-
-  .stepper-title {
-    font-size: 13px;
-    font-weight: 800;
-    color: var(--ink);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .stepper-badge {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--accent);
-    padding: 2px 7px;
-    border-radius: 4px;
-    background: rgba(99, 200, 223, 0.12);
-    border: 1px solid rgba(99, 200, 223, 0.2);
-    white-space: nowrap;
-  }
-
-  .stepper-controls {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-  }
-
-  .stepper-counter {
-    font-family: monospace, inherit;
-    font-size: 11px;
-    font-weight: 800;
-    color: var(--muted);
-    letter-spacing: 0.5px;
-    min-width: 48px;
-    text-align: center;
-  }
-
-  .stepper-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 4px;
-    border: 1px solid var(--card-border);
-    background: var(--panel);
-    color: var(--ink);
-    cursor: pointer;
-    transition: all $transition-fast;
-    padding: 0;
-
-    &:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
-
-    &:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    &:active {
-      transform: scale(0.92);
-    }
-  }
-
-  @include mobile {
-    padding: 6px 10px;
-    min-height: 40px;
-
-    .stepper-title {
-      font-size: 12px;
-    }
-
-    .stepper-badge {
-      font-size: 9px;
-      padding: 1px 5px;
-    }
-
-    .stepper-counter {
-      font-size: 10px;
-      min-width: 40px;
-    }
-
-    .stepper-btn {
-      width: 26px;
-      height: 26px;
-    }
-  }
-}
-
-/* Desktop Dossier Sidebar (Discrete option buttons) */
 .stage-dossier-list {
   display: flex;
   flex-direction: column;
@@ -441,7 +351,15 @@ h1.hero-heading {
   width: 100%;
 
   @include tablet {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
   }
 }
 
@@ -455,7 +373,7 @@ h1.hero-heading {
   border-radius: 6px;
   cursor: pointer;
   text-align: left;
-  transition: all $transition-fast;
+  transition: background-color $transition-fast, border-color $transition-fast, color $transition-fast;
   user-select: none;
   font-family: inherit;
   width: 100%;
@@ -519,7 +437,6 @@ h1.hero-heading {
   &.active {
     border-color: var(--accent);
     background: var(--card-bg);
-    box-shadow: 0 0 16px var(--accent-glow);
 
     .dossier-indicator {
       background: var(--accent);
@@ -549,6 +466,27 @@ h1.hero-heading {
       font-size: 11px;
     }
   }
+
+  @include tablet {
+    flex: 1;
+    min-width: 140px;
+    padding: 8px 12px;
+    gap: 8px;
+    border-radius: 6px;
+
+    .dossier-indicator {
+      width: 3px;
+      height: 18px;
+    }
+
+    .dossier-name {
+      font-size: 12px;
+    }
+
+    .dossier-tag {
+      font-size: 10px;
+    }
+  }
 }
 
 /* Stage Viewport Screen (Standalone preview card) */
@@ -565,7 +503,7 @@ h1.hero-heading {
 
   &:hover {
     border-color: var(--accent);
-    box-shadow: 0 28px 68px rgba(0, 0, 0, 0.82), 0 0 28px var(--accent-glow);
+    box-shadow: 0 28px 68px rgba(0, 0, 0, 0.82);
   }
 
   @include tablet {
@@ -660,7 +598,7 @@ h1.hero-heading {
     white-space: nowrap;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    transition: all $transition-fast;
+    transition: background-color $transition-fast, color $transition-fast, border-color $transition-fast, transform $transition-fast;
 
     &:focus-visible {
       outline: 2px solid var(--accent);
@@ -730,7 +668,6 @@ body.light-theme {
     &.active {
       background: var(--card-bg);
       border-color: var(--accent);
-      box-shadow: 0 0 16px var(--accent-glow);
 
       .dossier-indicator {
         background: var(--accent);
@@ -741,36 +678,6 @@ body.light-theme {
       }
 
       .dossier-tag {
-        color: var(--accent);
-      }
-    }
-  }
-
-  .stage-stepper-header {
-    background: var(--card-bg);
-    border-color: var(--card-border);
-
-    .stepper-title {
-      color: var(--ink);
-    }
-
-    .stepper-badge {
-      background: var(--accent-glow);
-      border-color: var(--card-border);
-      color: var(--accent);
-    }
-
-    .stepper-counter {
-      color: var(--muted);
-    }
-
-    .stepper-btn {
-      background: var(--card-bg);
-      border-color: var(--card-border);
-      color: var(--ink);
-
-      &:hover {
-        border-color: var(--accent);
         color: var(--accent);
       }
     }

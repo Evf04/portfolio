@@ -128,13 +128,12 @@ body.light-theme {
   cursor: pointer;
   padding: 0;
   text-decoration: none;
-  transition: border-color $transition-fast, transform $transition-fast, box-shadow $transition-fast, color $transition-fast;
+  transition: border-color $transition-fast, transform $transition-fast, color $transition-fast;
 
   &:hover {
     border-color: var(--accent);
     color: var(--accent);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px var(--accent-glow);
   }
 
   &:active {
@@ -165,13 +164,12 @@ body.light-theme {
   padding: 0;
   position: relative;
   overflow: hidden;
-  transition: border-color $transition-fast, transform $transition-fast, box-shadow $transition-fast, color $transition-fast;
+  transition: border-color $transition-fast, transform $transition-fast, color $transition-fast;
 
   &:hover {
     border-color: var(--accent);
     color: var(--accent);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px var(--accent-glow);
   }
 
   &:active {
@@ -197,6 +195,7 @@ body.light-theme {
   }
 }
 
+html.light-theme,
 body.light-theme {
   .topbar {
     background: rgba(241, 244, 247, 0.88);
@@ -250,6 +249,19 @@ body.light-theme {
     color: var(--line);
     font-weight: 400;
   }
+}
+
+html[lang="en"] .lang-toggle .lang-en,
+html:not([lang="es"]) .lang-toggle .lang-en {
+  color: var(--accent);
+}
+
+html[lang="es"] .lang-toggle .lang-es {
+  color: var(--accent);
+}
+
+html[lang="es"] .lang-toggle .lang-en {
+  color: var(--muted);
 }
 
 .mobile-nav-toggle {
