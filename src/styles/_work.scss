@@ -42,21 +42,16 @@
 .case-studies-stack {
   display: flex;
   flex-direction: column;
-  gap: clamp(48px, 6vw, 72px);
+  gap: clamp(96px, 12vw, 150px);
 }
 
 .case-study-dossier {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 8px;
-  padding: clamp(24px, 3.5vw, 40px);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   position: relative;
   scroll-margin-top: 90px;
-  transition: border-color $transition-fast;
-
-  &:hover {
-    border-color: var(--card-border);
-  }
 }
 
 /* Dossier Header */
@@ -65,12 +60,13 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 24px;
-  padding-bottom: 8px;
+  padding-bottom: 24px;
 
   @include tablet {
     flex-direction: column;
     align-items: stretch;
-    gap: 20px;
+    gap: 14px;
+    padding-bottom: 18px;
   }
 
   .dossier-title-group {
@@ -85,6 +81,16 @@
       letter-spacing: 0.08em;
       color: var(--accent);
       line-height: 1;
+
+      @include tablet-large {
+        font-size: 10px;
+        letter-spacing: 0.07em;
+      }
+
+      @include mobile {
+        font-size: 9.5px;
+        letter-spacing: 0.06em;
+      }
     }
 
     .dossier-title {
@@ -114,10 +120,6 @@
     gap: 8px;
     flex-shrink: 0;
 
-    @include tablet-large {
-      align-items: flex-start;
-    }
-
     .dossier-prod-note {
       font-size: 11px;
       color: var(--muted);
@@ -130,6 +132,12 @@
       @include tablet-large {
         text-align: left;
         max-width: none;
+        font-size: 10.5px;
+      }
+
+      @include mobile {
+        font-size: 10px;
+        line-height: 1.35;
       }
     }
 
@@ -139,7 +147,6 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
       background: var(--ink);
       color: var(--panel);
       font-size: 12px;
@@ -147,21 +154,35 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
       border-radius: 6px;
-      transition: all $transition-fast;
-
-      .arrow {
-        font-size: 14px;
-        transition: transform $transition-fast;
-      }
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color $transition-fast, color $transition-fast, transform $transition-fast;
 
       &:hover {
         background: var(--accent);
         color: #050a0d;
         transform: translateY(-2px);
+      }
 
-        .arrow {
-          transform: translate(2px, -2px);
-        }
+      @include tablet-large {
+        height: 38px;
+        padding: 0 16px;
+        font-size: 11px;
+        border-radius: 5px;
+      }
+
+      @include tablet {
+        height: 36px;
+        padding: 0 14px;
+        font-size: 10.5px;
+      }
+
+      @include mobile {
+        height: 34px;
+        padding: 0 12px;
+        font-size: 10px;
+        letter-spacing: 0.04em;
+        border-radius: 5px;
       }
     }
 
@@ -196,10 +217,16 @@
   grid-template-columns: 1.45fr 1fr;
   gap: 24px;
   align-items: stretch;
+  margin-bottom: 32px;
 
   @include tablet-large {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  @include mobile {
+    margin-bottom: 22px;
   }
 
   .snapshot-slot {
@@ -210,6 +237,10 @@
     &.main-snap {
       .snapshot-frame {
         min-height: 280px;
+
+        @include tablet-large {
+          min-height: auto;
+        }
       }
     }
   }
@@ -221,12 +252,37 @@
 
     @include tablet-large {
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      gap: 12px;
+
+      .snapshot-slot {
+        gap: 0;
+
+        .snap-caption {
+          display: none !important;
+        }
+      }
+
+      .snapshot-frame {
+        cursor: pointer;
+
+        &::before {
+          display: none !important;
+        }
+
+        &:hover {
+          border-color: var(--accent);
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
     }
 
     @include mobile {
-      grid-template-columns: 1fr;
-      gap: 12px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
     }
   }
 
@@ -241,7 +297,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: border-color $transition-fast, box-shadow $transition-fast, transform $transition-fast;
+    transition: border-color $transition-fast, box-shadow $transition-fast, transform $transition-fast, opacity 0.14s ease;
 
     &:hover {
       border-color: var(--accent);
@@ -249,7 +305,7 @@
     }
 
     &.clickable-snap {
-      cursor: zoom-in;
+      cursor: pointer;
 
       &::after {
         content: "";
@@ -293,6 +349,13 @@
         z-index: 2;
         pointer-events: none;
         backdrop-filter: blur(4px);
+
+        @include mobile {
+          width: 28px;
+          height: 28px;
+          right: 8px;
+          bottom: 8px;
+        }
       }
     }
 
@@ -312,7 +375,6 @@
     border-radius: 4px;
     background: var(--input-bg);
     display: flex;
-
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -343,6 +405,22 @@
     color: var(--muted);
     font-weight: 500;
     line-height: 1.4;
+    transition: opacity 0.14s ease, transform 0.14s ease;
+
+    @include tablet-large {
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 1.4;
+    }
+  }
+
+  .snap-swapping {
+    opacity: 0.3 !important;
+    transform: scale(0.985) !important;
   }
 }
 
@@ -356,18 +434,18 @@
   @include tablet-large {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
+    padding-top: 0;
 
     .dossier-column:last-child {
       grid-column: 1 / -1;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      padding-top: 16px;
-      border-top: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-top: 0;
+      border-top: none;
 
       .breakdown-heading {
-        grid-column: 1 / -1;
-        margin-bottom: 4px;
+        margin-bottom: 0;
       }
 
       .deliverables-list {
@@ -375,7 +453,10 @@
       }
 
       .dossier-tech-stack {
-        align-self: start;
+        margin-top: 12px;
+        padding-top: 0;
+        border-top: none;
+        align-self: flex-start;
       }
     }
   }
@@ -383,14 +464,22 @@
   @include mobile {
     grid-template-columns: 1fr;
     gap: 24px;
+    padding-top: 0;
 
     .dossier-column:last-child {
-      grid-column: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
       padding-top: 0;
       border-top: none;
+
+      .deliverables-list {
+        margin-bottom: 0;
+      }
+
+      .dossier-tech-stack {
+        margin-top: 14px;
+        padding-top: 0;
+        border-top: none;
+        gap: 6px;
+      }
     }
   }
 
@@ -405,6 +494,11 @@
       text-transform: uppercase;
       letter-spacing: 0.06em;
       margin: 0 0 12px;
+
+      @include mobile {
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
     }
 
     p {
@@ -412,6 +506,11 @@
       color: var(--muted);
       line-height: 1.65;
       margin: 0;
+
+      @include mobile {
+        font-size: 13.5px;
+        line-height: 1.6;
+      }
     }
 
     .deliverables-list {
@@ -436,6 +535,11 @@
           color: var(--accent);
           font-weight: 900;
         }
+
+        @include mobile {
+          font-size: 12.5px;
+          line-height: 1.48;
+        }
       }
     }
 
@@ -444,6 +548,7 @@
       flex-wrap: wrap;
       gap: 6px;
       margin-top: auto;
+      padding-top: 16px;
 
       .tech-tag {
         font-size: 11px;
@@ -454,6 +559,11 @@
         padding: 3px 8px;
         border-radius: 4px;
         letter-spacing: 0.02em;
+
+        @include mobile {
+          font-size: 10.5px;
+          padding: 3px 7px;
+        }
       }
     }
   }

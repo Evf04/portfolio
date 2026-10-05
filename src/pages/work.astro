@@ -263,7 +263,7 @@ import Layout from "../layouts/Layout.astro";
   </main>
 
   <script is:inline>
-    function initWorkLightbox() {
+    function initWorkInteractiveSnapshots() {
       const lightbox = document.getElementById("imageLightbox");
       const lightboxImg = document.getElementById("lightboxImg");
       const lightboxCaption = document.getElementById("lightboxCaption");
@@ -292,32 +292,6 @@ import Layout from "../layouts/Layout.astro";
         }
       }
 
-      // Attach click listener to all snapshot frames with an image
-      const snapshotFrames = document.querySelectorAll(".snapshot-frame");
-      snapshotFrames.forEach((frame) => {
-        const img = frame.querySelector("img");
-        if (img) {
-          frame.classList.add("clickable-snap");
-          frame.setAttribute("tabindex", "0");
-          frame.setAttribute("role", "button");
-          frame.setAttribute("aria-label", "Ver imagen ampliada / Enlarge snapshot preview");
-
-          const handleOpen = () => {
-            const captionEl = frame.closest(".snapshot-slot")?.querySelector(".snap-caption");
-            const captionText = captionEl ? captionEl.textContent : "";
-            openLightbox(img.src, img.alt, captionText);
-          };
-
-          frame.onclick = handleOpen;
-          frame.onkeydown = (e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              handleOpen();
-            }
-          };
-        }
-      });
-
       if (lightboxClose) lightboxClose.onclick = closeLightbox;
       if (lightboxOverlay) lightboxOverlay.onclick = closeLightbox;
       if (lightboxImg) lightboxImg.onclick = closeLightbox;
@@ -327,13 +301,129 @@ import Layout from "../layouts/Layout.astro";
           closeLightbox();
         }
       };
+
+      function swapSnapshots(mainSlot, thumbSlot) {
+        const mainFrame = mainSlot.querySelector(".snapshot-frame");
+        const thumbFrame = thumbSlot.querySelector(".snapshot-frame");
+        const mainImg = mainFrame?.querySelector("img");
+        const thumbImg = thumbFrame?.querySelector("img");
+        const mainCaption = mainSlot.querySelector(".snap-caption");
+        const thumbCaption = thumbSlot.querySelector(".snap-caption");
+
+        if (!mainImg || !thumbImg || !mainCaption || !thumbCaption) return;
+
+        mainFrame.classList.add("snap-swapping");
+        thumbFrame.classList.add("snap-swapping");
+        mainCaption.classList.add("snap-swapping");
+
+        setTimeout(() => {
+          // Swap image attributes
+          const tempSrc = mainImg.src;
+          const tempAlt = mainImg.alt;
+          const tempWidth = mainImg.getAttribute("width");
+          const tempHeight = mainImg.getAttribute("height");
+
+          mainImg.src = thumbImg.src;
+          mainImg.alt = thumbImg.alt;
+          if (thumbImg.getAttribute("width")) mainImg.setAttribute("width", thumbImg.getAttribute("width"));
+          if (thumbImg.getAttribute("height")) mainImg.setAttribute("height", thumbImg.getAttribute("height"));
+
+          thumbImg.src = tempSrc;
+          thumbImg.alt = tempAlt;
+          if (tempWidth) thumbImg.setAttribute("width", tempWidth);
+          if (tempHeight) thumbImg.setAttribute("height", tempHeight);
+
+          // Swap caption attributes and visible content
+          const tempEn = mainCaption.getAttribute("data-en") || "";
+          const tempEs = mainCaption.getAttribute("data-es") || "";
+          const currentLang = document.documentElement.getAttribute("data-lang") || document.documentElement.getAttribute("lang") || "en";
+
+          const thumbEn = thumbCaption.getAttribute("data-en") || "";
+          const thumbEs = thumbCaption.getAttribute("data-es") || "";
+
+          mainCaption.setAttribute("data-en", thumbEn);
+          mainCaption.setAttribute("data-es", thumbEs);
+          mainCaption.textContent = currentLang === "es" ? thumbEs : thumbEn;
+
+          thumbCaption.setAttribute("data-en", tempEn);
+          thumbCaption.setAttribute("data-es", tempEs);
+          thumbCaption.textContent = currentLang === "es" ? tempEs : tempEn;
+
+          requestAnimationFrame(() => {
+            mainFrame.classList.remove("snap-swapping");
+            thumbFrame.classList.remove("snap-swapping");
+            mainCaption.classList.remove("snap-swapping");
+          });
+        }, 140);
+      }
+
+      const galleries = document.querySelectorAll(".dossier-snapshots");
+      galleries.forEach((gallery) => {
+        const mainSlot = gallery.querySelector(".snapshot-slot.main-snap");
+        const subGrid = gallery.querySelector(".snapshot-sub-grid");
+        if (!mainSlot || !subGrid) return;
+
+        const mainFrame = mainSlot.querySelector(".snapshot-frame");
+        if (mainFrame) {
+          mainFrame.classList.add("clickable-snap");
+          mainFrame.setAttribute("tabindex", "0");
+          mainFrame.setAttribute("role", "button");
+          mainFrame.setAttribute("aria-label", "Ver imagen ampliada / Enlarge snapshot preview");
+
+          mainFrame.onclick = () => {
+            const mainImg = mainFrame.querySelector("img");
+            const captionEl = mainSlot.querySelector(".snap-caption");
+            if (mainImg) {
+              openLightbox(mainImg.src, mainImg.alt, captionEl?.textContent || "");
+            }
+          };
+
+          mainFrame.onkeydown = (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              mainFrame.click();
+            }
+          };
+        }
+
+        const thumbSlots = subGrid.querySelectorAll(".snapshot-slot");
+        thumbSlots.forEach((thumbSlot) => {
+          const thumbFrame = thumbSlot.querySelector(".snapshot-frame");
+          if (!thumbFrame) return;
+
+          thumbFrame.classList.add("clickable-snap");
+          thumbFrame.setAttribute("tabindex", "0");
+          thumbFrame.setAttribute("role", "button");
+          thumbFrame.setAttribute("aria-label", "Toca para ver en vista principal / Tap to switch to main preview");
+
+          thumbFrame.onclick = () => {
+            const isTabletOrMobile = window.matchMedia("(max-width: 1040px)").matches;
+            if (isTabletOrMobile) {
+              swapSnapshots(mainSlot, thumbSlot);
+            } else {
+              const thumbImg = thumbFrame.querySelector("img");
+              const captionEl = thumbSlot.querySelector(".snap-caption");
+              if (thumbImg) {
+                openLightbox(thumbImg.src, thumbImg.alt, captionEl?.textContent || "");
+              }
+            }
+          };
+
+          thumbFrame.onkeydown = (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              thumbFrame.click();
+            }
+          };
+        });
+      });
     }
 
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", initWorkLightbox);
+      document.addEventListener("DOMContentLoaded", initWorkInteractiveSnapshots);
     } else {
-      initWorkLightbox();
+      initWorkInteractiveSnapshots();
     }
-    document.addEventListener("astro:page-load", initWorkLightbox);
+    document.addEventListener("astro:page-load", initWorkInteractiveSnapshots);
   </script>
 </Layout>

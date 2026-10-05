@@ -10,18 +10,25 @@ import Layout from "../layouts/Layout.astro";
     <div class="contact-wrapper">
       <header class="contact-header">
         <h1 class="page-title">
-          <strong data-en="Say hello." data-es="Escríbeme.">Say hello.</strong>
+          <strong data-en="Say hello." data-es="Escríbeme.">
+            <span class="lang-text lang-en">Say hello.</span>
+            <span class="lang-text lang-es">Escríbeme.</span>
+          </strong>
         </h1>
 
-        <p class="page-description" data-en="Whether you have an open role, a web project, or just want to talk tech, feel free to reach out." data-es="Ya sea que tengas una oferta laboral, un proyecto web o quieras conversar sobre tecnología, escríbeme con total confianza.">
-          Whether you have an open role, a web project, or just want to talk tech, feel free to reach out.
+        <p class="page-description" data-en="Whether you have an open role, a web project, or just want to talk tech, feel free to reach out!" data-es="Ya sea que tengas una oferta laboral, un proyecto web o quieras conversar sobre tecnología, escríbeme con total confianza!">
+          <span class="lang-text lang-en">Whether you have an open role, a web project, or just want to talk tech, feel free to reach out!</span>
+          <span class="lang-text lang-es">Ya sea que tengas una oferta laboral, un proyecto web o quieras conversar sobre tecnología, escríbeme con total confianza!</span>
         </p>
       </header>
 
       <!-- Single Unified Contact Card -->
       <div class="contact-single-card">
         <div class="card-meta">
-          <span class="channel-badge" data-en="Direct Email" data-es="Correo Directo">Direct Email</span>
+          <span class="channel-badge" data-en="Direct Email" data-es="Correo Directo">
+            <span class="lang-text lang-en">Direct Email</span>
+            <span class="lang-text lang-es">Correo Directo</span>
+          </span>
         </div>
 
         <div class="card-main-row">
@@ -34,22 +41,29 @@ import Layout from "../layouts/Layout.astro";
             target="_blank" 
             rel="noopener noreferrer" 
             class="btn-email-action"
+            aria-label="Send direct email"
           >
-            <span data-en="Send an Email" data-es="Enviar Correo">Send an Email</span>
+            <span data-en="Send an Email" data-es="Enviar Correo">
+              <span class="lang-text lang-en">Send an Email</span>
+              <span class="lang-text lang-es">Enviar Correo</span>
+            </span>
           </a>
         </div>
 
         <div class="card-footer-meta">
           <a href="https://github.com/Evf04" target="_blank" rel="noopener noreferrer" class="footer-meta-item footer-meta-link">
             <span class="meta-label">GitHub</span>
-            <span class="meta-val">github.com/Evf04 ↗</span>
+            <span class="meta-val">github.com/Evf04</span>
           </a>
           <a href="https://www.linkedin.com/in/eliasvf" target="_blank" rel="noopener noreferrer" class="footer-meta-item footer-meta-link">
             <span class="meta-label">LinkedIn</span>
-            <span class="meta-val">linkedin.com/in/eliasvf ↗</span>
+            <span class="meta-val">linkedin.com/in/eliasvf</span>
           </a>
           <div class="footer-meta-item">
-            <span class="meta-label" data-en="Location" data-es="Ubicación">Location</span>
+            <span class="meta-label" data-en="Location" data-es="Ubicación">
+              <span class="lang-text lang-en">Location</span>
+              <span class="lang-text lang-es">Ubicación</span>
+            </span>
             <span class="meta-val">Cartagena, Colombia</span>
           </div>
         </div>

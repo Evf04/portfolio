@@ -30,9 +30,9 @@ $accent-glow-light: rgba(21, 109, 128, 0.18);
   }
 }
 
-// Tablet Landscape & Small Desktop (covers up to iPad Pro 1024px)
+// Tablet Landscape & Large Tablets (covers up to iPad Pro 13" 1032px)
 @mixin tablet-large {
-  @media (max-width: 1024px) {
+  @media (max-width: 1040px) {
     @content;
   }
 }

@@ -3,39 +3,25 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-brand">
-      <a href="/" class="footer-logo">Elias Velasquez<span>.</span></a>
-      <p data-en="Systems Engineering senior student and Full-Stack Developer creating web applications for brand events and businesses." data-es="Estudiante de último año de Ingeniería de Sistemas y Desarrollador Full-Stack creando aplicaciones web para eventos de marca y empresas.">
-        Systems Engineering senior student and Full-Stack Developer creating web applications for brand events and businesses.
-      </p>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-copy">
+        &copy; {currentYear} Elias Velasquez <span class="footer-dot">&middot;</span> Cartagena, Colombia
+      </span>
     </div>
 
-
-    <div class="footer-nav">
-      <h4 data-en="Navigation" data-es="Navegación">Navigation</h4>
-      <ul>
-        <li><a href="/" data-en="Home" data-es="Inicio">Home</a></li>
-        <li><a href="/about" data-en="About" data-es="Sobre mí">About</a></li>
-        <li><a href="/work" data-en="Work" data-es="Trabajo">Work</a></li>
-        <li><a href="/contact" data-en="Contact" data-es="Contacto">Contact</a></li>
-      </ul>
+    <div class="footer-links">
+      <a href="https://github.com/Evf04" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub profile">
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/eliasvf" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn profile">
+        LinkedIn
+      </a>
+      <a href="mailto:eliasvelasquezf0404@gmail.com" class="footer-link" aria-label="Send direct email">
+        <span class="lang-text lang-en">Email</span>
+        <span class="lang-text lang-es">Correo</span>
+      </a>
     </div>
-
-    <div class="footer-nav">
-      <h4 data-en="Direct Contact" data-es="Contacto Directo">Direct Contact</h4>
-      <ul>
-        <li><a href="mailto:eliasvelasquezf0404@gmail.com">eliasvelasquezf0404@gmail.com</a></li>
-        <li><a href="https://github.com/Evf04" target="_blank" rel="noopener noreferrer">github.com/Evf04</a></li>
-        <li><a href="https://www.linkedin.com/in/eliasvf" target="_blank" rel="noopener noreferrer">linkedin.com/in/eliasvf</a></li>
-        <li><span>Cartagena, Colombia</span></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <div>&copy; {currentYear} <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></div>
   </div>
 </footer>
 

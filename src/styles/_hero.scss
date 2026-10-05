@@ -12,6 +12,12 @@
   justify-content: flex-start;
   padding: clamp(28px, 4vh, 48px) clamp(24px, 4vw, 56px) clamp(44px, 5.5vh, 60px);
 
+  @include tablet-large {
+    min-height: auto;
+    padding: clamp(24px, 3.5vw, 36px) 0 clamp(40px, 4.5vw, 56px);
+    display: block;
+  }
+
   @include tablet {
     min-height: auto;
     padding: clamp(20px, 3vw, 28px) 0 clamp(36px, 5vw, 48px);
@@ -30,6 +36,13 @@
   gap: clamp(28px, 3.5vh, 40px);
   position: relative;
   z-index: 5;
+
+  @include tablet-large {
+    align-items: stretch;
+    padding: 0 36px;
+    gap: 36px;
+    max-width: 900px;
+  }
 
   @include tablet {
     align-items: stretch;
@@ -56,6 +69,11 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+
+  @include tablet-large {
+    max-width: 100%;
+    margin-top: 0;
+  }
 
   @include tablet {
     max-width: 100%;
@@ -88,6 +106,10 @@ h1.hero-heading {
   strong {
     display: block;
 
+    @include tablet-large {
+      white-space: normal;
+    }
+
     @include tablet {
       white-space: normal;
     }
@@ -96,6 +118,18 @@ h1.hero-heading {
   strong {
     color: var(--accent);
     font-style: normal;
+  }
+
+  @include tablet-large {
+    max-width: 100%;
+    font-size: 38px;
+    line-height: 1.15;
+
+    .hero-greeting {
+      font-size: 13.5px;
+      margin-bottom: 10px;
+      letter-spacing: 0.08em;
+    }
   }
 
   @include tablet {
@@ -122,6 +156,18 @@ h1.hero-heading {
     display: block;
 
     &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  @include tablet-large {
+    width: 100%;
+    max-width: 780px;
+    margin: 18px 0 26px;
+    font-size: 16px;
+    line-height: 1.62;
+
+    span:not(:last-child) {
       margin-bottom: 6px;
     }
   }
@@ -260,6 +306,12 @@ h1.hero-heading {
   pointer-events: auto;
   z-index: 3;
 
+  @include tablet-large {
+    justify-content: center;
+    margin-top: 0;
+    padding: 0;
+  }
+
   @include tablet {
     justify-content: center;
     margin-top: 0;
@@ -286,7 +338,12 @@ h1.hero-heading {
   pointer-events: none;
 
   @include tablet-large {
-    width: clamp(240px, 30vw, 380px);
+    width: clamp(240px, 36vw, 400px);
+    min-width: 0;
+    opacity: 0.36;
+    transform: none;
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 100%);
   }
 
   @include tablet {
@@ -322,10 +379,12 @@ h1.hero-heading {
   pointer-events: auto;
 
   @include tablet-large {
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
-    grid-template-columns: 190px 1fr;
-    gap: 14px;
-    margin-top: -20px;
+    margin: 0 auto;
+    margin-top: 0;
+    gap: 12px;
   }
 
   @include tablet {
@@ -349,6 +408,18 @@ h1.hero-heading {
   gap: 12px;
   justify-content: center;
   width: 100%;
+
+  @include tablet-large {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+  }
 
   @include tablet {
     display: flex;
@@ -455,15 +526,25 @@ h1.hero-heading {
   }
 
   @include tablet-large {
-    padding: 10px 12px;
-    gap: 8px;
+    flex: 1;
+    min-width: 160px;
+    padding: 12px 18px;
+    gap: 12px;
+    border-radius: 6px;
+
+    .dossier-indicator {
+      width: 3px;
+      height: 22px;
+    }
 
     .dossier-name {
-      font-size: 12px;
+      font-size: 13.5px;
+      font-weight: 800;
     }
 
     .dossier-tag {
       font-size: 11px;
+      font-weight: 700;
     }
   }
 
@@ -504,6 +585,10 @@ h1.hero-heading {
   &:hover {
     border-color: var(--accent);
     box-shadow: 0 28px 68px rgba(0, 0, 0, 0.82);
+  }
+
+  @include tablet-large {
+    aspect-ratio: 16 / 10;
   }
 
   @include tablet {
@@ -582,6 +667,13 @@ h1.hero-heading {
   gap: 10px;
   pointer-events: auto;
 
+  @include tablet-large {
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    gap: 12px;
+  }
+
   .stage-action-btn {
     flex: 1;
     min-height: 40px;
@@ -618,6 +710,13 @@ h1.hero-heading {
         border-color: var(--accent);
         transform: translateY(-2px);
       }
+    }
+
+    @include tablet-large {
+      min-height: 42px;
+      padding: 10px 18px;
+      font-size: 12.5px;
+      letter-spacing: 0.04em;
     }
 
     @include mobile {
@@ -707,6 +806,10 @@ body.light-theme {
   }
 
   .wave-art {
+    @include tablet-large {
+      opacity: 0.30;
+    }
+
     @include tablet {
       opacity: 0.32;
     }
