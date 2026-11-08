@@ -9,136 +9,33 @@ import Layout from "../layouts/Layout.astro";
   <main class="page-container work-page">
     <header class="work-header">
       <h1 class="page-title">
-        <span data-en="Selected work" data-es="Trabajos seleccionados">Selected work</span>
-        <strong data-en="& case studies." data-es="y casos de estudio.">& case studies.</strong>
+        <span data-en="Selected work" data-es="Trabajos seleccionados">
+          <span class="lang-text lang-en">Selected work</span>
+          <span class="lang-text lang-es">Trabajos seleccionados</span>
+        </span>
+        <strong data-en="& case studies." data-es="y casos de estudio.">
+          <span class="lang-text lang-en">& case studies.</span>
+          <span class="lang-text lang-es">y casos de estudio.</span>
+        </strong>
       </h1>
 
       <p class="page-description" data-en="A look into some of the web platforms, booking systems, and freelance projects I've built recently, with live demos and technical overviews." data-es="Un vistazo a algunas de las plataformas web, sistemas de reservas y proyectos freelance que he desarrollado recientemente, con demos en vivo y detalles técnicos.">
-        A look into some of the web platforms, booking systems, and freelance projects I've built recently, with live demos and technical overviews.
+        <span class="lang-text lang-en">A look into some of the web platforms, booking systems, and freelance projects I've built recently, with live demos and technical overviews.</span>
+        <span class="lang-text lang-es">Un vistazo a algunas de las plataformas web, sistemas de reservas y proyectos freelance que he desarrollado recientemente, con demos en vivo y detalles técnicos.</span>
       </p>
     </header>
 
     <!-- Deep-Dive Case Studies Stack -->
     <div class="case-studies-stack">
-      <!-- Case Study 01: Original Forever -->
-      <article id="original-forever" class="case-study-dossier" aria-labelledby="project-1-title">
-
+      <!-- Case Study 01: Hotel Superstar -->
+      <article id="hotel-superstar" class="case-study-dossier" aria-labelledby="project-1-title">
         <div class="dossier-header">
           <div class="dossier-title-group">
-            <span class="dossier-badge" data-en="Brand Launch Platform · Freelance" data-es="Plataforma de Lanzamiento · Freelance">Brand Launch Platform · Freelance</span>
-            <h2 id="project-1-title" class="dossier-title">
-              <a 
-                href="https://slotsadidasoriginals-p.netlify.app" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                data-en='"Original Forever"'
-                data-es='"Original Forever"'
-              >
-                "Original Forever"
-              </a>
-            </h2>
-          </div>
-
-          <div class="dossier-actions">
-            <a href="https://slotsadidasoriginals-p.netlify.app" class="btn-live-demo" target="_blank" rel="noopener noreferrer">
-              <span data-en="Launch Live Demo" data-es="Ver Demo en Vivo">Launch Live Demo</span>
-            </a>
-            <span class="dossier-prod-note" data-en="Original campaign domain: slotsadidasoriginals.com (campaign concluded)" data-es="Dominio original: slotsadidasoriginals.com (campaña finalizada)">
-              Original campaign domain: slotsadidasoriginals.com (campaign concluded)
+            <span class="dossier-badge" data-en="Brand Experience · Freelance" data-es="Experiencia de Marca · Freelance">
+              <span class="lang-text lang-en">Brand Experience · Freelance</span>
+              <span class="lang-text lang-es">Experiencia de Marca · Freelance</span>
             </span>
-          </div>
-
-
-        </div>
-
-        <!-- Snapshots Gallery Grid -->
-        <div class="dossier-snapshots" aria-label="Project UI Snapshots">
-          <div class="snapshot-slot main-snap">
-            <div class="snapshot-frame">
-              <img
-                src="/images/original-forever-hero.webp"
-                alt="Adidas Originals x Oasis Campaign Hero View"
-                width="1024"
-                height="508"
-                loading="eager"
-                decoding="async"
-              />
-            </div>
-            <span class="snap-caption" data-en="Overview: Campaign hero interface and Adidas x Oasis brand activation" data-es="Vista general: Interfaz de campaña y activación de marca Adidas x Oasis">Overview: Campaign hero interface and Adidas x Oasis brand activation</span>
-          </div>
-
-          <div class="snapshot-sub-grid">
-            <div class="snapshot-slot">
-              <div class="snapshot-frame">
-                <img
-                  src="/images/original-forever-slots.webp"
-                  alt="Store and Shift Selector with Real-time Capacity Control"
-                  width="1024"
-                  height="506"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <span class="snap-caption" data-en="Store & shift selection with real-time capacity rules" data-es="Selección de tienda y turno con reglas de aforo en tiempo real">Store & shift selection with real-time capacity rules</span>
-            </div>
-
-            <div class="snapshot-slot">
-              <div class="snapshot-frame">
-                <img
-                  src="/images/original-forever-form.webp"
-                  alt="Participant Registration Form and Database Sync"
-                  width="1024"
-                  height="507"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <span class="snap-caption" data-en="Participant registration form and instant database sync" data-es="Formulario de registro y sincronización instantánea con base de datos">Participant registration form and instant database sync</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case Study Detailed Narrative -->
-        <div class="dossier-body">
-          <div class="dossier-column">
-            <h3 class="breakdown-heading" data-en="Context" data-es="Contexto">Context</h3>
-            <p data-en="Developed as a freelance production platform for an agency-led brand campaign, the 'Original Forever' launch required a zero-latency reservation interface capable of enforcing strict store capacity limits across multiple retail locations in Argentina." data-es="Desarrollado como proyecto freelance para una campaña de marca, el lanzamiento 'Original Forever' requería una interfaz de reserva de latencia cero capaz de gestionar cupos estrictos por tienda en múltiples ubicaciones de Argentina.">
-              Developed as a freelance production platform for an agency-led brand campaign, the 'Original Forever' launch required a zero-latency reservation interface capable of enforcing strict store capacity limits across multiple retail locations in Argentina.
-            </p>
-          </div>
-
-          <div class="dossier-column">
-            <h3 class="breakdown-heading" data-en="How I built it" data-es="Cómo lo construí">How I built it</h3>
-            <p data-en="Working from UI/UX design specifications delivered by the client, I engineered a lightweight Astro application utilizing modern JavaScript and modular SCSS for fast mobile rendering. Connected the front-end to a Supabase & PostgreSQL backend to lock time-slots in real time and deliver instant digital confirmations. Originally deployed in production at slotsadidasoriginals.com during the active campaign run." data-es="A partir del diseño UI/UX entregado por el cliente, desarrollé una aplicación ligera en Astro utilizando JavaScript moderno y SCSS modular para cargas instantáneas en móviles. Conecté el front-end a Supabase y PostgreSQL para bloquear cupos en tiempo real y emitir confirmaciones digitales inmediatas. Desplegado originalmente en producción en slotsadidasoriginals.com durante la vigencia de la campaña.">
-              Working from UI/UX design specifications delivered by the client, I engineered a lightweight Astro application utilizing modern JavaScript and modular SCSS for fast mobile rendering. Connected the front-end to a Supabase & PostgreSQL backend to lock time-slots in real time and deliver instant digital confirmations. Originally deployed in production at slotsadidasoriginals.com during the active campaign run.
-            </p>
-          </div>
-
-          <div class="dossier-column">
-            <h3 class="breakdown-heading" data-en="Results" data-es="Resultados">Results</h3>
-            <ul class="deliverables-list">
-              <li data-en="Real-time capacity synchronization across retail locations, preventing duplicate or over-allocated bookings during traffic surges." data-es="Sincronización de cupos en tiempo real por tienda, evitando duplicados o exceso de reservas durante picos de tráfico.">Real-time capacity synchronization across retail locations, preventing duplicate or over-allocated bookings during traffic surges.</li>
-              <li data-en="Strict capacity enforcement and zero-latency slot selection across all locations." data-es="Control estricto de aforo y selección de turnos por ubicación sin demoras de respuesta.">Strict capacity enforcement and zero-latency slot selection across all locations.</li>
-              <li data-en="Faithful pixel-perfect implementation from provided UI design specs." data-es="Implementación pixel-perfect fiel al diseño de interfaz entregado.">Faithful pixel-perfect implementation from provided UI design specs.</li>
-            </ul>
-
-            <div class="dossier-tech-stack">
-              <span class="tech-tag">Astro</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">SCSS</span>
-              <span class="tech-tag">Supabase</span>
-              <span class="tech-tag">PostgreSQL</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Case Study 02: Hotel Superstar -->
-      <article id="hotel-superstar" class="case-study-dossier" aria-labelledby="project-2-title">
-        <div class="dossier-header">
-          <div class="dossier-title-group">
-            <span class="dossier-badge" data-en="Brand Experience · Freelance" data-es="Experiencia de Marca · Freelance">Brand Experience · Freelance</span>
-            <h2 id="project-2-title" class="dossier-title">
+            <h2 id="project-1-title" class="dossier-title">
               <a 
                 href="https://experienciasuperstar-p.netlify.app" 
                 target="_blank" 
@@ -153,10 +50,14 @@ import Layout from "../layouts/Layout.astro";
 
           <div class="dossier-actions">
             <a href="https://experienciasuperstar-p.netlify.app" class="btn-live-demo" target="_blank" rel="noopener noreferrer">
-              <span data-en="Launch Live Demo" data-es="Ver Demo en Vivo">Launch Live Demo</span>
+              <span data-en="Launch Live Demo" data-es="Ver Demo en Vivo">
+                <span class="lang-text lang-en">Launch Live Demo</span>
+                <span class="lang-text lang-es">Ver Demo en Vivo</span>
+              </span>
             </a>
             <span class="dossier-prod-note" data-en="Original campaign domain: experienciasuperstar.com (campaign concluded)" data-es="Dominio original: experienciasuperstar.com (campaña finalizada)">
-              Original campaign domain: experienciasuperstar.com (campaign concluded)
+              <span class="lang-text lang-en">Original campaign domain: experienciasuperstar.com (campaign concluded)</span>
+              <span class="lang-text lang-es">Dominio original: experienciasuperstar.com (campaña finalizada)</span>
             </span>
           </div>
         </div>
@@ -170,11 +71,14 @@ import Layout from "../layouts/Layout.astro";
                 alt="Adidas Originals Hotel Superstar Campaign Hero View"
                 width="1024"
                 height="503"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
               />
             </div>
-            <span class="snap-caption" data-en="Overview: Campaign hero interface and event dates (March 6, 7 & 8)" data-es="Vista general: Interfaz principal de campaña y fechas del evento (6, 7 y 8 de marzo)">Overview: Campaign hero interface and event dates (March 6, 7 & 8)</span>
+            <span class="snap-caption" data-en="Overview: Campaign hero interface and event dates (March 6, 7 & 8)" data-es="Vista general: Interfaz principal de campaña y fechas del evento (6, 7 y 8 de marzo)">
+              <span class="lang-text lang-en">Overview: Campaign hero interface and event dates (March 6, 7 & 8)</span>
+              <span class="lang-text lang-es">Vista general: Interfaz principal de campaña y fechas del evento (6, 7 y 8 de marzo)</span>
+            </span>
           </div>
 
           <div class="snapshot-sub-grid">
@@ -189,7 +93,10 @@ import Layout from "../layouts/Layout.astro";
                   decoding="async"
                 />
               </div>
-              <span class="snap-caption" data-en="'Anotate acá': Event RSVP and registration form" data-es="'Anotate acá': Formulario de reserva y registro al evento">'Anotate acá': Event RSVP and registration form</span>
+              <span class="snap-caption" data-en="'Anotate acá': Event RSVP and registration form" data-es="'Anotate acá': Formulario de reserva y registro al evento">
+                <span class="lang-text lang-en">'Anotate acá': Event RSVP and registration form</span>
+                <span class="lang-text lang-es">'Anotate acá': Formulario de reserva y registro al evento</span>
+              </span>
             </div>
 
             <div class="snapshot-slot">
@@ -203,7 +110,10 @@ import Layout from "../layouts/Layout.astro";
                   decoding="async"
                 />
               </div>
-              <span class="snap-caption" data-en="Café Superstar: Curated coffee space and public schedules" data-es="Café Superstar: Espacio gastronómico y horarios al público">Café Superstar: Curated coffee space and public schedules</span>
+              <span class="snap-caption" data-en="Café Superstar: Curated coffee space and public schedules" data-es="Café Superstar: Espacio gastronómico y horarios al público">
+                <span class="lang-text lang-en">Café Superstar: Curated coffee space and public schedules</span>
+                <span class="lang-text lang-es">Café Superstar: Espacio gastronómico y horarios al público</span>
+              </span>
             </div>
           </div>
         </div>
@@ -211,25 +121,191 @@ import Layout from "../layouts/Layout.astro";
         <!-- Case Study Detailed Narrative -->
         <div class="dossier-body">
           <div class="dossier-column">
-            <h3 class="breakdown-heading" data-en="Context" data-es="Contexto">Context</h3>
+            <h3 class="breakdown-heading" data-en="Context" data-es="Contexto">
+              <span class="lang-text lang-en">Context</span>
+              <span class="lang-text lang-es">Contexto</span>
+            </h3>
             <p data-en="Developed as a freelance project for a brand experience campaign in Argentina, the 'Hotel Superstar' activation by Adidas & adiclub brought together music, art, and hospitality in a 1912 French-style mansion in Recoleta. The platform served as the central point for users to redeem club points and enter the exclusive hotel stay giveaway." data-es="Desarrollado como proyecto freelance para una campaña de experiencia de marca en Argentina, la activación 'Hotel Superstar' de Adidas y adiclub combinó música, arte y hotelería en una mansión de estilo francés de 1912 en Recoleta. La plataforma funcionó como punto central para que los usuarios canjearan puntos y participaran por la estadía exclusiva.">
-              Developed as a freelance project for a brand experience campaign in Argentina, the 'Hotel Superstar' activation by Adidas & adiclub brought together music, art, and hospitality in a 1912 French-style mansion in Recoleta. The platform served as the central point for users to redeem club points and enter the exclusive hotel stay giveaway.
+              <span class="lang-text lang-en">Developed as a freelance project for a brand experience campaign in Argentina, the 'Hotel Superstar' activation by Adidas & adiclub brought together music, art, and hospitality in a 1912 French-style mansion in Recoleta. The platform served as the central point for users to redeem club points and enter the exclusive hotel stay giveaway.</span>
+              <span class="lang-text lang-es">Desarrollado como proyecto freelance para una campaña de experiencia de marca en Argentina, la activación 'Hotel Superstar' de Adidas y adiclub combinó música, arte y hotelería en una mansión de estilo francés de 1912 en Recoleta. La plataforma funcionó como punto central para que los usuarios canjearan puntos y participaran por la estadía exclusiva.</span>
             </p>
           </div>
 
           <div class="dossier-column">
-            <h3 class="breakdown-heading" data-en="How I built it" data-es="Cómo lo construí">How I built it</h3>
+            <h3 class="breakdown-heading" data-en="How I built it" data-es="Cómo lo construí">
+              <span class="lang-text lang-en">How I built it</span>
+              <span class="lang-text lang-es">Cómo lo construí</span>
+            </h3>
             <p data-en="Working from UI/UX design specifications delivered by the client, I engineered a fast, responsive web platform in Astro using modern JavaScript and modular SCSS. Connected the front-end to Supabase and PostgreSQL backend services to process 'Anotate acá' registrations and validate entry data in real time. Originally deployed in production at experienciasuperstar.com during the active campaign run." data-es="A partir del diseño UI/UX entregado por el cliente, desarrollé una plataforma web en Astro con JavaScript moderno y SCSS modular para cargas móviles inmediatas. Conecté el front-end a Supabase y PostgreSQL para procesar las inscripciones de 'Anotate acá' y validar accesos en tiempo real. Desplegado originalmente en producción en experienciasuperstar.com durante la vigencia de la campaña.">
-              Working from UI/UX design specifications delivered by the client, I engineered a fast, responsive web platform in Astro using modern JavaScript and modular SCSS. Connected the front-end to Supabase and PostgreSQL backend services to process 'Anotate acá' registrations and validate entry data in real time. Originally deployed in production at experienciasuperstar.com during the active campaign run.
+              <span class="lang-text lang-en">Working from UI/UX design specifications delivered by the client, I engineered a fast, responsive web platform in Astro using modern JavaScript and modular SCSS. Connected the front-end to Supabase and PostgreSQL backend services to process 'Anotate acá' registrations and validate entry data in real time. Originally deployed in production at experienciasuperstar.com during the active campaign run.</span>
+              <span class="lang-text lang-es">A partir del diseño UI/UX entregado por el cliente, desarrollé una plataforma web en Astro con JavaScript moderno y SCSS modular para cargas móviles inmediatas. Conecté el front-end a Supabase y PostgreSQL para procesar las inscripciones de 'Anotate acá' y validar accesos en tiempo real. Desplegado originalmente en producción en experienciasuperstar.com durante la vigencia de la campaña.</span>
             </p>
           </div>
 
           <div class="dossier-column">
-            <h3 class="breakdown-heading" data-en="Results" data-es="Resultados">Results</h3>
+            <h3 class="breakdown-heading" data-en="Results" data-es="Resultados">
+              <span class="lang-text lang-en">Results</span>
+              <span class="lang-text lang-es">Resultados</span>
+            </h3>
             <ul class="deliverables-list">
-              <li data-en="Real-time attendee registration ('Anotate acá') validated and synced directly to Supabase & PostgreSQL." data-es="Captura y validación de registros ('Anotate acá') sincronizada en tiempo real con Supabase y PostgreSQL.">Real-time attendee registration ('Anotate acá') validated and synced directly to Supabase & PostgreSQL.</li>
-              <li data-en="Sub-second mobile load times and smooth UX optimized for high campaign traffic." data-es="Cargas móviles ultrarrápidas y navegación optimizada para el tráfico masivo de la campaña.">Sub-second mobile load times and smooth UX optimized for high campaign traffic.</li>
-              <li data-en="Pixel-perfect execution faithful to the client's art direction and brand guidelines." data-es="Implementación fiel y pixel-perfect respetando la identidad visual y requerimientos del cliente.">Pixel-perfect execution faithful to the client's art direction and brand guidelines.</li>
+              <li data-en="Real-time attendee registration ('Anotate acá') validated and synced directly to Supabase & PostgreSQL." data-es="Captura y validación de registros ('Anotate acá') sincronizada en tiempo real con Supabase y PostgreSQL.">
+                <span class="lang-text lang-en">Real-time attendee registration ('Anotate acá') validated and synced directly to Supabase & PostgreSQL.</span>
+                <span class="lang-text lang-es">Captura y validación de registros ('Anotate acá') sincronizada en tiempo real con Supabase y PostgreSQL.</span>
+              </li>
+              <li data-en="Sub-second mobile load times and smooth UX optimized for high campaign traffic." data-es="Cargas móviles ultrarrápidas y navegación optimizada para el tráfico masivo de la campaña.">
+                <span class="lang-text lang-en">Sub-second mobile load times and smooth UX optimized for high campaign traffic.</span>
+                <span class="lang-text lang-es">Cargas móviles ultrarrápidas y navegación optimizada para el tráfico masivo de la campaña.</span>
+              </li>
+              <li data-en="Pixel-perfect execution faithful to the client's art direction and brand guidelines." data-es="Implementación fiel y pixel-perfect respetando la identidad visual y requerimientos del cliente.">
+                <span class="lang-text lang-en">Pixel-perfect execution faithful to the client's art direction and brand guidelines.</span>
+                <span class="lang-text lang-es">Implementación fiel y pixel-perfect respetando la identidad visual y requerimientos del cliente.</span>
+              </li>
+            </ul>
+
+            <div class="dossier-tech-stack">
+              <span class="tech-tag">Astro</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">SCSS</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case Study 02: Original Forever -->
+      <article id="original-forever" class="case-study-dossier" aria-labelledby="project-2-title">
+        <div class="dossier-header">
+          <div class="dossier-title-group">
+            <span class="dossier-badge" data-en="Brand Launch Platform · Freelance" data-es="Plataforma de Lanzamiento · Freelance">
+              <span class="lang-text lang-en">Brand Launch Platform · Freelance</span>
+              <span class="lang-text lang-es">Plataforma de Lanzamiento · Freelance</span>
+            </span>
+            <h2 id="project-2-title" class="dossier-title">
+              <a 
+                href="https://slotsadidasoriginals-p.netlify.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                data-en='"Original Forever"'
+                data-es='"Original Forever"'
+              >
+                "Original Forever"
+              </a>
+            </h2>
+          </div>
+
+          <div class="dossier-actions">
+            <a href="https://slotsadidasoriginals-p.netlify.app" class="btn-live-demo" target="_blank" rel="noopener noreferrer">
+              <span data-en="Launch Live Demo" data-es="Ver Demo en Vivo">
+                <span class="lang-text lang-en">Launch Live Demo</span>
+                <span class="lang-text lang-es">Ver Demo en Vivo</span>
+              </span>
+            </a>
+            <span class="dossier-prod-note" data-en="Original campaign domain: slotsadidasoriginals.com (campaign concluded)" data-es="Dominio original: slotsadidasoriginals.com (campaña finalizada)">
+              <span class="lang-text lang-en">Original campaign domain: slotsadidasoriginals.com (campaign concluded)</span>
+              <span class="lang-text lang-es">Dominio original: slotsadidasoriginals.com (campaña finalizada)</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Snapshots Gallery Grid -->
+        <div class="dossier-snapshots" aria-label="Project UI Snapshots">
+          <div class="snapshot-slot main-snap">
+            <div class="snapshot-frame">
+              <img
+                src="/images/original-forever-hero.webp"
+                alt="Adidas Originals x Oasis Campaign Hero View"
+                width="1024"
+                height="508"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <span class="snap-caption" data-en="Overview: Campaign hero interface and Adidas x Oasis brand activation" data-es="Vista general: Interfaz de campaña y activación de marca Adidas x Oasis">
+              <span class="lang-text lang-en">Overview: Campaign hero interface and Adidas x Oasis brand activation</span>
+              <span class="lang-text lang-es">Vista general: Interfaz de campaña y activación de marca Adidas x Oasis</span>
+            </span>
+          </div>
+
+          <div class="snapshot-sub-grid">
+            <div class="snapshot-slot">
+              <div class="snapshot-frame">
+                <img
+                  src="/images/original-forever-slots.webp"
+                  alt="Store and Shift Selector with Real-time Capacity Control"
+                  width="1024"
+                  height="506"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <span class="snap-caption" data-en="Store & shift selection with real-time capacity rules" data-es="Selección de tienda y turno con reglas de aforo en tiempo real">
+                <span class="lang-text lang-en">Store & shift selection with real-time capacity rules</span>
+                <span class="lang-text lang-es">Selección de tienda y turno con reglas de aforo en tiempo real</span>
+              </span>
+            </div>
+
+            <div class="snapshot-slot">
+              <div class="snapshot-frame">
+                <img
+                  src="/images/original-forever-form.webp"
+                  alt="Participant Registration Form and Database Sync"
+                  width="1024"
+                  height="507"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <span class="snap-caption" data-en="Participant registration form and instant database sync" data-es="Formulario de registro y sincronización instantánea con base de datos">
+                <span class="lang-text lang-en">Participant registration form and instant database sync</span>
+                <span class="lang-text lang-es">Formulario de registro y sincronización instantánea con base de datos</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study Detailed Narrative -->
+        <div class="dossier-body">
+          <div class="dossier-column">
+            <h3 class="breakdown-heading" data-en="Context" data-es="Contexto">
+              <span class="lang-text lang-en">Context</span>
+              <span class="lang-text lang-es">Contexto</span>
+            </h3>
+            <p data-en="Developed as a freelance production platform for an agency-led brand campaign, the 'Original Forever' launch required a zero-latency reservation interface capable of enforcing strict store capacity limits across multiple retail locations in Argentina." data-es="Desarrollado como proyecto freelance para una campaña de marca, el lanzamiento 'Original Forever' requería una interfaz de reserva de latencia cero capaz de gestionar cupos estrictos por tienda en múltiples ubicaciones de Argentina.">
+              <span class="lang-text lang-en">Developed as a freelance production platform for an agency-led brand campaign, the 'Original Forever' launch required a zero-latency reservation interface capable of enforcing strict store capacity limits across multiple retail locations in Argentina.</span>
+              <span class="lang-text lang-es">Desarrollado como proyecto freelance para una campaña de marca, el lanzamiento 'Original Forever' requería una interfaz de reserva de latencia cero capaz de gestionar cupos estrictos por tienda en múltiples ubicaciones de Argentina.</span>
+            </p>
+          </div>
+
+          <div class="dossier-column">
+            <h3 class="breakdown-heading" data-en="How I built it" data-es="Cómo lo construí">
+              <span class="lang-text lang-en">How I built it</span>
+              <span class="lang-text lang-es">Cómo lo construí</span>
+            </h3>
+            <p data-en="Working from UI/UX design specifications delivered by the client, I engineered a lightweight Astro application utilizing modern JavaScript and modular SCSS for fast mobile rendering. Connected the front-end to a Supabase & PostgreSQL backend to lock time-slots in real time and deliver instant digital confirmations. Originally deployed in production at slotsadidasoriginals.com during the active campaign run." data-es="A partir del diseño UI/UX entregado por el cliente, desarrollé una aplicación ligera en Astro utilizando JavaScript moderno y SCSS modular para cargas instantáneas en móviles. Conecté el front-end a Supabase y PostgreSQL para bloquear cupos en tiempo real y emitir confirmaciones digitales inmediatas. Desplegado originalmente en producción en slotsadidasoriginals.com durante la vigencia de la campaña.">
+              <span class="lang-text lang-en">Working from UI/UX design specifications delivered by the client, I engineered a lightweight Astro application utilizing modern JavaScript and modular SCSS for fast mobile rendering. Connected the front-end to a Supabase & PostgreSQL backend to lock time-slots in real time and deliver instant digital confirmations. Originally deployed in production at slotsadidasoriginals.com during the active campaign run.</span>
+              <span class="lang-text lang-es">A partir del diseño UI/UX entregado por el cliente, desarrollé una aplicación ligera en Astro utilizando JavaScript moderno y SCSS modular para cargas instantáneas en móviles. Conecté el front-end a Supabase y PostgreSQL para bloquear cupos en tiempo real y emitir confirmaciones digitales inmediatas. Desplegado originalmente en producción en slotsadidasoriginals.com durante la vigencia de la campaña.</span>
+            </p>
+          </div>
+
+          <div class="dossier-column">
+            <h3 class="breakdown-heading" data-en="Results" data-es="Resultados">
+              <span class="lang-text lang-en">Results</span>
+              <span class="lang-text lang-es">Resultados</span>
+            </h3>
+            <ul class="deliverables-list">
+              <li data-en="Real-time capacity synchronization across retail locations, preventing duplicate or over-allocated bookings during traffic surges." data-es="Sincronización de cupos en tiempo real por tienda, evitando duplicados o exceso de reservas durante picos de tráfico.">
+                <span class="lang-text lang-en">Real-time capacity synchronization across retail locations, preventing duplicate or over-allocated bookings during traffic surges.</span>
+                <span class="lang-text lang-es">Sincronización de cupos en tiempo real por tienda, evitando duplicados o exceso de reservas durante picos de tráfico.</span>
+              </li>
+              <li data-en="Strict capacity enforcement and zero-latency slot selection across all locations." data-es="Control estricto de aforo y selección de turnos por ubicación sin demoras de respuesta.">
+                <span class="lang-text lang-en">Strict capacity enforcement and zero-latency slot selection across all locations.</span>
+                <span class="lang-text lang-es">Control estricto de aforo y selección de turnos por ubicación sin demoras de respuesta.</span>
+              </li>
+              <li data-en="Faithful pixel-perfect implementation from provided UI design specs." data-es="Implementación pixel-perfect fiel al diseño de interfaz entregado.">
+                <span class="lang-text lang-en">Faithful pixel-perfect implementation from provided UI design specs.</span>
+                <span class="lang-text lang-es">Implementación pixel-perfect fiel al diseño de interfaz entregado.</span>
+              </li>
             </ul>
 
             <div class="dossier-tech-stack">
@@ -333,21 +409,36 @@ import Layout from "../layouts/Layout.astro";
           if (tempWidth) thumbImg.setAttribute("width", tempWidth);
           if (tempHeight) thumbImg.setAttribute("height", tempHeight);
 
-          // Swap caption attributes and visible content
+          // Swap caption attributes and inner lang-text spans
           const tempEn = mainCaption.getAttribute("data-en") || "";
           const tempEs = mainCaption.getAttribute("data-es") || "";
-          const currentLang = document.documentElement.getAttribute("data-lang") || document.documentElement.getAttribute("lang") || "en";
 
           const thumbEn = thumbCaption.getAttribute("data-en") || "";
           const thumbEs = thumbCaption.getAttribute("data-es") || "";
 
           mainCaption.setAttribute("data-en", thumbEn);
           mainCaption.setAttribute("data-es", thumbEs);
-          mainCaption.textContent = currentLang === "es" ? thumbEs : thumbEn;
+          const mainEnSpan = mainCaption.querySelector(".lang-en");
+          const mainEsSpan = mainCaption.querySelector(".lang-es");
+          if (mainEnSpan && mainEsSpan) {
+            mainEnSpan.textContent = thumbEn;
+            mainEsSpan.textContent = thumbEs;
+          } else {
+            const currentLang = document.documentElement.getAttribute("data-lang") || document.documentElement.getAttribute("lang") || "en";
+            mainCaption.textContent = currentLang === "es" ? thumbEs : thumbEn;
+          }
 
           thumbCaption.setAttribute("data-en", tempEn);
           thumbCaption.setAttribute("data-es", tempEs);
-          thumbCaption.textContent = currentLang === "es" ? tempEs : tempEn;
+          const thumbEnSpan = thumbCaption.querySelector(".lang-en");
+          const thumbEsSpan = thumbCaption.querySelector(".lang-es");
+          if (thumbEnSpan && thumbEsSpan) {
+            thumbEnSpan.textContent = tempEn;
+            thumbEsSpan.textContent = tempEs;
+          } else {
+            const currentLang = document.documentElement.getAttribute("data-lang") || document.documentElement.getAttribute("lang") || "en";
+            thumbCaption.textContent = currentLang === "es" ? tempEs : tempEn;
+          }
 
           requestAnimationFrame(() => {
             mainFrame.classList.remove("snap-swapping");

@@ -18,7 +18,7 @@
     letter-spacing: -0.02em;
     color: var(--ink);
 
-    span {
+    > span {
       display: block;
     }
 
@@ -200,7 +200,7 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
       border-radius: 6px;
-      transition: all $transition-fast;
+      transition: border-color $transition-fast, color $transition-fast, transform $transition-fast;
 
       &:hover {
         border-color: var(--accent);
@@ -629,7 +629,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all $transition-fast;
+    transition: background-color $transition-fast, border-color $transition-fast, color $transition-fast, transform $transition-fast;
 
     &:hover {
       background: var(--accent);

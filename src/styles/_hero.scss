@@ -373,7 +373,7 @@ h1.hero-heading {
   margin-left: auto;
   margin-top: clamp(-52px, -5vh, -30px);
   display: grid;
-  grid-template-columns: 210px 1fr;
+  grid-template-columns: clamp(210px, 20vw, 235px) 1fr;
   gap: 24px;
   align-items: center;
   pointer-events: auto;
@@ -438,7 +438,8 @@ h1.hero-heading {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 13px 15px;
+  padding: 12px 14px;
+  min-height: 44px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 6px;
@@ -456,7 +457,7 @@ h1.hero-heading {
 
   .dossier-indicator {
     width: 3px;
-    height: 26px;
+    height: 18px;
     border-radius: 2px;
     background: var(--card-border);
     transition: background $transition-fast, transform $transition-fast;
@@ -527,32 +528,9 @@ h1.hero-heading {
 
   @include tablet-large {
     flex: 1;
-    min-width: 160px;
-    padding: 12px 18px;
-    gap: 12px;
-    border-radius: 6px;
-
-    .dossier-indicator {
-      width: 3px;
-      height: 22px;
-    }
-
-    .dossier-name {
-      font-size: 13.5px;
-      font-weight: 800;
-    }
-
-    .dossier-tag {
-      font-size: 11px;
-      font-weight: 700;
-    }
-  }
-
-  @include tablet {
-    flex: 1;
     min-width: 140px;
-    padding: 8px 12px;
-    gap: 8px;
+    padding: 11px 14px;
+    gap: 10px;
     border-radius: 6px;
 
     .dossier-indicator {
@@ -561,11 +539,25 @@ h1.hero-heading {
     }
 
     .dossier-name {
-      font-size: 12px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+  }
+
+  @include tablet {
+    flex: 1;
+    min-width: 120px;
+    padding: 8px 10px;
+    gap: 8px;
+    border-radius: 6px;
+
+    .dossier-indicator {
+      width: 3px;
+      height: 16px;
     }
 
-    .dossier-tag {
-      font-size: 10px;
+    .dossier-name {
+      font-size: 11.5px;
     }
   }
 }
@@ -675,7 +667,8 @@ h1.hero-heading {
   }
 
   .stage-action-btn {
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     min-height: 40px;
     display: inline-flex;
     align-items: center;
@@ -720,18 +713,18 @@ h1.hero-heading {
     }
 
     @include mobile {
-      min-height: 36px;
-      padding: 6px 10px;
-      font-size: 11px;
-      letter-spacing: 0.03em;
+      min-height: 35px;
+      padding: 6px 6px;
+      font-size: 10px;
+      letter-spacing: 0.02em;
     }
   }
 
   @include mobile {
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    gap: 8px;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    gap: 6px;
   }
 }
 

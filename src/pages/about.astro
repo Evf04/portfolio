@@ -10,12 +10,19 @@ import Layout from "../layouts/Layout.astro";
     <!-- Header Masthead (No generic kickers) -->
     <header class="about-masthead">
       <h1 class="page-title">
-        <span data-en="Systems Engineer &" data-es="Ingeniero de Sistemas y">Systems Engineer &</span>
-        <strong data-en="Full-Stack Developer." data-es="Desarrollador Full-Stack.">Full-Stack Developer.</strong>
+        <span data-en="Systems Engineer &" data-es="Ingeniero de Sistemas y">
+          <span class="lang-text lang-en">Systems Engineer &</span>
+          <span class="lang-text lang-es">Ingeniero de Sistemas y</span>
+        </span>
+        <strong data-en="Full-Stack Developer." data-es="Desarrollador Full-Stack.">
+          <span class="lang-text lang-en">Full-Stack Developer.</span>
+          <span class="lang-text lang-es">Desarrollador Full-Stack.</span>
+        </strong>
       </h1>
 
       <p class="masthead-lead" data-en="Full-stack developer and senior Systems Engineering student building high-speed web platforms, real-time booking systems, and relational backends." data-es="Desarrollador full-stack y estudiante de último año de Ingeniería de Sistemas creando plataformas web rápidas, sistemas de reserva y backends relacionales.">
-        Full-stack developer and senior Systems Engineering student building high-speed web platforms, real-time booking systems, and relational backends.
+        <span class="lang-text lang-en">Full-stack developer and senior Systems Engineering student building high-speed web platforms, real-time booking systems, and relational backends.</span>
+        <span class="lang-text lang-es">Desarrollador full-stack y estudiante de último año de Ingeniería de Sistemas creando plataformas web rápidas, sistemas de reserva y backends relacionales.</span>
       </p>
     </header>
 
@@ -23,19 +30,31 @@ import Layout from "../layouts/Layout.astro";
     <div class="editorial-grid">
       <!-- Left: Specifications Dossier -->
       <aside class="specs-dossier" aria-label="Technical Profile & Credentials">
-        <h2 class="specs-title" data-en="Engineering Profile" data-es="Perfil de Ingeniería">Engineering Profile</h2>
+        <h2 class="specs-title" data-en="Engineering Profile" data-es="Perfil de Ingeniería">
+          <span class="lang-text lang-en">Engineering Profile</span>
+          <span class="lang-text lang-es">Perfil de Ingeniería</span>
+        </h2>
         
         <dl class="specs-list">
           <div class="spec-row">
-            <dt data-en="Education" data-es="Educación">Education</dt>
+            <dt data-en="Education" data-es="Educación">
+              <span class="lang-text lang-en">Education</span>
+              <span class="lang-text lang-es">Educación</span>
+            </dt>
             <dd>
               <strong>Universidad de Cartagena</strong>
-              <span data-en="Systems Engineering (Final Year)" data-es="Ingeniería de Sistemas (Último Año)">Systems Engineering (Final Year)</span>
+              <span data-en="Systems Engineering (Final Year)" data-es="Ingeniería de Sistemas (Último Año)">
+                <span class="lang-text lang-en">Systems Engineering (Final Year)</span>
+                <span class="lang-text lang-es">Ingeniería de Sistemas (Último Año)</span>
+              </span>
             </dd>
           </div>
 
           <div class="spec-row">
-            <dt data-en="Credentials" data-es="Certificaciones">Credentials</dt>
+            <dt data-en="Credentials" data-es="Certificaciones">
+              <span class="lang-text lang-en">Credentials</span>
+              <span class="lang-text lang-es">Certificaciones</span>
+            </dt>
             <dd>
               <strong>3x AWS Academy Graduate</strong>
               <span>Cloud Architecting, Data Engineering, Cloud Developing</span>
@@ -43,15 +62,27 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="spec-row">
-            <dt data-en="Experience" data-es="Experiencia">Experience</dt>
+            <dt data-en="Experience" data-es="Experiencia">
+              <span class="lang-text lang-en">Experience</span>
+              <span class="lang-text lang-es">Experiencia</span>
+            </dt>
             <dd>
-              <strong data-en="Freelance Full-Stack Developer" data-es="Desarrollador Full-Stack Freelance">Freelance Full-Stack Developer</strong>
-              <span data-en="Interactive booking & event platforms" data-es="Plataformas interactivas de reserva y eventos">Interactive booking & event platforms</span>
+              <strong data-en="Freelance Full-Stack Developer" data-es="Desarrollador Full-Stack Freelance">
+                <span class="lang-text lang-en">Freelance Full-Stack Developer</span>
+                <span class="lang-text lang-es">Desarrollador Full-Stack Freelance</span>
+              </strong>
+              <span data-en="Interactive booking & event platforms" data-es="Plataformas interactivas de reserva y eventos">
+                <span class="lang-text lang-en">Interactive booking & event platforms</span>
+                <span class="lang-text lang-es">Plataformas interactivas de reserva y eventos</span>
+              </span>
             </dd>
           </div>
 
           <div class="spec-row">
-            <dt data-en="Core Technologies" data-es="Tecnologías Base">Core Technologies</dt>
+            <dt data-en="Core Technologies" data-es="Tecnologías Base">
+              <span class="lang-text lang-en">Core Technologies</span>
+              <span class="lang-text lang-es">Tecnologías Base</span>
+            </dt>
             <dd class="spec-tags">
               <span class="tech-tag">Astro</span>
               <span class="tech-tag">JavaScript</span>
@@ -64,9 +95,13 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="spec-row">
-            <dt data-en="Languages" data-es="Idiomas">Languages</dt>
+            <dt data-en="Languages" data-es="Idiomas">
+              <span class="lang-text lang-en">Languages</span>
+              <span class="lang-text lang-es">Idiomas</span>
+            </dt>
             <dd data-en="English (B2) & Spanish (Native)" data-es="Inglés (B2) y Español (Nativo)">
-              English (B2) & Spanish (Native)
+              <span class="lang-text lang-en">English (B2) & Spanish (Native)</span>
+              <span class="lang-text lang-es">Inglés (B2) y Español (Nativo)</span>
             </dd>
           </div>
         </dl>
@@ -75,43 +110,63 @@ import Layout from "../layouts/Layout.astro";
       <!-- Right: Narrative & Engineering Focus -->
       <section class="narrative-section">
         <div class="narrative-block">
-          <h2 class="section-title" data-en="Perspective & Velocity" data-es="Perspectiva y Velocidad">Perspective & Velocity</h2>
+          <h2 class="section-title" data-en="Perspective & Velocity" data-es="Perspectiva y Velocidad">
+            <span class="lang-text lang-en">Perspective & Velocity</span>
+            <span class="lang-text lang-es">Perspectiva y Velocidad</span>
+          </h2>
           <p data-en="I build web applications where speed, clean architecture, and reliable data flow come first." data-es="Desarrollo aplicaciones web donde la velocidad, la arquitectura limpia y el flujo de datos confiable son la prioridad.">
-            I build web applications where speed, clean architecture, and reliable data flow come first.
+            <span class="lang-text lang-en">I build web applications where speed, clean architecture, and reliable data flow come first.</span>
+            <span class="lang-text lang-es">Desarrollo aplicaciones web donde la velocidad, la arquitectura limpia y el flujo de datos confiable son la prioridad.</span>
           </p>
           <p data-en="For brand launch events ('Original Forever' and 'Hotel Superstar'), I engineered reservation platforms that managed attendee capacity and eliminated physical queues in real time." data-es="Para eventos de marca ('Original Forever' y 'Hotel Superstar'), desarrollé plataformas de reserva que gestionaron aforo y eliminaron filas de registro en tiempo real.">
-            For brand launch events ('Original Forever' and 'Hotel Superstar'), I engineered reservation platforms that managed attendee capacity and eliminated physical queues in real time.
+            <span class="lang-text lang-en">For brand launch events ('Original Forever' and 'Hotel Superstar'), I engineered reservation platforms that managed attendee capacity and eliminated physical queues in real time.</span>
+            <span class="lang-text lang-es">Para eventos de marca ('Original Forever' y 'Hotel Superstar'), desarrollé plataformas de reserva que gestionaron aforo y eliminaron filas de registro en tiempo real.</span>
           </p>
         </div>
 
         <!-- Capability Areas -->
         <div class="capabilities-block">
-          <h2 class="section-title" data-en="Core Capabilities" data-es="Capacidades Principales">Core Capabilities</h2>
+          <h2 class="section-title" data-en="Core Capabilities" data-es="Capacidades Principales">
+            <span class="lang-text lang-en">Core Capabilities</span>
+            <span class="lang-text lang-es">Capacidades Principales</span>
+          </h2>
           
           <div class="capability-item">
             <div class="capability-header">
-              <h3 data-en="Interface Engineering & Performance" data-es="Ingeniería de Interfaces y Rendimiento">Interface Engineering & Performance</h3>
+              <h3 data-en="Interface Engineering & Performance" data-es="Ingeniería de Interfaces y Rendimiento">
+                <span class="lang-text lang-en">Interface Engineering & Performance</span>
+                <span class="lang-text lang-es">Ingeniería de Interfaces y Rendimiento</span>
+              </h3>
             </div>
             <p data-en="Fast, responsive web interfaces built with Astro, modern JavaScript, semantic HTML5, and modular SCSS." data-es="Interfaces web rápidas y responsivas construidas con Astro, JavaScript moderno, HTML5 semántico y SCSS modular.">
-              Fast, responsive web interfaces built with Astro, modern JavaScript, semantic HTML5, and modular SCSS.
+              <span class="lang-text lang-en">Fast, responsive web interfaces built with Astro, modern JavaScript, semantic HTML5, and modular SCSS.</span>
+              <span class="lang-text lang-es">Interfaces web rápidas y responsivas construidas con Astro, JavaScript moderno, HTML5 semántico y SCSS modular.</span>
             </p>
           </div>
 
           <div class="capability-item">
             <div class="capability-header">
-              <h3 data-en="Relational Systems & Backend Integration" data-es="Sistemas Relacionales e Integración Backend">Relational Systems & Backend Integration</h3>
+              <h3 data-en="Relational Systems & Backend Integration" data-es="Sistemas Relacionales e Integración Backend">
+                <span class="lang-text lang-en">Relational Systems & Backend Integration</span>
+                <span class="lang-text lang-es">Sistemas Relacionales e Integración Backend</span>
+              </h3>
             </div>
             <p data-en="Normalized PostgreSQL schemas, secure authentication, and real-time database synchronization with Supabase and Node.js." data-es="Esquemas PostgreSQL normalizados, autenticación segura y sincronización en tiempo real con Supabase y Node.js.">
-              Normalized PostgreSQL schemas, secure authentication, and real-time database synchronization with Supabase and Node.js.
+              <span class="lang-text lang-en">Normalized PostgreSQL schemas, secure authentication, and real-time database synchronization with Supabase and Node.js.</span>
+              <span class="lang-text lang-es">Esquemas PostgreSQL normalizados, autenticación segura y sincronización en tiempo real con Supabase y Node.js.</span>
             </p>
           </div>
 
           <div class="capability-item">
             <div class="capability-header">
-              <h3 data-en="Software Design & Architecture" data-es="Diseño de Software y Arquitectura">Software Design & Architecture</h3>
+              <h3 data-en="Software Design & Architecture" data-es="Diseño de Software y Arquitectura">
+                <span class="lang-text lang-en">Software Design & Architecture</span>
+                <span class="lang-text lang-es">Diseño de Software y Arquitectura</span>
+              </h3>
             </div>
             <p data-en="Applying systems engineering principles, modular architecture, relational data modeling, and structured Git workflows." data-es="Aplicación de principios de ingeniería de sistemas, arquitectura modular, modelado de datos relacionales y flujos estructurados en Git.">
-              Applying systems engineering principles, modular architecture, relational data modeling, and structured Git workflows.
+              <span class="lang-text lang-en">Applying systems engineering principles, modular architecture, relational data modeling, and structured Git workflows.</span>
+              <span class="lang-text lang-es">Aplicación de principios de ingeniería de sistemas, arquitectura modular, modelado de datos relacionales y flujos estructurados en Git.</span>
             </p>
           </div>
         </div>
@@ -120,10 +175,16 @@ import Layout from "../layouts/Layout.astro";
         <!-- Action Links -->
         <div class="about-actions">
           <a class="impact-link" href="/work">
-            <span data-en="See Case Studies & Live Demos" data-es="Ver Casos de Estudio y Demos">See Case Studies & Live Demos</span>
+            <span data-en="See Case Studies & Live Demos" data-es="Ver Casos de Estudio y Demos">
+              <span class="lang-text lang-en">See Case Studies & Live Demos</span>
+              <span class="lang-text lang-es">Ver Casos de Estudio y Demos</span>
+            </span>
           </a>
           <a class="secondary-action" href="/contact">
-            <span data-en="Get in Touch" data-es="Contáctame">Get in Touch</span>
+            <span data-en="Get in Touch" data-es="Contáctame">
+              <span class="lang-text lang-en">Get in Touch</span>
+              <span class="lang-text lang-es">Contáctame</span>
+            </span>
           </a>
         </div>
 

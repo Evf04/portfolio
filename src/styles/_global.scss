@@ -175,7 +175,7 @@ body.light-theme {
 
 // Multilingual Instant Render Guard (Zero Layout Shift / Zero Text Swap Flicker)
 .lang-text {
-  display: inline;
+  display: inline !important;
 }
 
 html[lang="en"] .lang-text.lang-es,

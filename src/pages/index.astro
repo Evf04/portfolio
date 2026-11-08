@@ -58,19 +58,16 @@ import WaveArt from "../components/WaveArt.astro";
               class="stage-dossier-item active"
               role="tab"
               aria-selected="true"
-              aria-controls="panel-oasis"
-              id="tab-oasis"
-              data-target="panel-oasis"
-              data-title-en="Adidas Originals"
-              data-title-es="Adidas Originals"
-              data-badge-en="Oasis · Argentina"
-              data-badge-es="Oasis · Argentina"
+              aria-controls="panel-sorteo"
+              id="tab-sorteo"
+              data-target="panel-sorteo"
+              data-title-en="Sorteo Adidas Oasis"
+              data-title-es="Sorteo Adidas Oasis"
               type="button"
             >
               <span class="dossier-indicator" aria-hidden="true"></span>
               <div class="dossier-text">
-                <span class="dossier-name" data-en="Adidas Originals" data-es="Adidas Originals">Adidas Originals</span>
-                <span class="dossier-tag" data-en="Oasis · Argentina" data-es="Oasis · Argentina">Oasis · Argentina</span>
+                <span class="dossier-name" data-en="Sorteo Adidas Oasis" data-es="Sorteo Adidas Oasis">Sorteo Adidas Oasis</span>
               </div>
             </button>
 
@@ -83,47 +80,64 @@ import WaveArt from "../components/WaveArt.astro";
               data-target="panel-superstar"
               data-title-en="Hotel Superstar"
               data-title-es="Hotel Superstar"
-              data-badge-en="Experience Hub"
-              data-badge-es="Portal de Evento"
               type="button"
             >
               <span class="dossier-indicator" aria-hidden="true"></span>
               <div class="dossier-text">
                 <span class="dossier-name" data-en="Hotel Superstar" data-es="Hotel Superstar">Hotel Superstar</span>
-                <span class="dossier-tag" data-en="Experience Hub" data-es="Portal de Evento">
-                  <span class="lang-text lang-en">Experience Hub</span>
-                  <span class="lang-text lang-es">Portal de Evento</span>
-                </span>
+              </div>
+            </button>
+
+            <button
+              class="stage-dossier-item"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-oasis"
+              id="tab-oasis"
+              data-target="panel-oasis"
+              data-title-en="Adidas Originals"
+              data-title-es="Adidas Originals"
+              type="button"
+            >
+              <span class="dossier-indicator" aria-hidden="true"></span>
+              <div class="dossier-text">
+                <span class="dossier-name" data-en="Adidas Originals" data-es="Adidas Originals">Adidas Originals</span>
               </div>
             </button>
           </div>
 
           <!-- Stage Viewport Screen -->
           <div class="stage-screen">
-            <!-- Slide 1: Oasis / Original Forever -->
+            <!-- Slide 1: Sorteo Adidas Oasis -->
             <div
               class="stage-slide active"
-              id="panel-oasis"
+              id="panel-sorteo"
               role="tabpanel"
-              aria-labelledby="tab-oasis"
+              aria-labelledby="tab-sorteo"
             >
               <div class="stage-media">
                 <img
-                  src="/images/oasis.webp"
-                  alt="Original Forever Booking Platform Preview"
-                  width="1902"
-                  height="942"
+                  src="/images/sorteo-adidas-oasis.webp"
+                  alt="Sorteo Adidas Oasis Giveaway Platform Preview"
+                  width="1904"
+                  height="948"
                   loading="eager"
                   decoding="async"
                 />
                 <div class="stage-actions">
-                  <a href="https://slotsadidasoriginals-p.netlify.app" target="_blank" rel="noopener noreferrer" class="stage-action-btn primary">
+                  <a href="https://sorteoadidasoasis-p.netlify.app" target="_blank" rel="noopener noreferrer" class="stage-action-btn primary">
                     <span data-en="Live Demo" data-es="Demo en Vivo">
                       <span class="lang-text lang-en">Live Demo</span>
                       <span class="lang-text lang-es">Demo en Vivo</span>
                     </span>
                   </a>
-                  <a href="/work#original-forever" class="stage-action-btn secondary">
+                  <a href="https://sorteoadidasoasis.com" target="_blank" rel="noopener noreferrer" class="stage-action-btn secondary">
+                    <span data-en="Live Site" data-es="Sitio en Vivo">
+                      <span class="lang-text lang-en">Live Site</span>
+                      <span class="lang-text lang-es">Sitio en Vivo</span>
+                    </span>
+                  </a>
+                  <a href="/work#sorteo-adidas-oasis" class="stage-action-btn secondary">
                     <span data-en="Case Study" data-es="Caso de Estudio">
                       <span class="lang-text lang-en">Case Study</span>
                       <span class="lang-text lang-es">Caso de Estudio</span>
@@ -146,7 +160,7 @@ import WaveArt from "../components/WaveArt.astro";
                   alt="Hotel Superstar Portal Preview"
                   width="1904"
                   height="948"
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
                 />
                 <div class="stage-actions">
@@ -157,6 +171,39 @@ import WaveArt from "../components/WaveArt.astro";
                     </span>
                   </a>
                   <a href="/work#hotel-superstar" class="stage-action-btn secondary">
+                    <span data-en="Case Study" data-es="Caso de Estudio">
+                      <span class="lang-text lang-en">Case Study</span>
+                      <span class="lang-text lang-es">Caso de Estudio</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Oasis / Original Forever -->
+            <div
+              class="stage-slide"
+              id="panel-oasis"
+              role="tabpanel"
+              aria-labelledby="tab-oasis"
+            >
+              <div class="stage-media">
+                <img
+                  src="/images/oasis.webp"
+                  alt="Original Forever Booking Platform Preview"
+                  width="1902"
+                  height="942"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="stage-actions">
+                  <a href="https://slotsadidasoriginals-p.netlify.app" target="_blank" rel="noopener noreferrer" class="stage-action-btn primary">
+                    <span data-en="Live Demo" data-es="Demo en Vivo">
+                      <span class="lang-text lang-en">Live Demo</span>
+                      <span class="lang-text lang-es">Demo en Vivo</span>
+                    </span>
+                  </a>
+                  <a href="/work#original-forever" class="stage-action-btn secondary">
                     <span data-en="Case Study" data-es="Caso de Estudio">
                       <span class="lang-text lang-en">Case Study</span>
                       <span class="lang-text lang-es">Caso de Estudio</span>
