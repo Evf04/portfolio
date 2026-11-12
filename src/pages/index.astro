@@ -52,7 +52,25 @@ import WaveArt from "../components/WaveArt.astro";
       <!-- Right-Side Visual: Hybrid Showcase Stage -->
       <div class="hero-visual" aria-label="Interactive Showcase">
         <div class="hero-showcase-stage" aria-label="Featured Projects Showcase">
-          <!-- Project Tabs (Vertical sidebar on desktop, clean horizontal tabs on mobile) -->
+          <!-- Mobile & Tablet Carousel Title Bar (Visible on <= 1040px) -->
+          <div class="stage-carousel-header" aria-label="Project carousel navigation">
+            <button class="carousel-arrow-btn prev" type="button" aria-label="Previous project" id="carousel-btn-prev">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <span class="carousel-title" id="carousel-active-title">
+              <span class="lang-text lang-en">Sorteo Adidas Oasis</span>
+              <span class="lang-text lang-es">Sorteo Adidas Oasis</span>
+            </span>
+            <button class="carousel-arrow-btn next" type="button" aria-label="Next project" id="carousel-btn-next">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Project Tabs (Vertical sidebar on desktop, hidden on mobile) -->
           <div class="stage-dossier-list" role="tablist" aria-label="Featured projects dossier">
             <button
               class="stage-dossier-item active"
@@ -129,12 +147,6 @@ import WaveArt from "../components/WaveArt.astro";
                     <span data-en="Live Demo" data-es="Demo en Vivo">
                       <span class="lang-text lang-en">Live Demo</span>
                       <span class="lang-text lang-es">Demo en Vivo</span>
-                    </span>
-                  </a>
-                  <a href="https://sorteoadidasoasis.com" target="_blank" rel="noopener noreferrer" class="stage-action-btn secondary">
-                    <span data-en="Live Site" data-es="Sitio en Vivo">
-                      <span class="lang-text lang-en">Live Site</span>
-                      <span class="lang-text lang-es">Sitio en Vivo</span>
                     </span>
                   </a>
                   <a href="/work#sorteo-adidas-oasis" class="stage-action-btn secondary">
@@ -227,6 +239,9 @@ import WaveArt from "../components/WaveArt.astro";
     const dossierItems = Array.from(document.querySelectorAll<HTMLButtonElement>('.stage-dossier-item'));
     const slides = Array.from(document.querySelectorAll<HTMLElement>('.stage-slide'));
     const stageScreen = document.querySelector<HTMLElement>('.stage-screen');
+    const carouselPrevBtn = document.getElementById('carousel-btn-prev');
+    const carouselNextBtn = document.getElementById('carousel-btn-next');
+    const carouselTitleEl = document.getElementById('carousel-active-title');
 
     let currentIndex = 0;
 
@@ -234,7 +249,7 @@ import WaveArt from "../components/WaveArt.astro";
       if (index < 0 || index >= slides.length) return;
       currentIndex = index;
 
-      // 1. Update Project Tabs
+      // 1. Update Project Tabs (Desktop sidebar)
       dossierItems.forEach((item, i) => {
         const isActive = i === index;
         item.classList.toggle('active', isActive);
@@ -242,7 +257,18 @@ import WaveArt from "../components/WaveArt.astro";
         item.tabIndex = isActive ? 0 : -1;
       });
 
-      // 2. Update Slides
+      // 2. Update Mobile & Tablet Carousel Header
+      if (carouselTitleEl) {
+        const targetItem = dossierItems[index];
+        const enTitle = targetItem?.getAttribute('data-title-en') || '';
+        const esTitle = targetItem?.getAttribute('data-title-es') || '';
+        const enSpan = carouselTitleEl.querySelector<HTMLElement>('.lang-en');
+        const esSpan = carouselTitleEl.querySelector<HTMLElement>('.lang-es');
+        if (enSpan) enSpan.textContent = enTitle;
+        if (esSpan) esSpan.textContent = esTitle;
+      }
+
+      // 3. Update Slides
       const targetItem = dossierItems[index];
       const targetId = targetItem?.getAttribute('data-target');
       slides.forEach((slide) => {
@@ -250,6 +276,15 @@ import WaveArt from "../components/WaveArt.astro";
         slide.classList.toggle('active', isTarget);
       });
     }
+
+    // Arrow Button Navigation for Mobile/Tablet Carousel
+    carouselPrevBtn?.addEventListener('click', () => {
+      activateSlide((currentIndex - 1 + slides.length) % slides.length);
+    });
+
+    carouselNextBtn?.addEventListener('click', () => {
+      activateSlide((currentIndex + 1) % slides.length);
+    });
 
     // Click & Keyboard Navigation for all viewports
     dossierItems.forEach((item, index) => {
