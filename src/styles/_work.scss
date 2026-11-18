@@ -229,6 +229,25 @@
     margin-bottom: 22px;
   }
 
+  &.snapshots-duo {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+
+    @include tablet-large {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .snapshot-slot {
+      width: 100%;
+    }
+
+    .snapshot-frame {
+      min-height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  }
+
   .snapshot-slot {
     display: flex;
     flex-direction: column;

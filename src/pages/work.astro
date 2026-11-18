@@ -27,15 +27,142 @@ import Layout from "../layouts/Layout.astro";
 
     <!-- Deep-Dive Case Studies Stack -->
     <div class="case-studies-stack">
-      <!-- Case Study 01: Hotel Superstar -->
-      <article id="hotel-superstar" class="case-study-dossier" aria-labelledby="project-1-title">
+      <!-- Case Study 01: Sorteo Adidas Oasis -->
+      <article id="sorteo-adidas-oasis" class="case-study-dossier" aria-labelledby="project-1-title">
+        <div class="dossier-header">
+          <div class="dossier-title-group">
+            <span class="dossier-badge" data-en="Brand Giveaway Platform · Freelance" data-es="Plataforma de Sorteo · Freelance">
+              <span class="lang-text lang-en">Brand Giveaway Platform · Freelance</span>
+              <span class="lang-text lang-es">Plataforma de Sorteo · Freelance</span>
+            </span>
+            <h2 id="project-1-title" class="dossier-title">
+              <a 
+                href="https://sorteoadidasoasis-p.netlify.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                data-en='"Sorteo Adidas Oasis"'
+                data-es='"Sorteo Adidas Oasis"'
+              >
+                "Sorteo Adidas Oasis"
+              </a>
+            </h2>
+          </div>
+
+          <div class="dossier-actions">
+            <a href="https://sorteoadidasoasis-p.netlify.app" class="btn-live-demo" target="_blank" rel="noopener noreferrer">
+              <span data-en="Launch Live Demo" data-es="Ver Demo en Vivo">
+                <span class="lang-text lang-en">Launch Live Demo</span>
+                <span class="lang-text lang-es">Ver Demo en Vivo</span>
+              </span>
+            </a>
+            <span class="dossier-prod-note" data-en="Original campaign domain: sorteoadidasoasis.com (campaign concluded)" data-es="Dominio original: sorteoadidasoasis.com (campaña finalizada)">
+              <span class="lang-text lang-en">Original campaign domain: sorteoadidasoasis.com (campaign concluded)</span>
+              <span class="lang-text lang-es">Dominio original: sorteoadidasoasis.com (campaña finalizada)</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Snapshots Gallery Grid: 2 UI Views -->
+        <div class="dossier-snapshots snapshots-duo" aria-label="Project UI Snapshots">
+          <div class="snapshot-slot">
+            <div class="snapshot-frame">
+              <img
+                src="/images/sorteo-adidas-oasis-form.webp"
+                alt="Store Selection and Participant Data Registration Form"
+                width="1024"
+                height="503"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+            <span class="snap-caption" data-en="Store selection (Malabia & Unicenter) and participant data registration" data-es="Selección de sucursal (Malabia y Unicenter) y registro de datos del participante">
+              <span class="lang-text lang-en">Store selection (Malabia & Unicenter) and participant data registration</span>
+              <span class="lang-text lang-es">Selección de sucursal (Malabia y Unicenter) y registro de datos del participante</span>
+            </span>
+          </div>
+
+          <div class="snapshot-slot">
+            <div class="snapshot-frame">
+              <img
+                src="/images/sorteo-adidas-oasis-ticket.webp"
+                alt="Purchase Receipt Upload with Direct Camera Capture and Verification"
+                width="1024"
+                height="504"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+            <span class="snap-caption" data-en="Purchase receipt upload with instant camera capture and client-side compression" data-es="Carga de comprobante de compra con captura de cámara y compresión en cliente">
+              <span class="lang-text lang-en">Purchase receipt upload with instant camera capture and client-side compression</span>
+              <span class="lang-text lang-es">Carga de comprobante de compra con captura de cámara y compresión en cliente</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Case Study Detailed Narrative -->
+        <div class="dossier-body">
+          <div class="dossier-column">
+            <h3 class="breakdown-heading" data-en="Context" data-es="Contexto">
+              <span class="lang-text lang-en">Context</span>
+              <span class="lang-text lang-es">Contexto</span>
+            </h3>
+            <p data-en="Developed as a freelance production platform for an Adidas Originals campaign in Argentina celebrating the Oasis collaboration, the 'Sorteo Adidas Oasis' web activation enabled customers who purchased at flagship retail stores (Malabia and Unicenter) to register their personal details and submit physical purchase receipts for an exclusive promotional giveaway." data-es="Desarrollado como proyecto freelance para una campaña de Adidas Originals en Argentina en el marco de la colaboración con Oasis, la plataforma web 'Sorteo Adidas Oasis' permitió a los clientes que realizaron compras en tiendas oficiales (Malabia y Unicenter) registrar sus datos y cargar su comprobante de compra para participar en el sorteo exclusivo.">
+              <span class="lang-text lang-en">Developed as a freelance production platform for an Adidas Originals campaign in Argentina celebrating the Oasis collaboration, the 'Sorteo Adidas Oasis' web activation enabled customers who purchased at flagship retail stores (Malabia and Unicenter) to register their personal details and submit physical purchase receipts for an exclusive promotional giveaway.</span>
+              <span class="lang-text lang-es">Desarrollado como proyecto freelance para una campaña de Adidas Originals en Argentina en el marco de la colaboración con Oasis, la plataforma web 'Sorteo Adidas Oasis' permitió a los clientes que realizaron compras en tiendas oficiales (Malabia y Unicenter) registrar sus datos y cargar su comprobante de compra para participar en el sorteo exclusivo.</span>
+            </p>
+          </div>
+
+          <div class="dossier-column">
+            <h3 class="breakdown-heading" data-en="How I built it" data-es="Cómo lo construí">
+              <span class="lang-text lang-en">How I built it</span>
+              <span class="lang-text lang-es">Cómo lo construí</span>
+            </h3>
+            <p data-en="Working from UI/UX design specifications delivered by the client, I engineered a high-performance web platform in Astro using modern JavaScript and modular SCSS. Built an optimized receipt-upload pipeline with client-side image compression to shrink heavy mobile camera photos before transfer, integrated live camera capture and drag-and-drop handling, and connected the flow to a Supabase & PostgreSQL backend to store receipts and validate participant entries in real time." data-es="A partir del diseño UI/UX entregado por el cliente, desarrollé una plataforma web en Astro con JavaScript moderno y SCSS modular. Implementé un flujo optimizado de carga de comprobantes con compresión de imágenes en el cliente para reducir fotos pesadas tomadas desde el móvil antes de su envío, integré captura directa de cámara y carga por arrastre, y conecté todo a un backend con Supabase y PostgreSQL para almacenar comprobantes y validar registros en tiempo real.">
+              <span class="lang-text lang-en">Working from UI/UX design specifications delivered by the client, I engineered a high-performance web platform in Astro using modern JavaScript and modular SCSS. Built an optimized receipt-upload pipeline with client-side image compression to shrink heavy mobile camera photos before transfer, integrated live camera capture and drag-and-drop handling, and connected the flow to a Supabase & PostgreSQL backend to store receipts and validate participant entries in real time.</span>
+              <span class="lang-text lang-es">A partir del diseño UI/UX entregado por el cliente, desarrollé una plataforma web en Astro con JavaScript moderno y SCSS modular. Implementé un flujo optimizado de carga de comprobantes con compresión de imágenes en el cliente para reducir fotos pesadas tomadas desde el móvil antes de su envío, integré captura directa de cámara y carga por arrastre, y conecté todo a un backend con Supabase y PostgreSQL para almacenar comprobantes y validar registros en tiempo real.</span>
+            </p>
+          </div>
+
+          <div class="dossier-column">
+            <h3 class="breakdown-heading" data-en="Results" data-es="Resultados">
+              <span class="lang-text lang-en">Results</span>
+              <span class="lang-text lang-es">Resultados</span>
+            </h3>
+            <ul class="deliverables-list">
+              <li data-en="Client-side image compression reducing mobile camera receipt uploads by up to 80%, ensuring seamless submissions even on constrained cellular networks." data-es="Compresión de imágenes en el cliente que redujo el peso de los comprobantes hasta un 80%, garantizando envíos fluidos incluso en redes móviles inestables.">
+                <span class="lang-text lang-en">Client-side image compression reducing mobile camera receipt uploads by up to 80%, ensuring seamless submissions even on constrained cellular networks.</span>
+                <span class="lang-text lang-es">Compresión de imágenes en el cliente que redujo el peso de los comprobantes hasta un 80%, garantizando envíos fluidos incluso en redes móviles inestables.</span>
+              </li>
+              <li data-en="Frictionless store selection and receipt verification pipeline synchronized with Supabase storage and PostgreSQL records." data-es="Flujo ágil de selección de tienda y verificación de comprobantes sincronizado con almacenamiento en Supabase y registros en PostgreSQL.">
+                <span class="lang-text lang-en">Frictionless store selection and receipt verification pipeline synchronized with Supabase storage and PostgreSQL records.</span>
+                <span class="lang-text lang-es">Flujo ágil de selección de tienda y verificación de comprobantes sincronizado con almacenamiento en Supabase y registros en PostgreSQL.</span>
+              </li>
+              <li data-en="Faithful pixel-perfect execution reflecting the distinct dark branding and visual identity of Adidas Originals x Oasis." data-es="Implementación pixel-perfect respetando rigurosamente la identidad visual oscura y estética de Adidas Originals x Oasis.">
+                <span class="lang-text lang-en">Faithful pixel-perfect execution reflecting the distinct dark branding and visual identity of Adidas Originals x Oasis.</span>
+                <span class="lang-text lang-es">Implementación pixel-perfect respetando rigurosamente la identidad visual oscura y estética de Adidas Originals x Oasis.</span>
+              </li>
+            </ul>
+
+            <div class="dossier-tech-stack">
+              <span class="tech-tag">Astro</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">SCSS</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case Study 02: Hotel Superstar -->
+      <article id="hotel-superstar" class="case-study-dossier" aria-labelledby="project-2-title">
         <div class="dossier-header">
           <div class="dossier-title-group">
             <span class="dossier-badge" data-en="Brand Experience · Freelance" data-es="Experiencia de Marca · Freelance">
               <span class="lang-text lang-en">Brand Experience · Freelance</span>
               <span class="lang-text lang-es">Experiencia de Marca · Freelance</span>
             </span>
-            <h2 id="project-1-title" class="dossier-title">
+            <h2 id="project-2-title" class="dossier-title">
               <a 
                 href="https://experienciasuperstar-p.netlify.app" 
                 target="_blank" 
@@ -71,7 +198,7 @@ import Layout from "../layouts/Layout.astro";
                 alt="Adidas Originals Hotel Superstar Campaign Hero View"
                 width="1024"
                 height="503"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
               />
             </div>
@@ -173,15 +300,15 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </article>
 
-      <!-- Case Study 02: Original Forever -->
-      <article id="original-forever" class="case-study-dossier" aria-labelledby="project-2-title">
+      <!-- Case Study 03: Original Forever -->
+      <article id="original-forever" class="case-study-dossier" aria-labelledby="project-3-title">
         <div class="dossier-header">
           <div class="dossier-title-group">
             <span class="dossier-badge" data-en="Brand Launch Platform · Freelance" data-es="Plataforma de Lanzamiento · Freelance">
               <span class="lang-text lang-en">Brand Launch Platform · Freelance</span>
               <span class="lang-text lang-es">Plataforma de Lanzamiento · Freelance</span>
             </span>
-            <h2 id="project-2-title" class="dossier-title">
+            <h2 id="project-3-title" class="dossier-title">
               <a 
                 href="https://slotsadidasoriginals-p.netlify.app" 
                 target="_blank" 
@@ -450,6 +577,35 @@ import Layout from "../layouts/Layout.astro";
 
       const galleries = document.querySelectorAll(".dossier-snapshots");
       galleries.forEach((gallery) => {
+        if (gallery.classList.contains("snapshots-duo")) {
+          const slots = gallery.querySelectorAll(".snapshot-slot");
+          slots.forEach((slot) => {
+            const frame = slot.querySelector(".snapshot-frame");
+            if (!frame) return;
+
+            frame.classList.add("clickable-snap");
+            frame.setAttribute("tabindex", "0");
+            frame.setAttribute("role", "button");
+            frame.setAttribute("aria-label", "Ver imagen ampliada / Enlarge snapshot preview");
+
+            frame.onclick = () => {
+              const img = frame.querySelector("img");
+              const captionEl = slot.querySelector(".snap-caption");
+              if (img) {
+                openLightbox(img.src, img.alt, captionEl?.textContent || "");
+              }
+            };
+
+            frame.onkeydown = (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                frame.click();
+              }
+            };
+          });
+          return;
+        }
+
         const mainSlot = gallery.querySelector(".snapshot-slot.main-snap");
         const subGrid = gallery.querySelector(".snapshot-sub-grid");
         if (!mainSlot || !subGrid) return;
