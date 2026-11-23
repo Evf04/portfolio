@@ -95,7 +95,7 @@ const currentPath = pathname.replace(/\/$/, "");
 
 
 <script is:inline>
-  // Mobile Nav Toggle Logic with Accessibility & Escape Key Handling
+  // Mobile Nav Toggle Logic with Accessibility & Viewport Resize Handling
   const mobileToggle = document.getElementById("mobileNavToggle");
   const mobileMenu = document.getElementById("mobileMenu");
 
@@ -114,10 +114,48 @@ const currentPath = pathname.replace(/\/$/, "");
     setMobileMenu(!isOpen);
   });
 
+  // Close on Escape key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && mobileMenu?.classList.contains("open")) {
       setMobileMenu(false);
       mobileToggle?.focus();
+    }
+  });
+
+  // Automatically close when resizing back to desktop (e.g. closing DevTools/Inspect)
+  const tabletMediaQuery = window.matchMedia("(max-width: 834px)");
+  function handleBreakpointChange(e) {
+    if (!e.matches && mobileMenu?.classList.contains("open")) {
+      setMobileMenu(false);
+    }
+  }
+  if (tabletMediaQuery.addEventListener) {
+    tabletMediaQuery.addEventListener("change", handleBreakpointChange);
+  } else {
+    tabletMediaQuery.addListener(handleBreakpointChange);
+  }
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 834 && mobileMenu?.classList.contains("open")) {
+      setMobileMenu(false);
+    }
+  }, { passive: true });
+
+  // Close when clicking any nav link inside mobile menu
+  mobileMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      setMobileMenu(false);
+    });
+  });
+
+  // Close when clicking outside mobile menu and toggle button
+  document.addEventListener("click", (e) => {
+    if (
+      mobileMenu?.classList.contains("open") &&
+      !mobileMenu.contains(e.target) &&
+      !mobileToggle?.contains(e.target)
+    ) {
+      setMobileMenu(false);
     }
   });
 </script>

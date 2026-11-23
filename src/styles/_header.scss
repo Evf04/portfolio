@@ -298,12 +298,20 @@ html[lang="es"] .lang-toggle .lang-en {
   @include tablet {
     top: 64px;
     padding: 20px 24px;
+
+    &.open {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
-  &.open {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
+  // Strictly prevent mobile menu from ever remaining visible on desktop
+  @media (min-width: 835px) {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
 
   a {
